@@ -1,3 +1,25 @@
 [gd_scene format=3 uid="uid://obrs4j5f5gs0"]
 
+[ext_resource type="PackedScene" uid="uid://nsyrijlcxkug" path="res://scenes/frank/player.tscn" id="1_o5qli"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o5qli"]
+
 [node name="Main" type="Node3D" unique_id=1620113986]
+
+[node name="Player" parent="." unique_id=482459206 instance=ExtResource("1_o5qli")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=873636186]
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=726660012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0670626, 0, 0)
+mesh = SubResource("BoxMesh_0wfyh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1583824835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0670626, 0, 0)
+shape = SubResource("BoxShape3D_o5qli")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=776660648]
+transform = Transform3D(0.9563048, -0.18120582, 0.2294464, 0, 0.7847764, 0.619779, -0.2923717, -0.5926976, 0.7504854, 8.052783, 4.894579, 5.225317)

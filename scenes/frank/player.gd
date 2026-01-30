@@ -2,27 +2,58 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const DASH_SPEED = 15
+const DASH_MAX_TIME = 3.0
+
+@onready var dash_component = $Dash
+#@onready var dash_timer = $DashTimer
+#@onready var dash_timer = $DashCooldownTimer
+# hide disables collider layer 2
+# 
+
+func dash():
+	if dash_component.dash_ready:
+		dash_component.dash()
+		
+
+func hide_from_enemy():
+	pass
+
+#const JUMP_VELOCITY = 4.5
+var isometric_angle = deg_to_rad(45)
+
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
+
+
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction = direction.rotated(Vector3(0,1,0), isometric_angle)
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		dash()
+	
+	var speed_used = SPEED
+	if dash_component.dashing:
+		speed_used = DASH_SPEED
+
+	
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed_used
+		velocity.z = direction.z * speed_used
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed_used)
+		velocity.z = move_toward(velocity.z, 0, speed_used)
 
 	move_and_slide()

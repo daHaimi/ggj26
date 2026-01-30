@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://nsyrijlcxkug"]
 
 [ext_resource type="Script" uid="uid://bm34s0rqelvk5" path="res://scenes/frank/player.gd" id="1_ydx0u"]
-[ext_resource type="Script" uid="uid://dqb53brberiui" path="res://scenes/frank/dash.gd" id="2_a0svu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krpkg"]
 
@@ -20,13 +19,10 @@ shape = SubResource("CapsuleShape3D_krpkg")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1845047366]
 mesh = SubResource("CapsuleMesh_ydx0u")
 
-[node name="Dash" type="Node3D" parent="." unique_id=856806171]
-script = ExtResource("2_a0svu")
-
-[node name="DashTimer" type="Timer" parent="Dash" unique_id=160366443]
+[node name="DashTimer" type="Timer" parent="." unique_id=160366443]
 wait_time = 3.0
 
-[node name="DashCooldownTimer" type="Timer" parent="Dash" unique_id=2067276604]
+[node name="DashCooldownTimer2" type="Timer" parent="." unique_id=2067276604]
 wait_time = 10.0
 
-[node name="Node3D2" type="Node3D" parent="." unique_id=1525075927]
+[node name="Node3D" type="Node3D" parent="." unique_id=856806171]

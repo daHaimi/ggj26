@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bm34s0rqelvk5" path="res://scenes/frank/player.gd" id="1_ydx0u"]
 [ext_resource type="Script" uid="uid://dqb53brberiui" path="res://scenes/frank/dash.gd" id="2_a0svu"]
-[ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://scenes/player-char.tscn" id="2_cmddg"]
+[ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="2_cmddg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krpkg"]
 radius = 0.31347656

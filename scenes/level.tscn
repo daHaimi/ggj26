@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://v1qcbvd8rnnj"]
+[gd_scene format=3 uid="uid://dx7d1ie30xydh"]
 
 [ext_resource type="Material" uid="uid://bo6cw3wo4by53" path="res://materials/floor.tres" id="1_2q6dc"]
 [ext_resource type="Material" uid="uid://dbb073ivpyo6f" path="res://materials/grass.tres" id="1_2r41h"]
@@ -23,7 +23,7 @@
 [ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="13_wu01b"]
 [ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="14_3ies3"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="15_xy2fk"]
-[ext_resource type="Shader" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
+[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]

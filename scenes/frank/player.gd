@@ -12,7 +12,6 @@ signal hit
 #@onready var dash_timer = $DashTimer
 #@onready var dash_timer = $DashCooldownTimer
 # hide disables collider layer 2
-# 
 
 var direction: Vector3
 

@@ -37,8 +37,8 @@ func _process(delta: float) -> void:
 	var anim: AnimationPlayer = $PlayerChar/model/AnimationPlayer
 	if input_dir != Vector2.ZERO:
 		anim.play("running")
-		var modelTarget = direction.rotated(Vector3(0,1,0), -isometric_angle)
-		direction = direction.rotated(Vector3(0,1,0), isometric_angle)
+		direction = direction.rotated(Vector3(0,1,0), -isometric_angle)
+		var modelTarget = direction.rotated(Vector3(0,1,0), deg_to_rad(-90))
 		var target_angle = atan2(modelTarget.x, modelTarget.z)
 		# Lerp into direction
 		$PlayerChar.rotation.y = lerp_angle($PlayerChar.rotation.y, target_angle, delta * 5)

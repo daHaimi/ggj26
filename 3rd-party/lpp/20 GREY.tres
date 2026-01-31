@@ -3,5 +3,5 @@
 [resource]
 resource_name = "20 GREY"
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.6215238, 0.62152404, 0.6215233, 1)
+albedo_color = Color(0.28118703, 0.2811868, 0.2811868, 1)
 emission_enabled = true

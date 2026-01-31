@@ -45,8 +45,8 @@ func _process(delta: float) -> void:
 	
 	### Picking up ###
 	for area: Area3D in $Pickup.get_overlapping_areas():
-		if area.name == "Mask":
-			mask_collected.emit("Tony")
+		if area.name.begins_with("Mask_"):
+			mask_collected.emit(area.mask_name)
 		elif area.name == "Machete":
 			hit.emit()
 		else:

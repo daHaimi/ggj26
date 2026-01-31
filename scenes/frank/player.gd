@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const SPEED = 5.0
-const DAMPING = 15.0
+const DAMPING = 25.0
 const DASH_SPEED = 15
 const DASH_MAX_TIME = 3.0
 
@@ -34,13 +34,14 @@ func _process(delta: float) -> void:
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	var anim: AnimationPlayer = $PlayerChar/model/AnimationPlayer
+	anim.playback_default_blend_time = 1.5
 	if input_dir != Vector2.ZERO:
 		anim.play("running")
 		direction = direction.rotated(Vector3(0,1,0), -isometric_angle)
 		var modelTarget = direction.rotated(Vector3(0,1,0), deg_to_rad(-90))
 		var target_angle = atan2(modelTarget.x, modelTarget.z)
 		# Lerp into direction
-		$PlayerChar.rotation.y = lerp_angle($PlayerChar.rotation.y, target_angle, delta * 5)
+		$PlayerChar.rotation.y = lerp_angle($PlayerChar.rotation.y, target_angle, delta * 10)
 	else:
 		anim.play("idle")
 	

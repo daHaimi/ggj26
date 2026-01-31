@@ -41,10 +41,6 @@ size = Vector2(30, 42)
 [sub_resource type="PlaneMesh" id="PlaneMesh_64w2a"]
 size = Vector2(8.12, 5.815)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_8c41q"]
-radius = 0.3
-height = 1.8
-
 [sub_resource type="BoxMesh" id="BoxMesh_7agi7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kih21"]
@@ -171,10 +167,6 @@ mesh = SubResource("PlaneMesh_8iemx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.75, 0.01, 4)
 material_override = ExtResource("1_2q6dc")
 mesh = SubResource("PlaneMesh_64w2a")
-
-[node name="player-dummy" type="MeshInstance3D" parent="." unique_id=1026084373]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.75, 0.8800957, 4.75)
-mesh = SubResource("CapsuleMesh_8c41q")
 
 [node name="building" type="Node3D" parent="." unique_id=404355230]
 
@@ -572,10 +564,10 @@ transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592
 [node name="tree-beech7" parent="outside" unique_id=699592880 instance=ExtResource("12_ux5qa")]
 transform = Transform3D(-0.86602545, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, -0.86602545, -45.375, 0, 8.25)
 
-[node name="bike-stand" parent="outside" unique_id=302902523 instance=ExtResource("4_64w2a")]
+[node name="bike-stand" parent="outside" unique_id=762438322 instance=ExtResource("4_64w2a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.375, 0, 8)
 
-[node name="bike-stand2" parent="outside" unique_id=289215087 instance=ExtResource("4_64w2a")]
+[node name="bike-stand2" parent="outside" unique_id=301347473 instance=ExtResource("4_64w2a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.875, 0, 8)
 
 [node name="fountain" parent="outside" unique_id=1675382496 instance=ExtResource("5_fpun6")]

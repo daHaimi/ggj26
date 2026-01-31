@@ -9,10 +9,14 @@ signal mask_collected(mask: String)
 signal hit
 
 @onready var dash_component = $Dash
+@onready var animator: AnimationPlayer = $PlayerChar/model/AnimationPlayer
 #@onready var dash_timer = $DashTimer
 #@onready var dash_timer = $DashCooldownTimer
 # hide disables collider layer 2
 
+#const JUMP_VELOCITY = 4.5
+var isometric_angle = deg_to_rad(45)
+var direction: Vector3
 
 func dash():
 	if dash_component.dash_ready:
@@ -21,15 +25,6 @@ func dash():
 
 func hide_from_enemy():
 	pass
-
-#const JUMP_VELOCITY = 4.5
-var isometric_angle = deg_to_rad(45)
-var direction: Vector3
-var animator: AnimationPlayer
-
-func _ready() -> void:
-	animator = $PlayerChar/model/AnimationPlayer
-
 func _process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

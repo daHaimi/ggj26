@@ -13,6 +13,8 @@ var player = null
 @onready var sight_cone = $RotationAxis/Sight
 @onready var sight_raycast = $RayCast3D
 @onready var animation_player = $AnimationPlayer
+@onready var char_animation: AnimationPlayer = $character/model/AnimationPlayer
+
 func scan_for_player():
 	var bodies: Array = sight_cone.get_overlapping_bodies()
 	if bodies.size() > 0:
@@ -27,6 +29,7 @@ func scan_for_player():
 		# print(raycast_result)
 		if raycast_result == player:
 			if state != States.AGGRO:
+				char_animation.play("running")
 				enter_aggro()
 		else:
 			match state:
@@ -35,6 +38,7 @@ func scan_for_player():
 				States.SEARCHING:
 					pass
 				States.AGGRO:
+					char_animation.play("idle")
 					enter_searching()
 				
 
@@ -46,6 +50,7 @@ func scan_for_player():
 			States.SEARCHING:
 				pass
 			States.AGGRO:
+				char_animation.play("idle")
 				enter_searching()
 
 func enter_aggro():

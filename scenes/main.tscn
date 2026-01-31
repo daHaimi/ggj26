@@ -10,7 +10,6 @@
 [ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="8_85g3d"]
 [ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="8_choun"]
 [ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="8_ya4ey"]
-[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="9_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="11_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="13_trceg"]
 [ext_resource type="Texture2D" uid="uid://dogh0q5q1tcue" path="res://Assets/img/tony.png" id="14_a8y0u"]
@@ -78,11 +77,6 @@ animations = [{
 "name": &"uncomfortable",
 "speed": 1.0
 }]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_trceg"]
-shader = ExtResource("9_ya4ey")
-shader_parameter/active = true
-shader_parameter/border_threshold = Vector2(0.01, 0.01)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muem4"]
 atlas = ExtResource("13_trceg")
@@ -245,7 +239,6 @@ autoplay = "uncomfortable"
 
 [node name="Disco" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=165359013]
 visible = false
-material = SubResource("ShaderMaterial_trceg")
 position = Vector2(122, 50)
 scale = Vector2(0.32, 0.32)
 sprite_frames = SubResource("SpriteFrames_yc10j")

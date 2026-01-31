@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dgjghw5netk5s"]
+[gd_scene format=4 uid="uid://cf864j3368ocb"]
 
 [ext_resource type="Texture2D" uid="uid://rrdsg7h1ili0" path="res://Assets/models/hitman-rig-v1_Image_0.png" id="1_6b6rb"]
 [ext_resource type="Animation" uid="uid://c3ots8uk01f1b" path="res://Assets/animations/idle.res" id="1_r2s1j"]
@@ -132,12 +132,12 @@ _data = {
 &"running": ExtResource("2_3iw73")
 }
 
-[node name="Node3D" type="Node3D" unique_id=838528403]
+[node name="hitman" type="Node3D" unique_id=838528403]
 
 [node name="model" type="Node3D" parent="." unique_id=1177241355]
 
 [node name="metarig" type="Node3D" parent="model" unique_id=1297412486]
-transform = Transform3D(98.55503, 4.45151, 16.342945, -16.026117, -6.7306633, 98.477715, 5.4837375, -99.673874, -5.9200025, -0.14454931, -0.009739532, 0.0045155557)
+transform = Transform3D(98.55504, 4.451501, 16.342945, -16.02612, -6.730662, 98.477715, 5.483723, -99.673874, -5.9200025, -0.14454931, -0.009739532, 0.0045155557)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="model/metarig" unique_id=1520210767]
 bones/0/name = "spine"

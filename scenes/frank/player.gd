@@ -6,6 +6,7 @@ const DASH_SPEED = 15
 const DASH_MAX_TIME = 3.0
 
 signal mask_collected(mask: String)
+signal hit
 
 @onready var dash_component = $Dash
 #@onready var dash_timer = $DashTimer
@@ -24,13 +25,6 @@ func hide_from_enemy():
 #const JUMP_VELOCITY = 4.5
 var isometric_angle = deg_to_rad(45)
 
-### Picking up ###
-func _body_entered(body):
-	print(body)
-	if is_in_group("lava"):
-		pass
-		#character_body.translation = Vector3(1, 1, 1)
-		# Set the position of the node to (x, y, z)`[enter image description here][1]
 
 func _physics_process(delta: float) -> void:
 	
@@ -68,9 +62,13 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+### Picking up ###
 func _process(delta: float) -> void:
 	for area: Area3D in $Pickup.get_overlapping_areas():
 		if area.name == "Mask":
-			mask_collected.emit("strong")
-		print("Collected: ", area)
+			mask_collected.emit("Smiley")
+		elif area.name == "Machete":
+			hit.emit()
+		else:
+			print("Collected: ", area)
 		area.queue_free()

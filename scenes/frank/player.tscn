@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bm34s0rqelvk5" path="res://scenes/frank/player.gd" id="1_ydx0u"]
 [ext_resource type="Script" uid="uid://dqb53brberiui" path="res://scenes/frank/dash.gd" id="2_a0svu"]
-[ext_resource type="PackedScene" uid="uid://sh8a27fjeysp" path="res://Assets/models/hitman.glb" id="2_cmddg"]
+[ext_resource type="PackedScene" uid="uid://cf864j3368ocb" path="res://scenes/hitman.tscn" id="2_cmddg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krpkg"]
 
@@ -11,9 +11,11 @@ radius = 0.30419922
 
 [node name="Player" type="CharacterBody3D" unique_id=482459206]
 collision_layer = 3
-collision_mask = 17
 platform_wall_layers = 1
 script = ExtResource("1_ydx0u")
+
+[node name="hitman" parent="." unique_id=838528403 instance=ExtResource("2_cmddg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7629171, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=151154706]
 transform = Transform3D(0.7071068, -0.5, 0.5, 0, 0.7071068, 0.70710677, -0.7071068, -0.5, 0.5, 12, 17.295008, 12)
@@ -22,9 +24,6 @@ size = 8.068
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=197406880]
 shape = SubResource("CapsuleShape3D_krpkg")
-
-[node name="hitman" parent="." unique_id=20091878 instance=ExtResource("2_cmddg")]
-transform = Transform3D(2.28, 0, 0, 0, 2.28, 0, 0, 0, 2.28, 0, 0.13508958, -0.039094865)
 
 [node name="Dash" type="Node3D" parent="." unique_id=856806171]
 script = ExtResource("2_a0svu")

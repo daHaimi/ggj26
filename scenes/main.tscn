@@ -10,6 +10,8 @@
 [ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="8_85g3d"]
 [ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="8_choun"]
 [ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="8_ya4ey"]
+[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="9_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="11_eb6dy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 
@@ -25,6 +27,12 @@ subdivide_depth = 32
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_sugp2"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_choun"]
+shader = ExtResource("7_tipki")
+shader_parameter/brightnessMult = 2.0000000298024
+shader_parameter/wiggleMult = 0.00369999990639
+shader_parameter/chromaticAberrationOffset = 0.00170999995725
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ya4ey"]
 shader = ExtResource("8_85g3d")
 shader_parameter/_CirclePosition = Vector2(0.5, 0.5)
@@ -32,11 +40,51 @@ shader_parameter/_Progress = 0.749999983236
 shader_parameter/_Smoothness = 0.54
 shader_parameter/_Background = Color(0, 0, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_choun"]
-shader = ExtResource("7_tipki")
-shader_parameter/brightnessMult = 4.0
-shader_parameter/wiggleMult = 0.005
-shader_parameter/chromaticAberrationOffset = 0.001
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eb6dy"]
+shader = ExtResource("9_ya4ey")
+shader_parameter/active = false
+shader_parameter/border_threshold = Vector2(0.02, 0.02)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_trceg"]
+shader = ExtResource("9_ya4ey")
+shader_parameter/active = false
+shader_parameter/border_threshold = Vector2(0.01, 0.01)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trceg"]
+atlas = ExtResource("11_eb6dy")
+region = Rect2(0, 0, 206, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8y0u"]
+atlas = ExtResource("11_eb6dy")
+region = Rect2(206, 0, 206, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkv2x"]
+atlas = ExtResource("11_eb6dy")
+region = Rect2(412, 0, 206, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbj1t"]
+atlas = ExtResource("11_eb6dy")
+region = Rect2(618, 0, 206, 315)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_muem4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trceg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8y0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkv2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbj1t")
+}],
+"loop": true,
+"name": &"uncomfortable",
+"speed": 1.0
+}]
 
 [node name="Main" type="Node3D" unique_id=1620113986]
 
@@ -45,6 +93,7 @@ transform = Transform3D(0.9563048, -0.18120582, 0.2294464, 0, 0.7847764, 0.61977
 
 [node name="Player" parent="." unique_id=482459206 instance=ExtResource("1_o5qli")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.0020583, 0)
+collision_mask = 1
 
 [node name="Box" type="RigidBody3D" parent="." unique_id=873636186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.495, 0.5042703, 0)
@@ -86,6 +135,13 @@ script = ExtResource("6_tefeu")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=73623557]
 
+[node name="CRT" type="ColorRect" parent="UI" unique_id=1794794536]
+material = SubResource("ShaderMaterial_choun")
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 1788.0
+offset_bottom = 1127.0
+
 [node name="Hole" type="ColorRect" parent="UI" unique_id=840938637]
 material = SubResource("ShaderMaterial_ya4ey")
 offset_left = 1.0
@@ -104,9 +160,19 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="Smiley" type="Sprite2D" parent="UI/Stats/SmileyPanel" unique_id=1272820308]
+visible = false
+material = SubResource("ShaderMaterial_eb6dy")
 position = Vector2(121, 50.38)
 scale = Vector2(0.75, 0.7)
 texture = ExtResource("8_choun")
+
+[node name="Default" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=1363842688]
+material = SubResource("ShaderMaterial_trceg")
+position = Vector2(122.07, 50.961)
+scale = Vector2(0.32038835, 0.32038835)
+sprite_frames = SubResource("SpriteFrames_muem4")
+animation = &"uncomfortable"
+autoplay = "uncomfortable"
 
 [node name="TextPanel" type="Panel" parent="UI/Stats" unique_id=671969044]
 layout_mode = 2
@@ -122,11 +188,5 @@ text = "You're fucked!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CRT" type="ColorRect" parent="UI" unique_id=1794794536]
-material = SubResource("ShaderMaterial_choun")
-offset_left = -6.0
-offset_top = -7.0
-offset_right = 1788.0
-offset_bottom = 1127.0
-
+[connection signal="hit" from="Player" to="UI/Stats" method="hit"]
 [connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]

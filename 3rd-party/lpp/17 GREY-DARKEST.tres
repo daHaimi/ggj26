@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://buyshi5vwncnx"]
+
+[resource]
+resource_name = "17 GREY-DARKEST"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+emission_enabled = true

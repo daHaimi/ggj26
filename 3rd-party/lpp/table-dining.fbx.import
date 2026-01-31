@@ -1,0 +1,62 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://l0pkkju67s26"
+path="res://.godot/imported/table-dining.fbx-fccac3ee8ce2b8d6b5989e1c5d61aa37.scn"
+
+[deps]
+
+source_file="res://3rd-party/lpp/table-dining.fbx"
+dest_files=["res://.godot/imported/table-dining.fbx-fccac3ee8ce2b8d6b5989e1c5d61aa37.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=1
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"22 GREY-LIGHTEST": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3rd-party/lpp/22 GREY-LIGHTEST.tres",
+"use_external/path": "uid://cdmur4wb6p532"
+},
+"58 WHITE": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3rd-party/lpp/58 WHITE.tres",
+"use_external/path": "uid://b50fm6hbp5ms4"
+}
+},
+"nodes": {
+"PATH:table-dining": {
+"generate/physics": true
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

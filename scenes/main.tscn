@@ -93,6 +93,7 @@ transform = Transform3D(0.9563048, -0.18120582, 0.2294464, 0, 0.7847764, 0.61977
 
 [node name="Player" parent="." unique_id=482459206 instance=ExtResource("1_o5qli")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.0020583, 0)
+collision_mask = 1
 
 [node name="Box" type="RigidBody3D" parent="." unique_id=873636186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.495, 0.5042703, 0)

@@ -4,21 +4,12 @@
 [ext_resource type="Script" uid="uid://dqb53brberiui" path="res://scenes/frank/dash.gd" id="2_a0svu"]
 [ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="4_tcb64"]
 [ext_resource type="Shader" uid="uid://cl8ex1kafi25j" path="res://Assets/Shaders/horrorwobble.gdshader" id="5_pdrpp"]
+[ext_resource type="PackedScene" uid="uid://sh8a27fjeysp" path="res://Assets/models/hitman.glb" id="2_cmddg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krpkg"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tns3i"]
-shader = ExtResource("5_pdrpp")
-shader_parameter/brightnessMult = 4.0
-shader_parameter/wiggleMult = 0.005
-shader_parameter/chromaticAberrationOffset = 0.001
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tcb64"]
-shader = ExtResource("4_tcb64")
-shader_parameter/_CirclePosition = Vector2(0.5, 0.5)
-shader_parameter/_Progress = 0.749999983236
-shader_parameter/_Smoothness = 0.54
-shader_parameter/_Background = Color(0, 0, 0, 1)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdrpp"]
+radius = 0.30419922
 
 [node name="Player" type="CharacterBody3D" unique_id=482459206]
 collision_layer = 3
@@ -45,16 +36,10 @@ wait_time = 3.0
 [node name="DashCooldownTimer" type="Timer" parent="Dash" unique_id=2067276604]
 wait_time = 10.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=585243028]
+[node name="Pickup" type="Area3D" parent="." unique_id=1232057521]
+collision_layer = 0
+collision_mask = 16
 
-[node name="CRT" type="ColorRect" parent="CanvasLayer" unique_id=2021398576]
-material = SubResource("ShaderMaterial_tns3i")
-offset_right = 1794.0
-offset_bottom = 1134.0
-
-[node name="Hole" type="ColorRect" parent="CanvasLayer" unique_id=1558751848]
-material = SubResource("ShaderMaterial_tcb64")
-offset_left = 1.0
-offset_top = -2.0
-offset_right = 1617.0
-offset_bottom = 1023.0
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickup" unique_id=820875847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15121591)
+shape = SubResource("CapsuleShape3D_pdrpp")

@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Area3D
 
 @export var float_speed: float = 1.0
 @export var float_limit: float = 1.0

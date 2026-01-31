@@ -1,10 +1,11 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const DAMPING = 15.0
 const DASH_SPEED = 15
 const DASH_MAX_TIME = 3.0
+
+signal mask_collected(mask: String)
 
 @onready var dash_component = $Dash
 #@onready var dash_timer = $DashTimer
@@ -67,7 +68,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	for index in get_slide_collision_count():
-		var collision := get_slide_collision(index)
-		var body := collision.get_collider()
-		print("Collided with: ", body.name)
+func _process(delta: float) -> void:
+	for area: Area3D in $Pickup.get_overlapping_areas():
+		if area.name == "Mask":
+			mask_collected.emit("strong")
+		print("Collected: ", area)
+		area.queue_free()

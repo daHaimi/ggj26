@@ -6,7 +6,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_18u33"]
 size = Vector3(0.44970703, 0.4062271, 0.15478516)
 
-[node name="Mask" type="StaticBody3D" unique_id=439555137]
+[node name="Mask" type="Area3D" unique_id=711317670]
+collision_layer = 16
+collision_mask = 2
 script = ExtResource("1_18u33")
 
 [node name="mask" parent="." unique_id=1100882523 instance=ExtResource("2_dm03s")]

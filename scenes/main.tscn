@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dd8ppnse7mnii" path="res://Assets/prefabs/mask.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cuog6afdg1i55" path="res://Assets/prefabs/machete.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="6_tefeu"]
+[ext_resource type="Shader" uid="uid://cl8ex1kafi25j" path="res://Assets/Shaders/horrorwobble.gdshader" id="7_tipki"]
+[ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="8_85g3d"]
+[ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="8_choun"]
+[ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="8_ya4ey"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 
@@ -20,6 +24,19 @@ subdivide_width = 32
 subdivide_depth = 32
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_sugp2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ya4ey"]
+shader = ExtResource("8_85g3d")
+shader_parameter/_CirclePosition = Vector2(0.5, 0.5)
+shader_parameter/_Progress = 0.749999983236
+shader_parameter/_Smoothness = 0.54
+shader_parameter/_Background = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_choun"]
+shader = ExtResource("7_tipki")
+shader_parameter/brightnessMult = 4.0
+shader_parameter/wiggleMult = 0.005
+shader_parameter/chromaticAberrationOffset = 0.001
 
 [node name="Main" type="Node3D" unique_id=1620113986]
 
@@ -66,3 +83,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9541563, 1, -2.5315638)
 [node name="Machete" parent="." unique_id=1920632882 instance=ExtResource("5_tbgi4")]
 transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, 0.32453412, 0.9999999, -1.7064006)
 script = ExtResource("6_tefeu")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=73623557]
+
+[node name="Hole" type="ColorRect" parent="UI" unique_id=840938637]
+material = SubResource("ShaderMaterial_ya4ey")
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1617.0
+offset_bottom = 1023.0
+
+[node name="Stats" type="VBoxContainer" parent="UI" unique_id=69464197]
+offset_right = 249.0
+offset_bottom = 163.0
+script = ExtResource("8_ya4ey")
+
+[node name="SmileyPanel" type="Panel" parent="UI/Stats" unique_id=394940317]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Smiley" type="Sprite2D" parent="UI/Stats/SmileyPanel" unique_id=1272820308]
+position = Vector2(121, 50.38)
+scale = Vector2(0.75, 0.7)
+texture = ExtResource("8_choun")
+
+[node name="TextPanel" type="Panel" parent="UI/Stats" unique_id=671969044]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UI/Stats/TextPanel" unique_id=1319085192]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 242.0
+offset_bottom = 49.0
+text = "You're fucked!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CRT" type="ColorRect" parent="UI" unique_id=1794794536]
+material = SubResource("ShaderMaterial_choun")
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 1788.0
+offset_bottom = 1127.0
+
+[connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]

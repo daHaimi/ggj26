@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
+const DAMPING = 15.0
 const DASH_SPEED = 15
 const DASH_MAX_TIME = 3.0
 
@@ -49,11 +50,11 @@ func _physics_process(delta: float) -> void:
 		speed_used = DASH_SPEED
 
 	
-	if direction:
+	if direction != Vector3.ZERO:
 		velocity.x = direction.x * speed_used
 		velocity.z = direction.z * speed_used
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed_used)
-		velocity.z = move_toward(velocity.z, 0, speed_used)
+		velocity.x = move_toward(velocity.x, 0, DAMPING * delta)
+		velocity.z = move_toward(velocity.z, 0, DAMPING * delta)
 
 	move_and_slide()

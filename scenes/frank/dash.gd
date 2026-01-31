@@ -15,6 +15,5 @@ func dash():
 		dash_ready = false
 
 func _ready() -> void:
-	pass # Replace with function body.
 	dash_cooldown_timer.timeout.connect(func(): dash_ready = true)
 	dash_timer.timeout.connect(func(): dashing = false)

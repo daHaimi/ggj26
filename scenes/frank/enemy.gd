@@ -28,6 +28,9 @@ func scan_for_player():
 			state = States.AGGRO
 		else:
 			state = States.SEARCHING
+	else:
+		state = States.SEARCHING
+		velocity = Vector3.ZERO
 
 func deaggro():
 	state = States.IDLE
@@ -57,6 +60,8 @@ func move_to_player(new_position: Vector3, stop_distance: float, delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, DAMPING * delta)
 		velocity.z = move_toward(velocity.z, 0, DAMPING * delta)
+
+
 
 
 func _physics_process(delta: float) -> void:

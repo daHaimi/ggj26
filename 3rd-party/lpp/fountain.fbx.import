@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cqk2gmxl7kvkb"
-path="res://.godot/imported/wall-door.glb-569756d66b246a3ad99c2d0f73289192.scn"
+uid="uid://bqhuxo7du6lo1"
+path="res://.godot/imported/fountain.fbx-0319f74e05b788f3398430028540c7df.scn"
 
 [deps]
 
-source_file="res://art/building-tiles/wall-door.glb"
-dest_files=["res://.godot/imported/wall-door.glb-569756d66b246a3ad99c2d0f73289192.scn"]
+source_file="res://3rd-party/lpp/fountain.fbx"
+dest_files=["res://.godot/imported/fountain.fbx-0319f74e05b788f3398430028540c7df.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -39,10 +39,12 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:door": {
+"PATH:fountain": {
 "generate/physics": true
 }
 }
 }
-gltf/naming_version=2
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

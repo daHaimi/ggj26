@@ -2,20 +2,23 @@
 
 [ext_resource type="Script" uid="uid://bm34s0rqelvk5" path="res://scenes/frank/player.gd" id="1_ydx0u"]
 [ext_resource type="Script" uid="uid://dqb53brberiui" path="res://scenes/frank/dash.gd" id="2_a0svu"]
-[ext_resource type="PackedScene" uid="uid://cf864j3368ocb" path="res://scenes/hitman.tscn" id="2_cmddg"]
+[ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://scenes/player-char.tscn" id="2_cmddg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krpkg"]
+radius = 0.31347656
+height = 1.762207
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdrpp"]
 radius = 0.30419922
+height = 1.6977539
 
 [node name="Player" type="CharacterBody3D" unique_id=482459206]
 collision_layer = 3
 platform_wall_layers = 1
 script = ExtResource("1_ydx0u")
 
-[node name="hitman" parent="." unique_id=838528403 instance=ExtResource("2_cmddg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7629171, 0)
+[node name="PlayerChar" parent="." unique_id=1158323092 instance=ExtResource("2_cmddg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0121818, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=151154706]
 transform = Transform3D(0.7071068, -0.5, 0.5, 0, 0.7071068, 0.70710677, -0.7071068, -0.5, 0.5, 12, 17.295008, 12)
@@ -23,6 +26,7 @@ projection = 1
 size = 8.068
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=197406880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.118896484, 0)
 shape = SubResource("CapsuleShape3D_krpkg")
 
 [node name="Dash" type="Node3D" parent="." unique_id=856806171]
@@ -39,5 +43,5 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pickup" unique_id=820875847]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15121591)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15112305, 0.07070649)
 shape = SubResource("CapsuleShape3D_pdrpp")

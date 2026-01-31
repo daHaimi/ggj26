@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dojewa1psfn5m"]
+
+[ext_resource type="Script" uid="uid://or4iin6eu1w0" path="res://scenes/music_player.gd" id="1_ql6qh"]
+[ext_resource type="AudioStream" uid="uid://pp7if8qdd22q" path="res://art/sfx/Enemy_Hit_ 2.wav" id="2_l7xiw"]
+[ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_l7xiw"]
+
+[sub_resource type="Animation" id="Animation_fwkb2"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioPlayerCalm:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioPlayerFast:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_jxdhu"]
+resource_name = "calm_to_fast"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioPlayerCalm:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioPlayerFast:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ql6qh"]
+resource_name = "fast_to_calm"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioPlayerCalm:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioPlayerFast:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l7xiw"]
+_data = {
+&"RESET": SubResource("Animation_fwkb2"),
+&"calm_to_fast": SubResource("Animation_jxdhu"),
+&"fast_to_calm": SubResource("Animation_ql6qh")
+}
+
+[node name="BackgroundMusic" type="Node3D" unique_id=1109360909]
+script = ExtResource("1_ql6qh")
+
+[node name="AudioPlayerCalm" type="AudioStreamPlayer" parent="." unique_id=1923782188]
+stream = ExtResource("2_l7xiw")
+
+[node name="AudioPlayerFast" type="AudioStreamPlayer" parent="." unique_id=707020977]
+stream = ExtResource("3_l7xiw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1714513413]
+libraries/ = SubResource("AnimationLibrary_l7xiw")

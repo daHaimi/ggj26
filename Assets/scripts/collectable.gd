@@ -1,6 +1,7 @@
 extends Area3D
 
 @export var rotate_speed: float = 2.0
+@export var mask_name: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

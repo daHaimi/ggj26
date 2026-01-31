@@ -68,6 +68,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	
 	for area: Area3D in $Pickup.get_overlapping_areas():
-		print("Collided with: ", area.name)
+		print("Collected: ", area)
+		area.queue_free()

@@ -8,7 +8,9 @@
 [ext_resource type="Material" uid="uid://dip1lnrtioa0" path="res://materials/floor-dark.tres" id="3_kih21"]
 [ext_resource type="PackedScene" uid="uid://dsc5xeghoo2yh" path="res://art/building-tiles/wall-t-junciton.glb" id="3_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://gwn65hxpulr1" path="res://art/building-tiles/wall-corner.glb" id="4_2r41h"]
+[ext_resource type="PackedScene" uid="uid://cq1ljmnk8vnb6" path="res://3rd-party/lpp/cereal-box.fbx" id="4_50fbu"]
 [ext_resource type="PackedScene" uid="uid://dukrpf0sd0r" path="res://3rd-party/lpp/bike-stand.fbx" id="4_64w2a"]
+[ext_resource type="PackedScene" uid="uid://bx6g2qmm5uuic" path="res://3rd-party/lpp/sofa.fbx" id="4_c1pbi"]
 [ext_resource type="PackedScene" uid="uid://bqhuxo7du6lo1" path="res://3rd-party/lpp/fountain.fbx" id="5_fpun6"]
 [ext_resource type="PackedScene" uid="uid://cqk2gmxl7kvkb" path="res://art/building-tiles/wall-door.glb" id="5_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://nsyrijlcxkug" path="res://scenes/frank/player.tscn" id="6_ux5qa"]
@@ -17,24 +19,30 @@
 [ext_resource type="PackedScene" uid="uid://dd8ppnse7mnii" path="res://Assets/prefabs/mask.tscn" id="8_gunhw"]
 [ext_resource type="PackedScene" uid="uid://cuog6afdg1i55" path="res://Assets/prefabs/machete.tscn" id="9_8gofh"]
 [ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="10_h6wmr"]
+[ext_resource type="PackedScene" uid="uid://db6id7x0o3jo1" path="res://3rd-party/lpp/hot-dog-stand.fbx" id="11_535f6"]
 [ext_resource type="PackedScene" uid="uid://l0pkkju67s26" path="res://3rd-party/lpp/table-dining.fbx" id="11_arp2o"]
 [ext_resource type="Shader" uid="uid://cl8ex1kafi25j" path="res://Assets/Shaders/horrorwobble.gdshader" id="11_pqd0y"]
 [ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="12_5k0ak"]
+[ext_resource type="PackedScene" uid="uid://w8pwn0ntiadc" path="res://3rd-party/lpp/cap-baseball.fbx" id="12_50fbu"]
 [ext_resource type="PackedScene" uid="uid://imaykrkew1ad" path="res://3rd-party/lpp/tree-beech.fbx" id="12_ux5qa"]
 [ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="13_wu01b"]
 [ext_resource type="PackedScene" uid="uid://7gg3678dv3j6" path="res://3rd-party/lpp/stage-truss.fbx" id="14_w3o6u"]
+[ext_resource type="PackedScene" uid="uid://crt11i8gnnx8d" path="res://3rd-party/lpp/beer.fbx" id="15_0fmhk"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="15_xy2fk"]
 [ext_resource type="PackedScene" uid="uid://djlifiqli0v35" path="res://3rd-party/lpp/speaker-array.fbx" id="16_2e2fo"]
-[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
+[ext_resource type="Shader" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
+[ext_resource type="PackedScene" uid="uid://bmxhxdm30rgw5" path="res://3rd-party/lpp/coffee-cup-paper.fbx" id="16_iafhg"]
+[ext_resource type="PackedScene" uid="uid://evmhhrelbk6c" path="res://3rd-party/lpp/flag-big.fbx" id="17_0fmhk"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
+[ext_resource type="PackedScene" uid="uid://clk12vxnwgpn4" path="res://3rd-party/lpp/television.fbx" id="17_cr74b"]
 [ext_resource type="PackedScene" uid="uid://dvyopytowb03u" path="res://3rd-party/lpp/speaker-tower.fbx" id="17_gur6y"]
 [ext_resource type="PackedScene" uid="uid://b6shayrvub6dg" path="res://3rd-party/lpp/microphone-stand.fbx" id="18_v3why"]
-[ext_resource type="PackedScene" uid="uid://ename7g0nov" path="res://Assets/models/convention-sign.glb" id="31_w3o6u"]
 [ext_resource type="Texture2D" uid="uid://dogh0q5q1tcue" path="res://Assets/img/tony.png" id="30_2e2fo"]
 [ext_resource type="Texture2D" uid="uid://dlt7jtgk7ipi" path="res://Assets/img/jigsaw.png" id="31_gur6y"]
+[ext_resource type="PackedScene" uid="uid://ename7g0nov" path="res://Assets/models/convention-sign.glb" id="31_w3o6u"]
 [ext_resource type="Texture2D" uid="uid://c66sadw083typ" path="res://Assets/img/mask.png" id="32_v3why"]
 [ext_resource type="PackedScene" uid="uid://cm3jv1yi67ac2" path="res://Assets/prefabs/enemy.tscn" id="33_gur6y"]
-[ext_resource type="PackedScene" uid="uid://bydk8v2sbxtis" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
+[ext_resource type="PackedScene" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]
 material = ExtResource("1_2q6dc")
@@ -154,10 +162,6 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="Environment" id="Environment_kih21"]
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.29
 [sub_resource type="AtlasTexture" id="AtlasTexture_yc10j"]
 atlas = ExtResource("30_2e2fo")
 region = Rect2(0, 0, 202, 321)
@@ -265,6 +269,11 @@ animations = [{
 "name": &"mask",
 "speed": 2.0
 }]
+
+[sub_resource type="Environment" id="Environment_kih21"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.29
 
 [node name="Node3D" type="Node3D" unique_id=1705667042]
 
@@ -465,7 +474,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.625, 0, -26)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.625, 0, -24)
 
 [node name="wall-straight40" parent="building" unique_id=205412426 instance=ExtResource("2_mx8sn")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -39.625, 0, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -39.625, -0.0024027824, -8)
 
 [node name="wall-straight41" parent="building" unique_id=1112108973 instance=ExtResource("2_mx8sn")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -37.625, 0, -8)
@@ -656,7 +665,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.625, 0, -37.875)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.375, 0, -37.75)
 
 [node name="table-dining3" parent="hall" unique_id=2069169719 instance=ExtResource("11_arp2o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.875, 0, -38)
+transform = Transform3D(0.9999616, 0.0062155332, -0.006173182, -0.006205783, 0.99997944, 0.0015965103, 0.006182984, -0.0015581184, 0.9999797, -30.875, 0, -38)
 
 [node name="table-dining4" parent="hall" unique_id=1262639592 instance=ExtResource("11_arp2o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.125, 0, -37.875)
@@ -672,6 +681,319 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.625, 0, -37.875)
 
 [node name="atm-mechine" parent="hall" unique_id=89422286 instance=ExtResource("3_8iemx")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.75, 0, -30.875)
+
+[node name="hot-dog-stand" parent="hall" unique_id=1006982967 instance=ExtResource("11_535f6")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -16, 0, -5.5)
+
+[node name="cap-baseball" parent="hall" unique_id=514271091 instance=ExtResource("12_50fbu")]
+transform = Transform3D(0.9355057, 0, 0.35331157, 0, 1, 0, -0.35331157, 0, 0.9355057, -31.25, 0.79277325, -38)
+
+[node name="cap-baseball2" parent="hall" unique_id=232672098 instance=ExtResource("12_50fbu")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -30.625, 0.82637596, -38)
+
+[node name="sofa" parent="hall" unique_id=52691169 instance=ExtResource("4_c1pbi")]
+transform = Transform3D(-0.9437606, 0, -0.3306297, 0, 1, 0, 0.3306297, 0, -0.9437606, -14.576186, 1.1483816e-06, -0.5569973)
+
+[node name="sofa2" parent="hall" unique_id=303463600 instance=ExtResource("4_c1pbi")]
+transform = Transform3D(-0.99897057, 0, 0.04536301, 0, 1, 0, -0.04536301, 0, -0.99897057, -17.217844, 1.1483816e-06, -0.20001644)
+
+[node name="table-dining8" parent="hall" unique_id=45726556 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19.516638, 0, -6.6163607)
+
+[node name="table-dining9" parent="hall" unique_id=1053677683 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19.516638, 0, -4.9821486)
+
+[node name="table-dining10" parent="hall" unique_id=1847590495 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.919891, 0, -4.9821486)
+
+[node name="table-dining11" parent="hall" unique_id=90370590 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.919891, 0, -6.664426)
+
+[node name="chair-dining126" parent="hall" unique_id=988930017 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.6674, 0, -6.955356)
+
+[node name="chair-dining127" parent="hall" unique_id=2085414764 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.6674, 0, -6.2078485)
+
+[node name="chair-dining128" parent="hall" unique_id=1787015844 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.6674, 0, -5.329527)
+
+[node name="chair-dining129" parent="hall" unique_id=1212337338 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.6674, 0, -4.6380816)
+
+[node name="chair-dining130" parent="hall" unique_id=261014902 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.059427, 0, -6.955356)
+
+[node name="chair-dining131" parent="hall" unique_id=1191337168 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.059427, 0, -6.2078485)
+
+[node name="chair-dining132" parent="hall" unique_id=1645441864 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.059427, 0, -5.329527)
+
+[node name="chair-dining133" parent="hall" unique_id=2057246181 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.059427, 0, -4.6380816)
+
+[node name="chair-dining134" parent="hall" unique_id=81105261 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.29323, 0, -4.6100507)
+
+[node name="chair-dining135" parent="hall" unique_id=524811823 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.29323, 0, -5.3575583)
+
+[node name="chair-dining136" parent="hall" unique_id=814097128 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.29323, 0, -6.23588)
+
+[node name="chair-dining137" parent="hall" unique_id=430163200 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.29323, 0, -6.9273252)
+
+[node name="chair-dining138" parent="hall" unique_id=614943596 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -22.74132, 0, -4.6100507)
+
+[node name="chair-dining139" parent="hall" unique_id=1734191329 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -22.74132, 0, -5.3575583)
+
+[node name="chair-dining140" parent="hall" unique_id=605790109 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -22.74132, 0, -6.23588)
+
+[node name="chair-dining141" parent="hall" unique_id=723331979 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -22.74132, 0, -6.9273252)
+
+[node name="table-dining12" parent="hall" unique_id=394125563 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -24.374365, 0, -6.6163607)
+
+[node name="table-dining13" parent="hall" unique_id=1446437881 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -24.374365, 0, -4.9821486)
+
+[node name="table-dining14" parent="hall" unique_id=1708832276 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.777618, 0, -4.9821486)
+
+[node name="table-dining15" parent="hall" unique_id=1739034626 instance=ExtResource("11_arp2o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.777618, 0, -6.664426)
+
+[node name="chair-dining142" parent="hall" unique_id=1290108038 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.525127, 0, -6.955356)
+
+[node name="chair-dining143" parent="hall" unique_id=1608737077 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.525127, 0, -6.2078485)
+
+[node name="chair-dining144" parent="hall" unique_id=680555795 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.525127, 0, -5.329527)
+
+[node name="chair-dining145" parent="hall" unique_id=627671307 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.525127, 0, -4.6380816)
+
+[node name="chair-dining146" parent="hall" unique_id=1948311165 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.917154, 0, -6.955356)
+
+[node name="chair-dining147" parent="hall" unique_id=2081688731 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.917154, 0, -6.2078485)
+
+[node name="chair-dining148" parent="hall" unique_id=1330349389 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.917154, 0, -5.329527)
+
+[node name="chair-dining149" parent="hall" unique_id=1957515011 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.917154, 0, -4.6380816)
+
+[node name="chair-dining150" parent="hall" unique_id=235009881 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.150957, 0, -4.6100507)
+
+[node name="chair-dining151" parent="hall" unique_id=158272524 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.150957, 0, -5.3575583)
+
+[node name="chair-dining152" parent="hall" unique_id=1761683711 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.150957, 0, -6.23588)
+
+[node name="chair-dining153" parent="hall" unique_id=1288555937 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.150957, 0, -6.9273252)
+
+[node name="chair-dining154" parent="hall" unique_id=562495397 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -27.599047, 0, -4.6100507)
+
+[node name="chair-dining155" parent="hall" unique_id=1912129740 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -27.599047, 0, -5.3575583)
+
+[node name="chair-dining156" parent="hall" unique_id=1743033555 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -27.599047, 0, -6.23588)
+
+[node name="chair-dining157" parent="hall" unique_id=1320140878 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -27.599047, 0, -6.9273252)
+
+[node name="beer" type="Node3D" parent="hall" unique_id=1482633296]
+
+[node name="beer2" parent="hall/beer" unique_id=354766108 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.9002276, 0, -0.43541965, 0, 1, 0, 0.43541965, 0, 0.9002276, -26.910631, 0.80086964, -4.5023823)
+
+[node name="beer3" parent="hall/beer" unique_id=1654855240 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.9002276, 0, -0.43541965, 0, 1, 0, 0.43541965, 0, 0.9002276, -26.594969, 0.80086964, -5.170412)
+
+[node name="beer4" parent="hall/beer" unique_id=1060273012 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.71923065, 0, 0.69477135, 0, 1, 0, -0.69477135, 0, 0.71923065, -26.910631, 0.80086964, -5.44937)
+
+[node name="beer5" parent="hall/beer" unique_id=831801399 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.7103206, 0, -0.7038784, 0, 1, 0, 0.7038784, 0, 0.7103206, -26.910631, 0.80086964, -6.2642193)
+
+[node name="beer6" parent="hall/beer" unique_id=1686271249 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.8257146, 0, 0.5640882, 0, 1, 0, -0.5640882, 0, 0.8257146, -26.910631, 0.80086964, -7.203866)
+
+[node name="beer7" parent="hall/beer" unique_id=113206868 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.44964644, 0, -0.8932066, 0, 1, 0, 0.8932066, 0, 0.44964644, -26.587627, 0.80086964, -6.9616127)
+
+[node name="beer8" parent="hall/beer" unique_id=552660545 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.87511003, 0, 0.48392403, 0, 1, 0, -0.48392403, 0, 0.87511003, -26.609652, 0.80086964, -6.5431767)
+
+[node name="beer9" parent="hall/beer" unique_id=1688781895 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.43070006, 0, -0.9024951, 0, 1, 0, 0.9024951, 0, 0.43070006, -26.565605, 0.80086964, -4.884114)
+
+[node name="beer10" parent="hall/beer" unique_id=1907387463 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(-0.8672185, 0, -0.49792778, 0, 1, 0, 0.49792778, 0, -0.8672185, -26.82988, 0.80086964, -5.023592)
+
+[node name="beer2" parent="hall" unique_id=1809780980 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.9002276, 0, -0.43541965, 0, 1, 0, 0.43541965, 0, 0.9002276, -24.348625, 0.80086964, -4.5023823)
+
+[node name="beer3" parent="hall" unique_id=706271727 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(-0.14250794, 0, -0.98979366, 0, 1, 0, 0.98979366, 0, -0.14250794, -24.289898, 0.80086964, -5.280527)
+
+[node name="beer4" parent="hall" unique_id=831985325 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.9002276, 0, -0.43541965, 0.023304146, 0.99856675, 0.048181187, 0.4347956, -0.053521115, 0.89893734, -24.583538, 0.80086964, -6.689996)
+
+[node name="beer5" parent="hall" unique_id=1146320173 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.41761336, 0, -0.9086249, 0, 1, 0, 0.9086249, 0, 0.41761336, -21.962805, 0.80086964, -6.609246)
+
+[node name="beer6" parent="hall" unique_id=1718110613 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(0.9002276, 0, -0.43541965, 0, 1, 0, 0.43541965, 0, 0.9002276, -19.496233, 0.80086964, -5.280527)
+
+[node name="beer7" parent="hall" unique_id=451532040 instance=ExtResource("15_0fmhk")]
+transform = Transform3D(-0.66971403, 0, 0.7426191, 0, 1, 0, -0.7426191, 0, -0.66971403, -19.40814, 0.80086964, -6.7046785)
+
+[node name="cereal-box" parent="hall" unique_id=703159383 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.9863403, 0, -0.16472054, 0, 1, 0, 0.16472054, 0, 0.9863403, -24.361692, 0.8001709, -4.864241)
+
+[node name="cereal-box2" parent="hall" unique_id=608584200 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8719155, 0, 0.4896564, 0, 1, 0, -0.4896564, 0, 0.8719155, -24.361692, 0.8001709, -6.227382)
+
+[node name="cereal-box3" parent="hall" unique_id=660693857 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.45905274, 0, 0.888409, 0, 1, 0, -0.888409, 0, 0.45905274, -26.65114, 0.8001709, -5.642183)
+
+[node name="cereal-box4" parent="hall" unique_id=1082365303 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.9863403, 0, -0.16472054, 0, 1, 0, 0.16472054, 0, 0.9863403, -22.131054, 0.8001709, -5.4131627)
+
+[node name="stack" type="Node3D" parent="hall" unique_id=1405316685]
+
+[node name="cereal-box5" parent="hall/stack" unique_id=762588889 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -40.23416, 2.3841858e-07, -5.0298834)
+
+[node name="cereal-box6" parent="hall/stack" unique_id=1277657506 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.98304, 2.3841858e-07, -5.200225)
+
+[node name="cereal-box7" parent="hall/stack" unique_id=1173180432 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.744873, 2.3841858e-07, -5.3617806)
+
+[node name="cereal-box8" parent="hall/stack" unique_id=1664051227 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.499657, 2.3841858e-07, -5.5281157)
+
+[node name="cereal-box9" parent="hall/stack" unique_id=849869870 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.252197, 2.3841858e-07, -5.6959734)
+
+[node name="cereal-box10" parent="hall/stack" unique_id=1680709780 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.998165, 2.3841858e-07, -5.8682914)
+
+[node name="cereal-box11" parent="hall/stack" unique_id=1163648803 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.740948, 2.3841858e-07, -6.042766)
+
+[node name="cereal-box12" parent="hall/stack" unique_id=1130584938 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.49605, 2.3841858e-07, -6.2088847)
+
+[node name="cereal-box13" parent="hall/stack" unique_id=779690435 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -40.080536, 0.37313014, -5.1340914)
+
+[node name="cereal-box14" parent="hall/stack" unique_id=2120961594 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.8425, 0.37313014, -5.295559)
+
+[node name="cereal-box15" parent="hall/stack" unique_id=2039937323 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.604218, 0.37313014, -5.4571896)
+
+[node name="cereal-box16" parent="hall/stack" unique_id=273946670 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.349884, 0.37313014, -5.629711)
+
+[node name="cereal-box17" parent="hall/stack" unique_id=410523548 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.10775, 0.37313014, -5.7939563)
+
+[node name="cereal-box18" parent="hall/stack" unique_id=1043341137 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.872734, 0.37313014, -5.9533744)
+
+[node name="cereal-box19" parent="hall/stack" unique_id=1329593014 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.622887, 0.37313014, -6.122851)
+
+[node name="cereal-box20" parent="hall/stack" unique_id=27626811 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.925503, 0.7527992, -5.2392545)
+
+[node name="cereal-box21" parent="hall/stack" unique_id=1352006263 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.66963, 0.7527992, -5.4128213)
+
+[node name="cereal-box22" parent="hall/stack" unique_id=1030981907 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.43989, 0.7527992, -5.568657)
+
+[node name="cereal-box23" parent="hall/stack" unique_id=1530003144 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.19372, 0.7527992, -5.7356386)
+
+[node name="cereal-box24" parent="hall/stack" unique_id=520826496 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.958294, 0.7527992, -5.8953357)
+
+[node name="cereal-box25" parent="hall/stack" unique_id=836064753 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.69441, 0.7527992, -6.074335)
+
+[node name="cereal-box26" parent="hall/stack" unique_id=212017024 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.801273, 1.1370914, -5.3235216)
+
+[node name="cereal-box27" parent="hall/stack" unique_id=498538008 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.57469, 1.1370914, -5.477218)
+
+[node name="cereal-box28" parent="hall/stack" unique_id=252980447 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.338867, 1.1370914, -5.6371827)
+
+[node name="cereal-box29" parent="hall/stack" unique_id=1520678932 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.07079, 1.1370914, -5.819028)
+
+[node name="cereal-box30" parent="hall/stack" unique_id=1845028163 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.81471, 1.1370914, -5.992734)
+
+[node name="cereal-box31" parent="hall/stack" unique_id=1849119081 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.68228, 1.5142477, -5.4042387)
+
+[node name="cereal-box32" parent="hall/stack" unique_id=1428489783 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.44453, 1.5142477, -5.5655093)
+
+[node name="cereal-box33" parent="hall/stack" unique_id=2114092155 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.1988, 1.5142477, -5.7321954)
+
+[node name="cereal-box34" parent="hall/stack" unique_id=905944066 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -38.97037, 1.5142477, -5.887142)
+
+[node name="cereal-box35" parent="hall/stack" unique_id=1452331703 instance=ExtResource("4_50fbu")]
+transform = Transform3D(0.8275708, 0, 0.5613614, 0, 1, 0, -0.5613614, 0, 0.8275708, -39.68228, 1.5142477, -5.4042387)
+
+[node name="coffee-cup-paper" parent="hall" unique_id=1628838629 instance=ExtResource("16_iafhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.972631, 0.8000004, -4.529632)
+
+[node name="coffee-cup-paper2" parent="hall" unique_id=1420913393 instance=ExtResource("16_iafhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.736296, 0.8000004, -5.43415)
+
+[node name="coffee-cup-paper3" parent="hall" unique_id=129687785 instance=ExtResource("16_iafhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.549484, 0.8000004, -4.4721537)
+
+[node name="coffee-cup-paper4" parent="hall" unique_id=2084638300 instance=ExtResource("16_iafhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.334131, 0.8000002, -4.4700336)
+
+[node name="television" parent="hall" unique_id=357259523 instance=ExtResource("17_cr74b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.478737, 1.1571047, -7.6801057)
+
+[node name="television2" parent="hall" unique_id=188563137 instance=ExtResource("17_cr74b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.921803, 1.1571047, -7.6801057)
+
+[node name="television3" parent="hall" unique_id=1317593173 instance=ExtResource("17_cr74b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.90281, 1.1571047, -7.6801057)
+
+[node name="television4" parent="hall" unique_id=1377753090 instance=ExtResource("17_cr74b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.50942, 1.1571047, -7.6801057)
 
 [node name="outside" type="Node3D" parent="." unique_id=1507530086]
 
@@ -714,549 +1036,558 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.625, 0, 33.75)
 [node name="tree-bare3" parent="outside" unique_id=1866400863 instance=ExtResource("6_wc255")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -45, 0, 12.625)
 
+[node name="flag-big" parent="outside" unique_id=868549673 instance=ExtResource("17_0fmhk")]
+transform = Transform3D(1.8000001, 0, 0, 0, 2.5500002, 0, 0, 0, 1.3, -13.25, 0, 45.125)
+
+[node name="flag-big2" parent="outside" unique_id=1026734542 instance=ExtResource("17_0fmhk")]
+transform = Transform3D(1.8000001, 0, 0, 0, 2.5500002, 0, 0, 0, 1.3, -13.25, 0, 43.125)
+
+[node name="flag-big3" parent="outside" unique_id=1744961202 instance=ExtResource("17_0fmhk")]
+transform = Transform3D(1.8000001, 0, 0, 0, 2.5500002, 0, 0, 0, 1.3, -13.25, 0, 41)
+
 [node name="stage" type="Node3D" parent="." unique_id=315466806]
 
 [node name="stage-truss" parent="stage" unique_id=1088891343 instance=ExtResource("14_w3o6u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.125, 0, -9.625)
 
-[node name="chair-dining" parent="stage" unique_id=727647423 instance=ExtResource("3_3ies3")]
+[node name="chair-dining" parent="stage" unique_id=715742170 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -15.125)
 
-[node name="chair-dining2" parent="stage" unique_id=1876686613 instance=ExtResource("3_3ies3")]
+[node name="chair-dining2" parent="stage" unique_id=1166628791 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -15.75)
 
-[node name="chair-dining3" parent="stage" unique_id=866424879 instance=ExtResource("3_3ies3")]
+[node name="chair-dining3" parent="stage" unique_id=1065355312 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -14.5)
 
-[node name="chair-dining4" parent="stage" unique_id=2139863597 instance=ExtResource("3_3ies3")]
+[node name="chair-dining4" parent="stage" unique_id=503757544 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -13.25)
 
-[node name="chair-dining5" parent="stage" unique_id=1807284213 instance=ExtResource("3_3ies3")]
+[node name="chair-dining5" parent="stage" unique_id=908312280 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -13.875)
 
-[node name="chair-dining6" parent="stage" unique_id=451801333 instance=ExtResource("3_3ies3")]
+[node name="chair-dining6" parent="stage" unique_id=385363739 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -12.625)
 
-[node name="chair-dining7" parent="stage" unique_id=587229275 instance=ExtResource("3_3ies3")]
+[node name="chair-dining7" parent="stage" unique_id=272956490 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -17)
 
-[node name="chair-dining8" parent="stage" unique_id=1487413073 instance=ExtResource("3_3ies3")]
+[node name="chair-dining8" parent="stage" unique_id=1518492287 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -17.625)
 
-[node name="chair-dining9" parent="stage" unique_id=1079409650 instance=ExtResource("3_3ies3")]
+[node name="chair-dining9" parent="stage" unique_id=1288625149 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -16.375)
 
-[node name="chair-dining10" parent="stage" unique_id=1852676751 instance=ExtResource("3_3ies3")]
+[node name="chair-dining10" parent="stage" unique_id=855218678 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -15.125)
 
-[node name="chair-dining11" parent="stage" unique_id=855652349 instance=ExtResource("3_3ies3")]
+[node name="chair-dining11" parent="stage" unique_id=802999776 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -15.75)
 
-[node name="chair-dining12" parent="stage" unique_id=211727650 instance=ExtResource("3_3ies3")]
+[node name="chair-dining12" parent="stage" unique_id=92752052 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -14.5)
 
-[node name="chair-dining13" parent="stage" unique_id=1740532561 instance=ExtResource("3_3ies3")]
+[node name="chair-dining13" parent="stage" unique_id=979896517 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -17)
 
-[node name="chair-dining14" parent="stage" unique_id=1754964369 instance=ExtResource("3_3ies3")]
+[node name="chair-dining14" parent="stage" unique_id=1327876423 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -17.625)
 
-[node name="chair-dining15" parent="stage" unique_id=1299402733 instance=ExtResource("3_3ies3")]
+[node name="chair-dining15" parent="stage" unique_id=87873608 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -16.375)
 
-[node name="chair-dining16" parent="stage" unique_id=756608642 instance=ExtResource("3_3ies3")]
+[node name="chair-dining16" parent="stage" unique_id=1817269441 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -13.25)
 
-[node name="chair-dining17" parent="stage" unique_id=297878655 instance=ExtResource("3_3ies3")]
+[node name="chair-dining17" parent="stage" unique_id=1279932079 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -13.875)
 
-[node name="chair-dining18" parent="stage" unique_id=74712703 instance=ExtResource("3_3ies3")]
+[node name="chair-dining18" parent="stage" unique_id=1796964838 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -12.625)
 
-[node name="chair-dining19" parent="stage" unique_id=2124805999 instance=ExtResource("3_3ies3")]
+[node name="chair-dining19" parent="stage" unique_id=21493766 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -22)
 
-[node name="chair-dining20" parent="stage" unique_id=1847070089 instance=ExtResource("3_3ies3")]
+[node name="chair-dining20" parent="stage" unique_id=322651406 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -22.625)
 
-[node name="chair-dining21" parent="stage" unique_id=1354381245 instance=ExtResource("3_3ies3")]
+[node name="chair-dining21" parent="stage" unique_id=2110597372 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -21.375)
 
-[node name="chair-dining22" parent="stage" unique_id=484617395 instance=ExtResource("3_3ies3")]
+[node name="chair-dining22" parent="stage" unique_id=8808834 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -20.125)
 
-[node name="chair-dining23" parent="stage" unique_id=1544326181 instance=ExtResource("3_3ies3")]
+[node name="chair-dining23" parent="stage" unique_id=188198111 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -20.75)
 
-[node name="chair-dining24" parent="stage" unique_id=46454254 instance=ExtResource("3_3ies3")]
+[node name="chair-dining24" parent="stage" unique_id=316855307 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -19.5)
 
-[node name="chair-dining25" parent="stage" unique_id=1078104744 instance=ExtResource("3_3ies3")]
+[node name="chair-dining25" parent="stage" unique_id=1341708166 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -23.875)
 
-[node name="chair-dining26" parent="stage" unique_id=1325731388 instance=ExtResource("3_3ies3")]
+[node name="chair-dining26" parent="stage" unique_id=1281608642 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -24.5)
 
-[node name="chair-dining27" parent="stage" unique_id=65052752 instance=ExtResource("3_3ies3")]
+[node name="chair-dining27" parent="stage" unique_id=124150180 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -23.25)
 
-[node name="chair-dining28" parent="stage" unique_id=1453950720 instance=ExtResource("3_3ies3")]
+[node name="chair-dining28" parent="stage" unique_id=1822810127 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -22)
 
-[node name="chair-dining29" parent="stage" unique_id=254357317 instance=ExtResource("3_3ies3")]
+[node name="chair-dining29" parent="stage" unique_id=250756443 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -22.625)
 
-[node name="chair-dining30" parent="stage" unique_id=2146257641 instance=ExtResource("3_3ies3")]
+[node name="chair-dining30" parent="stage" unique_id=2107173968 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -21.375)
 
-[node name="chair-dining31" parent="stage" unique_id=862713138 instance=ExtResource("3_3ies3")]
+[node name="chair-dining31" parent="stage" unique_id=1052273969 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -23.875)
 
-[node name="chair-dining32" parent="stage" unique_id=1914308146 instance=ExtResource("3_3ies3")]
+[node name="chair-dining32" parent="stage" unique_id=573254259 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -24.5)
 
-[node name="chair-dining33" parent="stage" unique_id=1458853588 instance=ExtResource("3_3ies3")]
+[node name="chair-dining33" parent="stage" unique_id=2010632434 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -23.25)
 
-[node name="chair-dining34" parent="stage" unique_id=280576661 instance=ExtResource("3_3ies3")]
+[node name="chair-dining34" parent="stage" unique_id=1655158461 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -20.125)
 
-[node name="chair-dining35" parent="stage" unique_id=1700277393 instance=ExtResource("3_3ies3")]
+[node name="chair-dining35" parent="stage" unique_id=332748710 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -20.75)
 
-[node name="chair-dining36" parent="stage" unique_id=969647150 instance=ExtResource("3_3ies3")]
+[node name="chair-dining36" parent="stage" unique_id=187263774 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -19.5)
 
-[node name="chair-dining37" parent="stage" unique_id=1063064479 instance=ExtResource("3_3ies3")]
+[node name="chair-dining37" parent="stage" unique_id=2028988398 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -15.125)
 
-[node name="chair-dining38" parent="stage" unique_id=1520619088 instance=ExtResource("3_3ies3")]
+[node name="chair-dining38" parent="stage" unique_id=1561599755 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -15.75)
 
-[node name="chair-dining39" parent="stage" unique_id=2137392714 instance=ExtResource("3_3ies3")]
+[node name="chair-dining39" parent="stage" unique_id=1898901951 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -14.5)
 
-[node name="chair-dining40" parent="stage" unique_id=690010615 instance=ExtResource("3_3ies3")]
+[node name="chair-dining40" parent="stage" unique_id=889356284 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -13.25)
 
-[node name="chair-dining41" parent="stage" unique_id=2405873 instance=ExtResource("3_3ies3")]
+[node name="chair-dining41" parent="stage" unique_id=1968262343 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -13.875)
 
-[node name="chair-dining42" parent="stage" unique_id=1485567199 instance=ExtResource("3_3ies3")]
+[node name="chair-dining42" parent="stage" unique_id=128485944 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -12.625)
 
-[node name="chair-dining43" parent="stage" unique_id=849845817 instance=ExtResource("3_3ies3")]
+[node name="chair-dining43" parent="stage" unique_id=1410648696 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -17)
 
-[node name="chair-dining44" parent="stage" unique_id=472364273 instance=ExtResource("3_3ies3")]
+[node name="chair-dining44" parent="stage" unique_id=1468254109 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -17.625)
 
-[node name="chair-dining45" parent="stage" unique_id=1745367156 instance=ExtResource("3_3ies3")]
+[node name="chair-dining45" parent="stage" unique_id=1129382808 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -16.375)
 
-[node name="chair-dining46" parent="stage" unique_id=1109757652 instance=ExtResource("3_3ies3")]
+[node name="chair-dining46" parent="stage" unique_id=1808357019 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -15.125)
 
-[node name="chair-dining47" parent="stage" unique_id=1216005572 instance=ExtResource("3_3ies3")]
+[node name="chair-dining47" parent="stage" unique_id=123625635 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -15.75)
 
-[node name="chair-dining48" parent="stage" unique_id=967437702 instance=ExtResource("3_3ies3")]
+[node name="chair-dining48" parent="stage" unique_id=1983097707 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -14.5)
 
-[node name="chair-dining49" parent="stage" unique_id=704517688 instance=ExtResource("3_3ies3")]
+[node name="chair-dining49" parent="stage" unique_id=1812940683 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -17)
 
-[node name="chair-dining50" parent="stage" unique_id=1857235451 instance=ExtResource("3_3ies3")]
+[node name="chair-dining50" parent="stage" unique_id=664621843 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -17.625)
 
-[node name="chair-dining51" parent="stage" unique_id=1657674204 instance=ExtResource("3_3ies3")]
+[node name="chair-dining51" parent="stage" unique_id=1046043604 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -16.375)
 
-[node name="chair-dining52" parent="stage" unique_id=990079506 instance=ExtResource("3_3ies3")]
+[node name="chair-dining52" parent="stage" unique_id=1677273473 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -13.25)
 
-[node name="chair-dining53" parent="stage" unique_id=1781720291 instance=ExtResource("3_3ies3")]
+[node name="chair-dining53" parent="stage" unique_id=472981048 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -13.875)
 
-[node name="chair-dining54" parent="stage" unique_id=1423594385 instance=ExtResource("3_3ies3")]
+[node name="chair-dining54" parent="stage" unique_id=428739279 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -12.625)
 
-[node name="chair-dining55" parent="stage" unique_id=770675322 instance=ExtResource("3_3ies3")]
+[node name="chair-dining55" parent="stage" unique_id=168085696 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -22)
 
-[node name="chair-dining56" parent="stage" unique_id=32331 instance=ExtResource("3_3ies3")]
+[node name="chair-dining56" parent="stage" unique_id=1537125562 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -22.625)
 
-[node name="chair-dining57" parent="stage" unique_id=1201042111 instance=ExtResource("3_3ies3")]
+[node name="chair-dining57" parent="stage" unique_id=558421489 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -21.375)
 
-[node name="chair-dining58" parent="stage" unique_id=1586614159 instance=ExtResource("3_3ies3")]
+[node name="chair-dining58" parent="stage" unique_id=1163824252 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -20.125)
 
-[node name="chair-dining59" parent="stage" unique_id=1753661612 instance=ExtResource("3_3ies3")]
+[node name="chair-dining59" parent="stage" unique_id=1401893171 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -20.75)
 
-[node name="chair-dining60" parent="stage" unique_id=1849852286 instance=ExtResource("3_3ies3")]
+[node name="chair-dining60" parent="stage" unique_id=1292824231 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -19.5)
 
-[node name="chair-dining61" parent="stage" unique_id=1065299860 instance=ExtResource("3_3ies3")]
+[node name="chair-dining61" parent="stage" unique_id=1208179038 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -23.875)
 
-[node name="chair-dining62" parent="stage" unique_id=2048310111 instance=ExtResource("3_3ies3")]
+[node name="chair-dining62" parent="stage" unique_id=495089099 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -24.5)
 
-[node name="chair-dining63" parent="stage" unique_id=724648886 instance=ExtResource("3_3ies3")]
+[node name="chair-dining63" parent="stage" unique_id=781749652 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.875, 0, -23.25)
 
-[node name="chair-dining64" parent="stage" unique_id=711454803 instance=ExtResource("3_3ies3")]
+[node name="chair-dining64" parent="stage" unique_id=1881483183 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -22)
 
-[node name="chair-dining65" parent="stage" unique_id=699846356 instance=ExtResource("3_3ies3")]
+[node name="chair-dining65" parent="stage" unique_id=31378452 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -22.625)
 
-[node name="chair-dining66" parent="stage" unique_id=462310457 instance=ExtResource("3_3ies3")]
+[node name="chair-dining66" parent="stage" unique_id=2070095031 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -21.375)
 
-[node name="chair-dining67" parent="stage" unique_id=281498995 instance=ExtResource("3_3ies3")]
+[node name="chair-dining67" parent="stage" unique_id=309843969 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -23.875)
 
-[node name="chair-dining68" parent="stage" unique_id=1878661281 instance=ExtResource("3_3ies3")]
+[node name="chair-dining68" parent="stage" unique_id=1360705488 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -24.5)
 
-[node name="chair-dining69" parent="stage" unique_id=1293071785 instance=ExtResource("3_3ies3")]
+[node name="chair-dining69" parent="stage" unique_id=1003835586 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -23.25)
 
-[node name="chair-dining70" parent="stage" unique_id=1834482621 instance=ExtResource("3_3ies3")]
+[node name="chair-dining70" parent="stage" unique_id=588240053 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -20.125)
 
-[node name="chair-dining71" parent="stage" unique_id=178787559 instance=ExtResource("3_3ies3")]
+[node name="chair-dining71" parent="stage" unique_id=1675636643 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -20.75)
 
-[node name="chair-dining72" parent="stage" unique_id=1152390800 instance=ExtResource("3_3ies3")]
+[node name="chair-dining72" parent="stage" unique_id=19220849 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.625, 0, -19.5)
 
-[node name="chair-dining73" parent="stage" unique_id=2018761652 instance=ExtResource("3_3ies3")]
+[node name="chair-dining73" parent="stage" unique_id=449912975 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -15.125)
 
-[node name="chair-dining74" parent="stage" unique_id=1471612692 instance=ExtResource("3_3ies3")]
+[node name="chair-dining74" parent="stage" unique_id=535670410 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -15.75)
 
-[node name="chair-dining75" parent="stage" unique_id=4451196 instance=ExtResource("3_3ies3")]
+[node name="chair-dining75" parent="stage" unique_id=1200337737 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -14.5)
 
-[node name="chair-dining76" parent="stage" unique_id=1412774742 instance=ExtResource("3_3ies3")]
+[node name="chair-dining76" parent="stage" unique_id=100161654 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -13.25)
 
-[node name="chair-dining77" parent="stage" unique_id=1792302990 instance=ExtResource("3_3ies3")]
+[node name="chair-dining77" parent="stage" unique_id=1106159880 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -13.875)
 
-[node name="chair-dining78" parent="stage" unique_id=874925512 instance=ExtResource("3_3ies3")]
+[node name="chair-dining78" parent="stage" unique_id=29953113 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -12.625)
 
-[node name="chair-dining79" parent="stage" unique_id=2075884267 instance=ExtResource("3_3ies3")]
+[node name="chair-dining79" parent="stage" unique_id=1863396795 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -17)
 
-[node name="chair-dining80" parent="stage" unique_id=1404970768 instance=ExtResource("3_3ies3")]
+[node name="chair-dining80" parent="stage" unique_id=134022282 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -17.625)
 
-[node name="chair-dining81" parent="stage" unique_id=1961877883 instance=ExtResource("3_3ies3")]
+[node name="chair-dining81" parent="stage" unique_id=1032192640 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -16.375)
 
-[node name="chair-dining82" parent="stage" unique_id=1885435235 instance=ExtResource("3_3ies3")]
+[node name="chair-dining82" parent="stage" unique_id=304472946 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -15.125)
 
-[node name="chair-dining83" parent="stage" unique_id=1594527772 instance=ExtResource("3_3ies3")]
+[node name="chair-dining83" parent="stage" unique_id=319718751 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -15.75)
 
-[node name="chair-dining84" parent="stage" unique_id=1807348810 instance=ExtResource("3_3ies3")]
+[node name="chair-dining84" parent="stage" unique_id=9895883 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -14.5)
 
-[node name="chair-dining85" parent="stage" unique_id=1140869482 instance=ExtResource("3_3ies3")]
+[node name="chair-dining85" parent="stage" unique_id=2113791210 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -17)
 
-[node name="chair-dining86" parent="stage" unique_id=1278307508 instance=ExtResource("3_3ies3")]
+[node name="chair-dining86" parent="stage" unique_id=1280546018 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -17.625)
 
-[node name="chair-dining87" parent="stage" unique_id=740991033 instance=ExtResource("3_3ies3")]
+[node name="chair-dining87" parent="stage" unique_id=1100361603 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -16.375)
 
-[node name="chair-dining88" parent="stage" unique_id=803065019 instance=ExtResource("3_3ies3")]
+[node name="chair-dining88" parent="stage" unique_id=1235637602 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -13.25)
 
-[node name="chair-dining89" parent="stage" unique_id=1701742941 instance=ExtResource("3_3ies3")]
+[node name="chair-dining89" parent="stage" unique_id=253640379 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -13.875)
 
-[node name="chair-dining90" parent="stage" unique_id=1821393614 instance=ExtResource("3_3ies3")]
+[node name="chair-dining90" parent="stage" unique_id=2071272407 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -12.625)
 
-[node name="chair-dining91" parent="stage" unique_id=1855520095 instance=ExtResource("3_3ies3")]
+[node name="chair-dining91" parent="stage" unique_id=1043410936 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -22)
 
-[node name="chair-dining92" parent="stage" unique_id=346798951 instance=ExtResource("3_3ies3")]
+[node name="chair-dining92" parent="stage" unique_id=1364119228 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -22.625)
 
-[node name="chair-dining93" parent="stage" unique_id=42452330 instance=ExtResource("3_3ies3")]
+[node name="chair-dining93" parent="stage" unique_id=1572080823 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -21.375)
 
-[node name="chair-dining94" parent="stage" unique_id=1982308607 instance=ExtResource("3_3ies3")]
+[node name="chair-dining94" parent="stage" unique_id=1830629584 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -20.125)
 
-[node name="chair-dining95" parent="stage" unique_id=2144946287 instance=ExtResource("3_3ies3")]
+[node name="chair-dining95" parent="stage" unique_id=858115006 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -20.75)
 
-[node name="chair-dining96" parent="stage" unique_id=1034794813 instance=ExtResource("3_3ies3")]
+[node name="chair-dining96" parent="stage" unique_id=407019483 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -19.5)
 
-[node name="chair-dining97" parent="stage" unique_id=2037352227 instance=ExtResource("3_3ies3")]
+[node name="chair-dining97" parent="stage" unique_id=998514902 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -23.875)
 
-[node name="chair-dining98" parent="stage" unique_id=164528757 instance=ExtResource("3_3ies3")]
+[node name="chair-dining98" parent="stage" unique_id=1532362783 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -24.5)
 
-[node name="chair-dining99" parent="stage" unique_id=1771068046 instance=ExtResource("3_3ies3")]
+[node name="chair-dining99" parent="stage" unique_id=721191607 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.375, 0, -23.25)
 
-[node name="chair-dining100" parent="stage" unique_id=1348214968 instance=ExtResource("3_3ies3")]
+[node name="chair-dining100" parent="stage" unique_id=389063858 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -22)
 
-[node name="chair-dining101" parent="stage" unique_id=437676196 instance=ExtResource("3_3ies3")]
+[node name="chair-dining101" parent="stage" unique_id=1723592702 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -22.625)
 
-[node name="chair-dining102" parent="stage" unique_id=2059918020 instance=ExtResource("3_3ies3")]
+[node name="chair-dining102" parent="stage" unique_id=1505372478 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -21.375)
 
-[node name="chair-dining103" parent="stage" unique_id=2000451693 instance=ExtResource("3_3ies3")]
+[node name="chair-dining103" parent="stage" unique_id=1690308403 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -23.875)
 
-[node name="chair-dining104" parent="stage" unique_id=1419075278 instance=ExtResource("3_3ies3")]
+[node name="chair-dining104" parent="stage" unique_id=2045282977 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -24.5)
 
-[node name="chair-dining105" parent="stage" unique_id=520113169 instance=ExtResource("3_3ies3")]
+[node name="chair-dining105" parent="stage" unique_id=426322032 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -23.25)
 
-[node name="chair-dining106" parent="stage" unique_id=842156355 instance=ExtResource("3_3ies3")]
+[node name="chair-dining106" parent="stage" unique_id=18250977 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -20.125)
 
-[node name="chair-dining107" parent="stage" unique_id=943395596 instance=ExtResource("3_3ies3")]
+[node name="chair-dining107" parent="stage" unique_id=1749396146 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -20.75)
 
-[node name="chair-dining108" parent="stage" unique_id=1101929489 instance=ExtResource("3_3ies3")]
+[node name="chair-dining108" parent="stage" unique_id=1590900621 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.125, 0, -19.5)
 
-[node name="chair-dining109" parent="stage" unique_id=50692553 instance=ExtResource("3_3ies3")]
+[node name="chair-dining109" parent="stage" unique_id=1688847260 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -15.125)
 
-[node name="chair-dining110" parent="stage" unique_id=1439841985 instance=ExtResource("3_3ies3")]
+[node name="chair-dining110" parent="stage" unique_id=1607162668 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -15.75)
 
-[node name="chair-dining111" parent="stage" unique_id=68323566 instance=ExtResource("3_3ies3")]
+[node name="chair-dining111" parent="stage" unique_id=1051440145 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -14.5)
 
-[node name="chair-dining112" parent="stage" unique_id=1563320401 instance=ExtResource("3_3ies3")]
+[node name="chair-dining112" parent="stage" unique_id=1976451299 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -13.25)
 
-[node name="chair-dining113" parent="stage" unique_id=183486841 instance=ExtResource("3_3ies3")]
+[node name="chair-dining113" parent="stage" unique_id=234750913 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -13.875)
 
-[node name="chair-dining114" parent="stage" unique_id=710330774 instance=ExtResource("3_3ies3")]
+[node name="chair-dining114" parent="stage" unique_id=1391555203 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -12.625)
 
-[node name="chair-dining115" parent="stage" unique_id=2020524721 instance=ExtResource("3_3ies3")]
+[node name="chair-dining115" parent="stage" unique_id=2025455505 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -17)
 
-[node name="chair-dining116" parent="stage" unique_id=51791728 instance=ExtResource("3_3ies3")]
+[node name="chair-dining116" parent="stage" unique_id=690639272 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -17.625)
 
-[node name="chair-dining117" parent="stage" unique_id=500431221 instance=ExtResource("3_3ies3")]
+[node name="chair-dining117" parent="stage" unique_id=578160817 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -16.375)
 
-[node name="chair-dining118" parent="stage" unique_id=957627364 instance=ExtResource("3_3ies3")]
+[node name="chair-dining118" parent="stage" unique_id=1225082994 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -15.125)
 
-[node name="chair-dining119" parent="stage" unique_id=652896552 instance=ExtResource("3_3ies3")]
+[node name="chair-dining119" parent="stage" unique_id=1712962742 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -15.75)
 
-[node name="chair-dining120" parent="stage" unique_id=1227219448 instance=ExtResource("3_3ies3")]
+[node name="chair-dining120" parent="stage" unique_id=2022942680 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -14.5)
 
-[node name="chair-dining121" parent="stage" unique_id=145040972 instance=ExtResource("3_3ies3")]
+[node name="chair-dining121" parent="stage" unique_id=1354192191 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -17)
 
-[node name="chair-dining122" parent="stage" unique_id=1423387261 instance=ExtResource("3_3ies3")]
+[node name="chair-dining122" parent="stage" unique_id=1594053043 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -17.625)
 
-[node name="chair-dining123" parent="stage" unique_id=1156370184 instance=ExtResource("3_3ies3")]
+[node name="chair-dining123" parent="stage" unique_id=1417343200 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -16.375)
 
-[node name="chair-dining124" parent="stage" unique_id=1067783238 instance=ExtResource("3_3ies3")]
+[node name="chair-dining124" parent="stage" unique_id=605702396 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -13.25)
 
-[node name="chair-dining125" parent="stage" unique_id=2088335231 instance=ExtResource("3_3ies3")]
+[node name="chair-dining125" parent="stage" unique_id=2011685452 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -13.875)
 
-[node name="chair-dining126" parent="stage" unique_id=1025821017 instance=ExtResource("3_3ies3")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -12.625)
+[node name="chair-dining126" parent="stage" unique_id=1962762473 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0.046281517, -12.625)
 
-[node name="chair-dining127" parent="stage" unique_id=300887212 instance=ExtResource("3_3ies3")]
+[node name="chair-dining127" parent="stage" unique_id=651733996 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -22)
 
-[node name="chair-dining128" parent="stage" unique_id=1862932533 instance=ExtResource("3_3ies3")]
+[node name="chair-dining128" parent="stage" unique_id=1885416208 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -22.625)
 
-[node name="chair-dining129" parent="stage" unique_id=2077687508 instance=ExtResource("3_3ies3")]
+[node name="chair-dining129" parent="stage" unique_id=1979791175 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -21.375)
 
-[node name="chair-dining130" parent="stage" unique_id=1527475326 instance=ExtResource("3_3ies3")]
+[node name="chair-dining130" parent="stage" unique_id=657585204 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -20.125)
 
-[node name="chair-dining131" parent="stage" unique_id=645449142 instance=ExtResource("3_3ies3")]
+[node name="chair-dining131" parent="stage" unique_id=574949404 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -20.75)
 
-[node name="chair-dining132" parent="stage" unique_id=1183701940 instance=ExtResource("3_3ies3")]
+[node name="chair-dining132" parent="stage" unique_id=1593868326 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -19.5)
 
-[node name="chair-dining133" parent="stage" unique_id=2083515714 instance=ExtResource("3_3ies3")]
+[node name="chair-dining133" parent="stage" unique_id=868033025 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -23.875)
 
-[node name="chair-dining134" parent="stage" unique_id=168377334 instance=ExtResource("3_3ies3")]
+[node name="chair-dining134" parent="stage" unique_id=1943752211 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -24.5)
 
-[node name="chair-dining135" parent="stage" unique_id=1102043910 instance=ExtResource("3_3ies3")]
+[node name="chair-dining135" parent="stage" unique_id=1067190694 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.875, 0, -23.25)
 
-[node name="chair-dining136" parent="stage" unique_id=1203885204 instance=ExtResource("3_3ies3")]
+[node name="chair-dining136" parent="stage" unique_id=577502510 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -22)
 
-[node name="chair-dining137" parent="stage" unique_id=1127938228 instance=ExtResource("3_3ies3")]
+[node name="chair-dining137" parent="stage" unique_id=362625609 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -22.625)
 
-[node name="chair-dining138" parent="stage" unique_id=313127861 instance=ExtResource("3_3ies3")]
+[node name="chair-dining138" parent="stage" unique_id=840238773 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -21.375)
 
-[node name="chair-dining139" parent="stage" unique_id=1653846033 instance=ExtResource("3_3ies3")]
+[node name="chair-dining139" parent="stage" unique_id=1837892890 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -23.875)
 
-[node name="chair-dining140" parent="stage" unique_id=1157962818 instance=ExtResource("3_3ies3")]
+[node name="chair-dining140" parent="stage" unique_id=1098473368 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -24.5)
 
-[node name="chair-dining141" parent="stage" unique_id=869930345 instance=ExtResource("3_3ies3")]
+[node name="chair-dining141" parent="stage" unique_id=530783247 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -23.25)
 
-[node name="chair-dining142" parent="stage" unique_id=492076056 instance=ExtResource("3_3ies3")]
+[node name="chair-dining142" parent="stage" unique_id=260274826 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -20.125)
 
-[node name="chair-dining143" parent="stage" unique_id=108379276 instance=ExtResource("3_3ies3")]
+[node name="chair-dining143" parent="stage" unique_id=115123570 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -20.75)
 
-[node name="chair-dining144" parent="stage" unique_id=1091280308 instance=ExtResource("3_3ies3")]
+[node name="chair-dining144" parent="stage" unique_id=730556563 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.625, 0, -19.5)
 
-[node name="chair-dining145" parent="stage" unique_id=377817293 instance=ExtResource("3_3ies3")]
+[node name="chair-dining145" parent="stage" unique_id=150524258 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -15.125)
 
-[node name="chair-dining146" parent="stage" unique_id=111312425 instance=ExtResource("3_3ies3")]
+[node name="chair-dining146" parent="stage" unique_id=1354721833 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -15.75)
 
-[node name="chair-dining147" parent="stage" unique_id=779821786 instance=ExtResource("3_3ies3")]
+[node name="chair-dining147" parent="stage" unique_id=2112010927 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -14.5)
 
-[node name="chair-dining148" parent="stage" unique_id=2133447092 instance=ExtResource("3_3ies3")]
+[node name="chair-dining148" parent="stage" unique_id=642324555 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -13.25)
 
-[node name="chair-dining149" parent="stage" unique_id=1238677602 instance=ExtResource("3_3ies3")]
+[node name="chair-dining149" parent="stage" unique_id=1857251821 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -13.875)
 
-[node name="chair-dining150" parent="stage" unique_id=147633039 instance=ExtResource("3_3ies3")]
+[node name="chair-dining150" parent="stage" unique_id=805473665 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -12.625)
 
-[node name="chair-dining151" parent="stage" unique_id=1756645220 instance=ExtResource("3_3ies3")]
+[node name="chair-dining151" parent="stage" unique_id=1844185289 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -17)
 
-[node name="chair-dining152" parent="stage" unique_id=1924407940 instance=ExtResource("3_3ies3")]
+[node name="chair-dining152" parent="stage" unique_id=1230178428 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -17.625)
 
-[node name="chair-dining153" parent="stage" unique_id=1056789437 instance=ExtResource("3_3ies3")]
+[node name="chair-dining153" parent="stage" unique_id=1974019823 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -16.375)
 
-[node name="chair-dining154" parent="stage" unique_id=1086090332 instance=ExtResource("3_3ies3")]
+[node name="chair-dining154" parent="stage" unique_id=702977183 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -15.125)
 
-[node name="chair-dining155" parent="stage" unique_id=2118681505 instance=ExtResource("3_3ies3")]
+[node name="chair-dining155" parent="stage" unique_id=2146213103 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -15.75)
 
-[node name="chair-dining156" parent="stage" unique_id=181406265 instance=ExtResource("3_3ies3")]
+[node name="chair-dining156" parent="stage" unique_id=978505830 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -14.5)
 
-[node name="chair-dining157" parent="stage" unique_id=1522994812 instance=ExtResource("3_3ies3")]
+[node name="chair-dining157" parent="stage" unique_id=1494845317 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -17)
 
-[node name="chair-dining158" parent="stage" unique_id=1383381514 instance=ExtResource("3_3ies3")]
+[node name="chair-dining158" parent="stage" unique_id=1869429903 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -17.625)
 
-[node name="chair-dining159" parent="stage" unique_id=1490358047 instance=ExtResource("3_3ies3")]
+[node name="chair-dining159" parent="stage" unique_id=2037732560 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -16.375)
 
-[node name="chair-dining160" parent="stage" unique_id=1119133219 instance=ExtResource("3_3ies3")]
+[node name="chair-dining160" parent="stage" unique_id=100009078 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -13.25)
 
-[node name="chair-dining161" parent="stage" unique_id=1542042933 instance=ExtResource("3_3ies3")]
+[node name="chair-dining161" parent="stage" unique_id=36624565 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -13.875)
 
-[node name="chair-dining162" parent="stage" unique_id=1189825436 instance=ExtResource("3_3ies3")]
+[node name="chair-dining162" parent="stage" unique_id=1608980881 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -12.625)
 
-[node name="chair-dining163" parent="stage" unique_id=1150333780 instance=ExtResource("3_3ies3")]
+[node name="chair-dining163" parent="stage" unique_id=1911980920 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -22)
 
-[node name="chair-dining164" parent="stage" unique_id=1476434103 instance=ExtResource("3_3ies3")]
+[node name="chair-dining164" parent="stage" unique_id=902136456 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -22.625)
 
-[node name="chair-dining165" parent="stage" unique_id=254847128 instance=ExtResource("3_3ies3")]
+[node name="chair-dining165" parent="stage" unique_id=404729616 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -21.375)
 
-[node name="chair-dining166" parent="stage" unique_id=1005289298 instance=ExtResource("3_3ies3")]
+[node name="chair-dining166" parent="stage" unique_id=1091141138 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -20.125)
 
-[node name="chair-dining167" parent="stage" unique_id=978619988 instance=ExtResource("3_3ies3")]
+[node name="chair-dining167" parent="stage" unique_id=1883404082 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -20.75)
 
-[node name="chair-dining168" parent="stage" unique_id=407707021 instance=ExtResource("3_3ies3")]
+[node name="chair-dining168" parent="stage" unique_id=96456665 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -19.5)
 
-[node name="chair-dining169" parent="stage" unique_id=1999609594 instance=ExtResource("3_3ies3")]
+[node name="chair-dining169" parent="stage" unique_id=439155898 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -23.875)
 
-[node name="chair-dining170" parent="stage" unique_id=830528933 instance=ExtResource("3_3ies3")]
+[node name="chair-dining170" parent="stage" unique_id=1066966145 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -24.5)
 
-[node name="chair-dining171" parent="stage" unique_id=965212645 instance=ExtResource("3_3ies3")]
+[node name="chair-dining171" parent="stage" unique_id=1060371205 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.875, 0, -23.25)
 
-[node name="chair-dining172" parent="stage" unique_id=787687032 instance=ExtResource("3_3ies3")]
+[node name="chair-dining172" parent="stage" unique_id=732015032 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -22)
 
-[node name="chair-dining173" parent="stage" unique_id=370565939 instance=ExtResource("3_3ies3")]
+[node name="chair-dining173" parent="stage" unique_id=1404819226 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -22.625)
 
-[node name="chair-dining174" parent="stage" unique_id=291448930 instance=ExtResource("3_3ies3")]
+[node name="chair-dining174" parent="stage" unique_id=2079021790 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -21.375)
 
-[node name="chair-dining175" parent="stage" unique_id=1115374128 instance=ExtResource("3_3ies3")]
+[node name="chair-dining175" parent="stage" unique_id=290484927 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -23.875)
 
-[node name="chair-dining176" parent="stage" unique_id=953299415 instance=ExtResource("3_3ies3")]
+[node name="chair-dining176" parent="stage" unique_id=1033261358 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -24.5)
 
-[node name="chair-dining177" parent="stage" unique_id=812048344 instance=ExtResource("3_3ies3")]
+[node name="chair-dining177" parent="stage" unique_id=1437886212 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -23.25)
 
-[node name="chair-dining178" parent="stage" unique_id=141008203 instance=ExtResource("3_3ies3")]
+[node name="chair-dining178" parent="stage" unique_id=373273590 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -20.125)
 
-[node name="chair-dining179" parent="stage" unique_id=90193324 instance=ExtResource("3_3ies3")]
+[node name="chair-dining179" parent="stage" unique_id=88167674 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -20.75)
 
-[node name="chair-dining180" parent="stage" unique_id=518121591 instance=ExtResource("3_3ies3")]
+[node name="chair-dining180" parent="stage" unique_id=991695652 instance=ExtResource("3_3ies3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -27.625, 0, -19.5)
 
 [node name="stage-truss2" parent="stage" unique_id=186036229 instance=ExtResource("14_w3o6u")]
@@ -1415,6 +1746,7 @@ environment = SubResource("Environment_kih21")
 
 [node name="convention-sign" parent="." unique_id=842501103 instance=ExtResource("31_w3o6u")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1, -26.625, 0, 3)
+
 [node name="Enemy" parent="." unique_id=493197561 instance=ExtResource("33_gur6y")]
 transform = Transform3D(-0.7781336, 0, 0.62809885, 0, 1, 0, -0.62809885, 0, -0.7781336, -14.948072, 0.9657839, -25.934914)
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bteba1idbicuq"
-path="res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"
+uid="uid://evmhhrelbk6c"
+path="res://.godot/imported/flag-big.fbx-cca9e209b1a7a913416374260fb6216a.scn"
 
 [deps]
 
-source_file="res://3rd-party/lpp/chair-dining.fbx"
-dest_files=["res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"]
+source_file="res://3rd-party/lpp/flag-big.fbx"
+dest_files=["res://.godot/imported/flag-big.fbx-cca9e209b1a7a913416374260fb6216a.scn"]
 
 [params]
 
@@ -39,24 +39,20 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"17 GREY-DARKEST": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://3rd-party/lpp/17 GREY-DARKEST.tres",
-"use_external/path": "uid://buyshi5vwncnx"
-},
 "20 GREY": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://3rd-party/lpp/20 GREY.tres",
 "use_external/path": "uid://0nt5yumgswoa"
+},
+"26 RED-DARK": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3rd-party/lpp/26 RED-DARK.tres",
+"use_external/path": "uid://cpposkdext2aj"
 }
 },
 "nodes": {
-"PATH:chair-dining": {
-"generate/physics": true,
-"physics/body_type": 1,
-"physics/shape_type": 1,
-"primitive/position": Vector3(0, 0.5, -0.01),
-"primitive/size": Vector3(0.51, 1.01, 0.54)
+"PATH:flag-big": {
+"generate/physics": true
 }
 }
 }

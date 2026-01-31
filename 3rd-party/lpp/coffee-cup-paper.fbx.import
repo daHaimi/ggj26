@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bteba1idbicuq"
-path="res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"
+uid="uid://bmxhxdm30rgw5"
+path="res://.godot/imported/coffee-cup-paper.fbx-90a7ec21a1b296aee2f6ac0cb2da4b6a.scn"
 
 [deps]
 
-source_file="res://3rd-party/lpp/chair-dining.fbx"
-dest_files=["res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"]
+source_file="res://3rd-party/lpp/coffee-cup-paper.fbx"
+dest_files=["res://.godot/imported/coffee-cup-paper.fbx-90a7ec21a1b296aee2f6ac0cb2da4b6a.scn"]
 
 [params]
 
@@ -37,29 +37,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"materials": {
-"17 GREY-DARKEST": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://3rd-party/lpp/17 GREY-DARKEST.tres",
-"use_external/path": "uid://buyshi5vwncnx"
-},
-"20 GREY": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://3rd-party/lpp/20 GREY.tres",
-"use_external/path": "uid://0nt5yumgswoa"
-}
-},
-"nodes": {
-"PATH:chair-dining": {
-"generate/physics": true,
-"physics/body_type": 1,
-"physics/shape_type": 1,
-"primitive/position": Vector3(0, 0.5, -0.01),
-"primitive/size": Vector3(0.51, 1.01, 0.54)
-}
-}
-}
+_subresources={}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

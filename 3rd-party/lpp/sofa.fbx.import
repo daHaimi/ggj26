@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bteba1idbicuq"
-path="res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"
+uid="uid://bx6g2qmm5uuic"
+path="res://.godot/imported/sofa.fbx-3d18bd60f03fdba8523cc9bd7934990b.scn"
 
 [deps]
 
-source_file="res://3rd-party/lpp/chair-dining.fbx"
-dest_files=["res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"]
+source_file="res://3rd-party/lpp/sofa.fbx"
+dest_files=["res://.godot/imported/sofa.fbx-3d18bd60f03fdba8523cc9bd7934990b.scn"]
 
 [params]
 
@@ -39,24 +39,27 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"17 GREY-DARKEST": {
+"14 BROWN-LIGHTEST": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://3rd-party/lpp/17 GREY-DARKEST.tres",
-"use_external/path": "uid://buyshi5vwncnx"
+"use_external/fallback_path": "res://3rd-party/lpp/14 BROWN-LIGHTEST.tres",
+"use_external/path": "uid://dy33ukk0wsv61"
+}
 },
-"20 GREY": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://3rd-party/lpp/20 GREY.tres",
-"use_external/path": "uid://0nt5yumgswoa"
+"meshes": {
+"sofa": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://3rd-party/lpp/sofa.res",
+"save_to_file/path": "uid://c6377t10qprnj"
 }
 },
 "nodes": {
-"PATH:chair-dining": {
+"PATH:sofa": {
 "generate/physics": true,
-"physics/body_type": 1,
-"physics/shape_type": 1,
-"primitive/position": Vector3(0, 0.5, -0.01),
-"primitive/size": Vector3(0.51, 1.01, 0.54)
+"physics/shape_type": 1
 }
 }
 }

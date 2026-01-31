@@ -28,7 +28,17 @@ func scan_for_player():
 		if raycast_result == player:
 			if state != States.AGGRO:
 				enter_aggro()
+		else:
+			match state:
+				States.IDLE:
+					pass
+				States.SEARCHING:
+					pass
+				States.AGGRO:
+					enter_searching()
+				
 
+	# Player not in sight cone
 	else:	
 		match state:
 			States.IDLE:

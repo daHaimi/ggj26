@@ -8,12 +8,12 @@
 [ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="6_tefeu"]
 [ext_resource type="Shader" uid="uid://cl8ex1kafi25j" path="res://Assets/Shaders/horrorwobble.gdshader" id="7_tipki"]
 [ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="8_85g3d"]
-[ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="8_choun"]
 [ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="8_ya4ey"]
-[ext_resource type="Shader" path="res://Assets/Shaders/glow.gdshader" id="9_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="11_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://dlt7jtgk7ipi" path="res://Assets/img/jigsaw.png" id="13_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="13_trceg"]
 [ext_resource type="Texture2D" uid="uid://dogh0q5q1tcue" path="res://Assets/img/tony.png" id="14_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://c66sadw083typ" path="res://Assets/img/mask.png" id="14_jkv2x"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 
@@ -150,6 +150,78 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_og1vs"]
+atlas = ExtResource("13_a8y0u")
+region = Rect2(0, 0, 201, 322)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wyq8"]
+atlas = ExtResource("13_a8y0u")
+region = Rect2(201, 0, 201, 322)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxglm"]
+atlas = ExtResource("13_a8y0u")
+region = Rect2(402, 0, 201, 322)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f3dj"]
+atlas = ExtResource("13_a8y0u")
+region = Rect2(603, 0, 201, 322)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yq6so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og1vs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wyq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxglm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f3dj")
+}],
+"loop": true,
+"name": &"jigsaw",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv21b"]
+atlas = ExtResource("14_jkv2x")
+region = Rect2(0, 0, 200, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tel4y"]
+atlas = ExtResource("14_jkv2x")
+region = Rect2(200, 0, 200, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkpxi"]
+atlas = ExtResource("14_jkv2x")
+region = Rect2(400, 0, 200, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q0nq"]
+atlas = ExtResource("14_jkv2x")
+region = Rect2(600, 0, 200, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgi5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv21b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tel4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkpxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q0nq")
+}],
+"loop": true,
+"name": &"mask",
+"speed": 2.0
+}]
+
 [node name="Main2" type="Node3D" unique_id=1620113986]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=776660648]
@@ -224,12 +296,6 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="Smiley" type="Sprite2D" parent="UI/Stats/SmileyPanel" unique_id=1272820308]
-visible = false
-position = Vector2(121, 50.38)
-scale = Vector2(0.75, 0.7)
-texture = ExtResource("8_choun")
-
 [node name="Default" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=1363842688]
 position = Vector2(122, 50)
 scale = Vector2(0.32038835, 0.32038835)
@@ -253,6 +319,22 @@ sprite_frames = SubResource("SpriteFrames_og1vs")
 animation = &"tony"
 autoplay = "tony"
 
+[node name="Jigsaw" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=243775866]
+visible = false
+position = Vector2(122, 50)
+scale = Vector2(0.32, 0.32)
+sprite_frames = SubResource("SpriteFrames_yq6so")
+animation = &"jigsaw"
+autoplay = "jigsaw"
+
+[node name="Mask" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=1045499464]
+visible = false
+position = Vector2(122, 50)
+scale = Vector2(0.32, 0.32)
+sprite_frames = SubResource("SpriteFrames_dgi5k")
+animation = &"mask"
+autoplay = "mask"
+
 [node name="TextPanel" type="Panel" parent="UI/Stats" unique_id=671969044]
 layout_mode = 2
 size_flags_vertical = 3
@@ -266,9 +348,6 @@ offset_bottom = 49.0
 text = "You're fucked!"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Enemy" parent="." unique_id=493197561]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8264327, 0.86076045, 2.1128287)
 
 [connection signal="hit" from="Player" to="UI/Stats" method="hit"]
 [connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]

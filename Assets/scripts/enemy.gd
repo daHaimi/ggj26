@@ -4,16 +4,34 @@ extends CharacterBody3D
 @export var SPEED = 3.0
 @export var DAMPING = 15
 
-enum States {IDLE, ROAMING, SEARCHING, AGGRO}
-var state := States.IDLE
+signal hit_player
 
+enum States {IDLE, ROAMING, SEARCHING, AGGRO, DEAD}
+
+@export var footsteps_01: AudioStream
+@export var footsteps_02: AudioStream
+@export var footsteps_03: AudioStream
+@onready var footsteps = [footsteps_01, footsteps_02, footsteps_03]
+
+@export var voiceline_search: AudioStream
+@export var voiceline_aggro: AudioStream
+@export var voiceline_getting_hit: AudioStream
+@export var voiceline_death: AudioStream
+
+var state := States.IDLE
 var player = null
 
 @onready var rotation_axis = $RotationAxis
 @onready var sight_cone = $RotationAxis/Sight
 @onready var sight_raycast = $RayCast3D
+@onready var hit_range = $PunchArea
+@onready var shoot_range = $ShootArea
 @onready var animation_player = $AnimationPlayer
 @onready var char_animation: AnimationPlayer = $character/model/AnimationPlayer
+@onready var enemy_type: String = $character.character_type
+
+@onready var audio_effect = $AudioEffect
+@onready var audio_voice = $AudioVoice
 
 func scan_for_player():
 	var bodies: Array = sight_cone.get_overlapping_bodies()
@@ -40,7 +58,6 @@ func scan_for_player():
 				States.AGGRO:
 					char_animation.play("idle")
 					enter_searching()
-				
 
 	# Player not in sight cone
 	else:	
@@ -54,11 +71,17 @@ func scan_for_player():
 				enter_searching()
 
 func enter_aggro():
+	if voiceline_aggro:
+		audio_voice.stream = voiceline_aggro
+		audio_voice.play()
 	state = States.AGGRO
 	animation_player.stop()
 	rotation_axis.rotation = Vector3.ZERO
 
 func enter_searching():
+	if voiceline_search:
+		audio_voice.stream = voiceline_search
+		audio_voice.play()
 	state = States.SEARCHING
 	velocity = Vector3.ZERO
 	animation_player.stop()
@@ -69,6 +92,24 @@ func enter_idle():
 	velocity = Vector3.ZERO
 	animation_player.stop()	
 
+func enter_dead():
+	if voiceline_death:
+		audio_voice.stream = voiceline_death
+		audio_voice.play()
+	# play death animation
+
+func hit(damage: int):
+	LIFE = clamp(LIFE - damage, 0, LIFE)
+	if voiceline_getting_hit:
+		audio_voice.stream = voiceline_getting_hit
+		audio_voice.play()
+	if LIFE == 0:
+		enter_dead()
+
+func play_footsteps():
+	if not audio_effect.playing:
+		audio_effect.stream = footsteps.pick_random()
+		audio_effect.play()
 
 func move_to_player(new_position: Vector3, stop_distance: float, delta):
 	var speed_used
@@ -98,6 +139,8 @@ func move_to_player(new_position: Vector3, stop_distance: float, delta):
 
 
 func _physics_process(delta: float) -> void:
+	if state == States.DEAD:
+		return
 	scan_for_player()
 	match state:
 		States.IDLE:
@@ -110,5 +153,22 @@ func _physics_process(delta: float) -> void:
 			#searching(delta)
 		States.AGGRO:
 			move_to_player(Vector3.ZERO, 0, delta)
-
+			detect_attack()
+	if velocity.length() > 0: 
+		play_footsteps()
 	move_and_slide()
+
+
+func detect_attack():
+	if enemy_type == "Redneck":
+		var collisions: Array = hit_range.get_overlapping_bodies()
+		if collisions.size() > 0:
+			$character.attack()
+			hit_player.emit()
+
+	if enemy_type == "Hitman":
+		var collisions: Array = shoot_range.get_overlapping_bodies()
+		if collisions.size() > 0:
+			$character.attack()
+			hit_player.emit()
+

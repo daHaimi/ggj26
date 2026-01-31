@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dd8ppnse7mnii" path="res://Assets/prefabs/mask.tscn" id="4_saoeg"]
 [ext_resource type="PackedScene" uid="uid://cuog6afdg1i55" path="res://Assets/prefabs/machete.tscn" id="5_we7ej"]
 [ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="6_xi5sv"]
-[ext_resource type="PackedScene" uid="uid://cm3jv1yi67ac2" path="res://scenes/frank/enemy.tscn" id="7_2dgve"]
+[ext_resource type="PackedScene" path="res://scenes/frank/enemy.tscn" id="7_2dgve"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 

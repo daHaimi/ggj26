@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dx7d1ie30xydh"]
+[gd_scene format=3 uid="uid://v1qcbvd8rnnj"]
 
 [ext_resource type="Material" uid="uid://bo6cw3wo4by53" path="res://materials/floor.tres" id="1_2q6dc"]
 [ext_resource type="Material" uid="uid://dbb073ivpyo6f" path="res://materials/grass.tres" id="1_2r41h"]
@@ -9,24 +9,21 @@
 [ext_resource type="PackedScene" uid="uid://dukrpf0sd0r" path="res://3rd-party/lpp/bike-stand.fbx" id="4_64w2a"]
 [ext_resource type="PackedScene" uid="uid://bqhuxo7du6lo1" path="res://3rd-party/lpp/fountain.fbx" id="5_fpun6"]
 [ext_resource type="PackedScene" uid="uid://cqk2gmxl7kvkb" path="res://art/building-tiles/wall-door.glb" id="5_ppgk2"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://csywbh8er1u1x" path="res://3rd-party/lpp/tree-bare.fbx" id="6_wc255"]
-[ext_resource type="PackedScene" uid="uid://l0pkkju67s26" path="res://3rd-party/lpp/table-dining.fbx" id="11_arp2o"]
-[ext_resource type="PackedScene" uid="uid://imaykrkew1ad" path="res://3rd-party/lpp/tree-beech.fbx" id="12_ux5qa"]
-=======
 [ext_resource type="PackedScene" uid="uid://nsyrijlcxkug" path="res://scenes/frank/player.tscn" id="6_ux5qa"]
+[ext_resource type="PackedScene" uid="uid://csywbh8er1u1x" path="res://3rd-party/lpp/tree-bare.fbx" id="6_wc255"]
 [ext_resource type="PackedScene" uid="uid://dl8625vddcehn" path="res://Assets/models/barrel.glb" id="7_82cfe"]
 [ext_resource type="PackedScene" uid="uid://dd8ppnse7mnii" path="res://Assets/prefabs/mask.tscn" id="8_gunhw"]
 [ext_resource type="PackedScene" uid="uid://cuog6afdg1i55" path="res://Assets/prefabs/machete.tscn" id="9_8gofh"]
 [ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="10_h6wmr"]
+[ext_resource type="PackedScene" uid="uid://l0pkkju67s26" path="res://3rd-party/lpp/table-dining.fbx" id="11_arp2o"]
 [ext_resource type="Shader" uid="uid://cl8ex1kafi25j" path="res://Assets/Shaders/horrorwobble.gdshader" id="11_pqd0y"]
 [ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="12_5k0ak"]
+[ext_resource type="PackedScene" uid="uid://imaykrkew1ad" path="res://3rd-party/lpp/tree-beech.fbx" id="12_ux5qa"]
 [ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="13_wu01b"]
 [ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="14_3ies3"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="15_xy2fk"]
-[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
+[ext_resource type="Shader" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
->>>>>>> 3f4f70da74b31faf385364dc0dd4b54d7f333833
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]
 material = ExtResource("1_2q6dc")
@@ -526,7 +523,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -33.
 [node name="wall-door7" parent="building" unique_id=1914754651 instance=ExtResource("5_ppgk2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -39.625, 0, -32)
 
-<<<<<<< HEAD
 [node name="hall" type="Node3D" parent="." unique_id=960944724]
 
 [node name="table-dining" parent="hall" unique_id=642413123 instance=ExtResource("11_arp2o")]
@@ -593,7 +589,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.625, 0, 33.75)
 
 [node name="tree-bare3" parent="outside" unique_id=1866400863 instance=ExtResource("6_wc255")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -45, 0, 12.625)
-=======
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1557123381]
 transform = Transform3D(0.9563048, -0.18120582, 0.2294464, 0, 0.7847764, 0.619779, -0.2923717, -0.5926976, 0.7504854, -22.359684, 4.894579, -14.069975)
 
@@ -689,4 +685,3 @@ offset_bottom = 49.0
 text = "You're fucked!"
 horizontal_alignment = 1
 vertical_alignment = 1
->>>>>>> 3f4f70da74b31faf385364dc0dd4b54d7f333833

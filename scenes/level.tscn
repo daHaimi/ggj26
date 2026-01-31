@@ -3,6 +3,7 @@
 [ext_resource type="Material" uid="uid://bo6cw3wo4by53" path="res://materials/floor.tres" id="1_2q6dc"]
 [ext_resource type="Material" uid="uid://dbb073ivpyo6f" path="res://materials/grass.tres" id="1_2r41h"]
 [ext_resource type="PackedScene" uid="uid://cx1eevx2paxgl" path="res://art/building-tiles/wall-straight.glb" id="2_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://bteba1idbicuq" path="res://3rd-party/lpp/chair-dining.fbx" id="3_3ies3"]
 [ext_resource type="PackedScene" uid="uid://dg6knds3tymhc" path="res://3rd-party/lpp/atm-mechine.fbx" id="3_8iemx"]
 [ext_resource type="PackedScene" uid="uid://dsc5xeghoo2yh" path="res://art/building-tiles/wall-t-junciton.glb" id="3_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://gwn65hxpulr1" path="res://art/building-tiles/wall-corner.glb" id="4_2r41h"]
@@ -167,6 +168,51 @@ mesh = SubResource("PlaneMesh_8iemx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.75, 0.01, 4)
 material_override = ExtResource("1_2q6dc")
 mesh = SubResource("PlaneMesh_64w2a")
+
+[node name="chair-dining" parent="floors" unique_id=1376152573 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -13.25)
+
+[node name="chair-dining2" parent="floors" unique_id=929434357 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -13.875)
+
+[node name="chair-dining3" parent="floors" unique_id=1715892430 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -12.625)
+
+[node name="chair-dining4" parent="floors" unique_id=1090785642 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -17)
+
+[node name="chair-dining5" parent="floors" unique_id=1576220690 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -17.625)
+
+[node name="chair-dining6" parent="floors" unique_id=70565120 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -16.375)
+
+[node name="chair-dining7" parent="floors" unique_id=689397849 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -15.125)
+
+[node name="chair-dining8" parent="floors" unique_id=540580414 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -15.75)
+
+[node name="chair-dining9" parent="floors" unique_id=1313346699 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -14.5)
+
+[node name="chair-dining10" parent="floors" unique_id=1290609494 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -17)
+
+[node name="chair-dining11" parent="floors" unique_id=169058352 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -17.625)
+
+[node name="chair-dining12" parent="floors" unique_id=1924539592 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -16.375)
+
+[node name="chair-dining13" parent="floors" unique_id=1108531966 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -13.25)
+
+[node name="chair-dining14" parent="floors" unique_id=673500529 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -13.875)
+
+[node name="chair-dining15" parent="floors" unique_id=1196331452 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -25.25, 0, -12.625)
 
 [node name="building" type="Node3D" parent="." unique_id=404355230]
 
@@ -582,14 +628,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.625, 0, 33.75)
 [node name="tree-bare3" parent="outside" unique_id=1866400863 instance=ExtResource("6_wc255")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -45, 0, 12.625)
 
+[node name="stage" type="Node3D" parent="." unique_id=315466806]
+
+[node name="chair-dining" parent="stage" unique_id=659228671 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -15.125)
+
+[node name="chair-dining2" parent="stage" unique_id=2009977835 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -15.75)
+
+[node name="chair-dining3" parent="stage" unique_id=1382715589 instance=ExtResource("3_3ies3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -26.5, 0, -14.5)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1557123381]
 transform = Transform3D(0.9563048, -0.18120582, 0.2294464, 0, 0.7847764, 0.619779, -0.2923717, -0.5926976, 0.7504854, -22.359684, 4.894579, -14.069975)
 
 [node name="Player" parent="." unique_id=482459206 instance=ExtResource("6_ux5qa")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30.412468, 1.0020583, -19.295292)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30.412468, 1.0020583, 10.079708)
 
 [node name="Box" type="RigidBody3D" parent="." unique_id=646352430]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.917469, 0.5042703, -19.295292)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.917469, 0.5042703, 10.079708)
 gravity_scale = 0.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Box" unique_id=2083901972]
@@ -599,7 +656,7 @@ mesh = SubResource("BoxMesh_7agi7")
 shape = SubResource("BoxShape3D_kih21")
 
 [node name="Barrel" type="RigidBody3D" parent="." unique_id=885281995]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.982111, 1.4980721, -19.295292)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.982111, 1.4980721, 10.079708)
 
 [node name="barrel" parent="Barrel" unique_id=1297360253 instance=ExtResource("7_82cfe")]
 
@@ -608,10 +665,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0066833496, 0)
 shape = SubResource("CylinderShape3D_w3o6u")
 
 [node name="Mask" parent="." unique_id=711317670 instance=ExtResource("8_gunhw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.458311, 1, -21.826855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.458311, 1, 7.5481453)
 
 [node name="Machete" parent="." unique_id=1767296346 instance=ExtResource("9_8gofh")]
-transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, -30.087934, 0.9999999, -21.001692)
+transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, -30.087934, 0.9999999, 8.373308)
 script = ExtResource("10_h6wmr")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1433507822]

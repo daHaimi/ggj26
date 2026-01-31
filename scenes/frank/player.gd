@@ -67,7 +67,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	for index in get_slide_collision_count():
-		var collision := get_slide_collision(index)
-		var body := collision.get_collider()
-		print("Collided with: ", body.name)
+func _process(delta: float) -> void:
+	
+	for area: Area3D in $Pickup.get_overlapping_areas():
+		print("Collided with: ", area.name)

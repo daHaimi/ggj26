@@ -5,8 +5,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbgi4"]
 size = Vector3(0.98358154, 0.081451416, 0.13337708)
 
-[node name="Machete" type="StaticBody3D" unique_id=1920632882]
+[node name="Machete" type="Area3D" unique_id=1767296346]
 transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, 0, 0, 0)
+collision_layer = 16
+collision_mask = 2
 
 [node name="machete" parent="." unique_id=2065739991 instance=ExtResource("1_45sih")]
 

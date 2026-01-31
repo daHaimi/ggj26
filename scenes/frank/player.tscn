@@ -21,7 +21,12 @@ shader_parameter/_Progress = 0.749999983236
 shader_parameter/_Smoothness = 0.54
 shader_parameter/_Background = Color(0, 0, 0, 1)
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdrpp"]
+radius = 0.30419922
+
 [node name="Player" type="CharacterBody3D" unique_id=482459206]
+collision_layer = 3
+collision_mask = 17
 platform_wall_layers = 1
 script = ExtResource("1_ydx0u")
 
@@ -58,3 +63,11 @@ offset_left = 1.0
 offset_top = -2.0
 offset_right = 1617.0
 offset_bottom = 1023.0
+
+[node name="Pickup" type="Area3D" parent="." unique_id=1232057521]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickup" unique_id=820875847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15121591)
+shape = SubResource("CapsuleShape3D_pdrpp")

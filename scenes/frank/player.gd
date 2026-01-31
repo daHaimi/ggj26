@@ -14,6 +14,8 @@ signal hit
 # hide disables collider layer 2
 # 
 
+var direction: Vector3
+
 func dash():
 	if dash_component.dash_ready:
 		dash_component.dash()
@@ -25,6 +27,34 @@ func hide_from_enemy():
 #const JUMP_VELOCITY = 4.5
 var isometric_angle = deg_to_rad(45)
 
+
+func _process(delta: float) -> void:
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	var anim: AnimationPlayer = $PlayerChar/model/AnimationPlayer
+	if input_dir != Vector2.ZERO:
+		anim.play("running")
+		var modelTarget = direction.rotated(Vector3(0,1,0), -isometric_angle)
+		direction = direction.rotated(Vector3(0,1,0), isometric_angle)
+		var target_angle = atan2(modelTarget.x, modelTarget.z)
+		# Lerp into direction
+		$PlayerChar.rotation.y = lerp_angle($PlayerChar.rotation.y, target_angle, delta * 5)
+	else:
+		anim.play("idle")
+	
+	
+	### Picking up ###
+	for area: Area3D in $Pickup.get_overlapping_areas():
+		if area.name == "Mask":
+			mask_collected.emit("Tony")
+		elif area.name == "Machete":
+			hit.emit()
+		else:
+			print("Collected: ", area)
+		area.queue_free()
 
 func _physics_process(delta: float) -> void:
 	
@@ -38,21 +68,13 @@ func _physics_process(delta: float) -> void:
 		#velocity.y = JUMP_VELOCITY
 
 
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	direction = direction.rotated(Vector3(0,1,0), isometric_angle)
-	
 	if Input.is_action_just_pressed("ui_accept"):
 		dash()
-	
+
 	var speed_used = SPEED
 	if dash_component.dashing:
 		speed_used = DASH_SPEED
 
-	
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * speed_used
 		velocity.z = direction.z * speed_used
@@ -61,14 +83,3 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, DAMPING * delta)
 
 	move_and_slide()
-
-### Picking up ###
-func _process(delta: float) -> void:
-	for area: Area3D in $Pickup.get_overlapping_areas():
-		if area.name == "Mask":
-			mask_collected.emit("Smiley")
-		elif area.name == "Machete":
-			hit.emit()
-		else:
-			print("Collected: ", area)
-		area.queue_free()

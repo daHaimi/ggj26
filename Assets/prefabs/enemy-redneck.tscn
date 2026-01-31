@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bydk8v2sbxtis"]
 
 [ext_resource type="Script" uid="uid://c6chbe8ii8dam" path="res://Assets/scripts/enemy.gd" id="1_2wj43"]
+[ext_resource type="AudioStream" uid="uid://dwjlupsivkpfm" path="res://art/sfx/Player_Footsteps_0.wav" id="2_lqx03"]
 [ext_resource type="PackedScene" uid="uid://cxfx2qrpsx21r" path="res://Assets/prefabs/redneck.tscn" id="2_tjbv5"]
+[ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_2wki4"]
 [ext_resource type="Script" uid="uid://cw2i3edfkt7rc" path="res://Assets/scripts/enemy_model.gd" id="3_ffs4v"]
+[ext_resource type="AudioStream" uid="uid://bjiv3pbguom6x" path="res://art/sfx/Player_Footsteps_2.wav" id="4_b4h52"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iq85u"]
 
@@ -72,6 +75,9 @@ points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.
 
 [node name="Enemy" type="CharacterBody3D" unique_id=493197561]
 script = ExtResource("1_2wj43")
+footsteps_01 = ExtResource("2_lqx03")
+footsteps_02 = ExtResource("3_2wki4")
+footsteps_03 = ExtResource("4_b4h52")
 
 [node name="character" parent="." unique_id=214737925 instance=ExtResource("2_tjbv5")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.85589516, 0)
@@ -122,3 +128,7 @@ mesh = SubResource("PrismMesh_1i4hk")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RotationAxis/Sight" unique_id=1901755525]
 transform = Transform3D(4, 0, 0, 0, 8, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_gmggq")
+
+[node name="AudioEffect" type="AudioStreamPlayer3D" parent="." unique_id=233608873]
+
+[node name="AudioVoice" type="AudioStreamPlayer3D" parent="." unique_id=288407206]

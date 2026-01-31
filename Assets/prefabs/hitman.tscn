@@ -141,7 +141,7 @@ script = ExtResource("1_8yy1m")
 [node name="model" type="Node3D" parent="." unique_id=1177241355]
 
 [node name="metarig" type="Node3D" parent="model" unique_id=1297412486]
-transform = Transform3D(98.55507, 4.451501, 16.342945, -16.026125, -6.730662, 98.477715, 5.4837246, -99.673874, -5.9200025, -0.14454931, -0.009739532, 0.0045155557)
+transform = Transform3D(98.55508, 4.451501, 16.342945, -16.026125, -6.730662, 98.477715, 5.483725, -99.673874, -5.9200025, -0.14454931, -0.009739532, 0.0045155557)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="model/metarig" unique_id=1520210767]
 bones/0/name = "spine"

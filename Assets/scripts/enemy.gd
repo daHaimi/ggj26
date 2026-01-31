@@ -6,7 +6,7 @@ extends CharacterBody3D
 
 signal hit_player
 
-enum States {IDLE, ROAMING, SEARCHING, AGGRO, DEAD}
+enum States {IDLE, ROAMING, SEARCHING, AGGRO, DEAD, ATTACK}
 
 @export var footsteps_01: AudioStream
 @export var footsteps_02: AudioStream
@@ -33,6 +33,9 @@ var player = null
 @onready var audio_effect = $AudioEffect
 @onready var audio_voice = $AudioVoice
 
+func _ready() -> void:
+	char_animation.animation_finished.connect(_on_char_anim_finished)
+
 func scan_for_player():
 	var bodies: Array = sight_cone.get_overlapping_bodies()
 	if bodies.size() > 0:
@@ -46,7 +49,7 @@ func scan_for_player():
 		var raycast_result = sight_raycast.get_collider()
 		# print(raycast_result)
 		if raycast_result == player:
-			if state != States.AGGRO:
+			if state not in [States.AGGRO, States.ATTACK]:
 				char_animation.play("running")
 				enter_aggro()
 		else:
@@ -92,6 +95,12 @@ func enter_idle():
 	velocity = Vector3.ZERO
 	animation_player.stop()	
 
+func enter_attack():
+	state = States.ATTACK
+	velocity = Vector3.ZERO
+	animation_player.stop()	
+	$character.attack()
+	
 func enter_dead():
 	if voiceline_death:
 		audio_voice.stream = voiceline_death
@@ -158,16 +167,22 @@ func _physics_process(delta: float) -> void:
 		play_footsteps()
 	move_and_slide()
 
+func _on_char_anim_finished(anim_name: String):
+	if (
+		enemy_type == "Redneck" and anim_name == "hook-punch"
+	) or (
+		enemy_type == "Hitman" and anim_name == "pistol"
+	):
+		hit_player.emit()
+		enter_idle()
 
 func detect_attack():
 	if enemy_type == "Redneck":
 		var collisions: Array = hit_range.get_overlapping_bodies()
 		if collisions.size() > 0:
-			$character.attack()
-			hit_player.emit()
+			enter_attack()
 
 	if enemy_type == "Hitman":
 		var collisions: Array = shoot_range.get_overlapping_bodies()
 		if collisions.size() > 0:
-			$character.attack()
-			hit_player.emit()
+			enter_attack()

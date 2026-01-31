@@ -15,8 +15,8 @@ func hit():
 	print("hit")
 	cur_hitpoints -= 1
 	if cur_hitpoints == 1:
-		var sm: ShaderMaterial = $SmileyPanel.find_child(cur_mask).material
-		sm.set_shader_parameter("active", true)
+		cur_mask = "Disco"
+		updateMask()
 	updateHitpoints()
 
 func changeMask(mask: String) -> void:
@@ -27,8 +27,6 @@ func changeMask(mask: String) -> void:
 	else:
 		max_hitpoints = HP_DEFAULT
 		cur_hitpoints = HP_DEFAULT
-	var sm: ShaderMaterial = $SmileyPanel.find_child(cur_mask).material
-	sm.set_shader_parameter("active", false)
 	updateMask()
 	updateHitpoints()
 

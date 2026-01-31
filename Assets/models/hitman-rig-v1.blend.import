@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dr3ddbb6c3nga"
-path="res://.godot/imported/hitman-rig-v1.blend-15c614d12afa437e575d339332686298.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/models/hitman-rig-v1.blend"
-dest_files=["res://.godot/imported/hitman-rig-v1.blend-15c614d12afa437e575d339332686298.scn"]
 
 [params]
 

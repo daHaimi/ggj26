@@ -1,10 +1,22 @@
-[gd_scene format=3 uid="uid://v1qcbvd8rnnj"]
+[gd_scene format=3 uid="uid://dx7d1ie30xydh"]
 
 [ext_resource type="Material" uid="uid://bo6cw3wo4by53" path="res://materials/floor.tres" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://cx1eevx2paxgl" path="res://art/building-tiles/wall-straight.glb" id="2_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://dsc5xeghoo2yh" path="res://art/building-tiles/wall-t-junciton.glb" id="3_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://gwn65hxpulr1" path="res://art/building-tiles/wall-corner.glb" id="4_2r41h"]
 [ext_resource type="PackedScene" uid="uid://cqk2gmxl7kvkb" path="res://art/building-tiles/wall-door.glb" id="5_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://nsyrijlcxkug" path="res://scenes/frank/player.tscn" id="6_ux5qa"]
+[ext_resource type="PackedScene" uid="uid://dl8625vddcehn" path="res://Assets/models/barrel.glb" id="7_82cfe"]
+[ext_resource type="PackedScene" uid="uid://dd8ppnse7mnii" path="res://Assets/prefabs/mask.tscn" id="8_gunhw"]
+[ext_resource type="PackedScene" uid="uid://cuog6afdg1i55" path="res://Assets/prefabs/machete.tscn" id="9_8gofh"]
+[ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="10_h6wmr"]
+[ext_resource type="Shader" uid="uid://cl8ex1kafi25j" path="res://Assets/Shaders/horrorwobble.gdshader" id="11_pqd0y"]
+[ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="12_5k0ak"]
+[ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="13_wu01b"]
+[ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="14_3ies3"]
+[ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="15_xy2fk"]
+[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
+[ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]
 material = ExtResource("1_2q6dc")
@@ -16,6 +28,104 @@ data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0,
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8c41q"]
 radius = 0.3
 height = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_7agi7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kih21"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_w3o6u"]
+height = 1.0066528
+radius = 0.40966797
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2e2fo"]
+shader = ExtResource("11_pqd0y")
+shader_parameter/brightnessMult = 2.0000000298024
+shader_parameter/wiggleMult = 0.00369999990639
+shader_parameter/chromaticAberrationOffset = 0.00170999995725
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gur6y"]
+shader = ExtResource("12_5k0ak")
+shader_parameter/_CirclePosition = Vector2(0.5, 0.5)
+shader_parameter/_Progress = 0.749999983236
+shader_parameter/_Smoothness = 0.54
+shader_parameter/_Background = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trceg"]
+atlas = ExtResource("15_xy2fk")
+region = Rect2(0, 0, 206, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8y0u"]
+atlas = ExtResource("15_xy2fk")
+region = Rect2(206, 0, 206, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkv2x"]
+atlas = ExtResource("15_xy2fk")
+region = Rect2(412, 0, 206, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbj1t"]
+atlas = ExtResource("15_xy2fk")
+region = Rect2(618, 0, 206, 315)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3why"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trceg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8y0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkv2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbj1t")
+}],
+"loop": true,
+"name": &"uncomfortable",
+"speed": 1.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_asl66"]
+shader = ExtResource("16_cmcjb")
+shader_parameter/active = true
+shader_parameter/border_threshold = Vector2(0.01, 0.01)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muem4"]
+atlas = ExtResource("17_556r4")
+region = Rect2(0, 0, 200, 338)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp3eg"]
+atlas = ExtResource("17_556r4")
+region = Rect2(200, 0, 200, 338)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ld40"]
+atlas = ExtResource("17_556r4")
+region = Rect2(400, 0, 200, 338)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqmmt"]
+atlas = ExtResource("17_556r4")
+region = Rect2(600, 0, 200, 338)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2jdvr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muem4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp3eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ld40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqmmt")
+}],
+"loop": true,
+"name": &"disco",
+"speed": 2.0
+}]
 
 [node name="Node3D" type="Node3D" unique_id=1705667042]
 
@@ -377,3 +487,99 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -33.
 
 [node name="wall-door7" parent="building" unique_id=1228307418 instance=ExtResource("5_ppgk2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -39.625, 0, -32)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1557123381]
+transform = Transform3D(0.9563048, -0.18120582, 0.2294464, 0, 0.7847764, 0.619779, -0.2923717, -0.5926976, 0.7504854, -22.359684, 4.894579, -14.069975)
+
+[node name="Player" parent="." unique_id=482459206 instance=ExtResource("6_ux5qa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30.412468, 1.0020583, -19.295292)
+
+[node name="Box" type="RigidBody3D" parent="." unique_id=646352430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.917469, 0.5042703, -19.295292)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Box" unique_id=2083901972]
+mesh = SubResource("BoxMesh_7agi7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=1391617013]
+shape = SubResource("BoxShape3D_kih21")
+
+[node name="Barrel" type="RigidBody3D" parent="." unique_id=885281995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.982111, 1.4980721, -19.295292)
+
+[node name="barrel" parent="Barrel" unique_id=1297360253 instance=ExtResource("7_82cfe")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel" unique_id=1935571192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0066833496, 0)
+shape = SubResource("CylinderShape3D_w3o6u")
+
+[node name="Mask" parent="." unique_id=711317670 instance=ExtResource("8_gunhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.458311, 1, -21.826855)
+
+[node name="Machete" parent="." unique_id=1767296346 instance=ExtResource("9_8gofh")]
+transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, -30.087934, 0.9999999, -21.001692)
+script = ExtResource("10_h6wmr")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1433507822]
+
+[node name="CRT" type="ColorRect" parent="UI" unique_id=1265730231]
+visible = false
+material = SubResource("ShaderMaterial_2e2fo")
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 1788.0
+offset_bottom = 1127.0
+
+[node name="Hole" type="ColorRect" parent="UI" unique_id=642265463]
+visible = false
+material = SubResource("ShaderMaterial_gur6y")
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1617.0
+offset_bottom = 1023.0
+
+[node name="Stats" type="VBoxContainer" parent="UI" unique_id=2000462218]
+offset_right = 249.0
+offset_bottom = 163.0
+script = ExtResource("13_wu01b")
+
+[node name="SmileyPanel" type="Panel" parent="UI/Stats" unique_id=1109749936]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Smiley" type="Sprite2D" parent="UI/Stats/SmileyPanel" unique_id=1107459747]
+visible = false
+position = Vector2(121, 50.38)
+scale = Vector2(0.75, 0.7)
+texture = ExtResource("14_3ies3")
+
+[node name="Default" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=1610160487]
+position = Vector2(122, 50)
+scale = Vector2(0.32038835, 0.32038835)
+sprite_frames = SubResource("SpriteFrames_v3why")
+animation = &"uncomfortable"
+autoplay = "uncomfortable"
+
+[node name="Disco" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=2044979674]
+visible = false
+material = SubResource("ShaderMaterial_asl66")
+position = Vector2(122, 50)
+scale = Vector2(0.32, 0.32)
+sprite_frames = SubResource("SpriteFrames_2jdvr")
+animation = &"disco"
+autoplay = "disco"
+
+[node name="TextPanel" type="Panel" parent="UI/Stats" unique_id=560329296]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UI/Stats/TextPanel" unique_id=307272117]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 242.0
+offset_bottom = 49.0
+text = "You're fucked!"
+horizontal_alignment = 1
+vertical_alignment = 1

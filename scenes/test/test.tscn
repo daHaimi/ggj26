@@ -70,3 +70,9 @@ script = ExtResource("6_xi5sv")
 
 [node name="Enemy" parent="." unique_id=493197561 instance=ExtResource("7_2dgve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9063425, 0, 3.4525292)
+
+[node name="NavPoint1" type="Node3D" parent="." unique_id=1520254626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4905286, 0, 3.350925)
+
+[node name="NavPoint2" type="Node3D" parent="." unique_id=423016253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.771516, 0, -5.4825106)

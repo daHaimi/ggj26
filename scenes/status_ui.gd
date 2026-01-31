@@ -21,7 +21,7 @@ func hit():
 
 func changeMask(mask: String) -> void:
 	cur_mask = mask
-	if cur_mask in ['Smiley']:
+	if cur_mask in ['Tony']:
 		max_hitpoints = HP_HIGH
 		cur_hitpoints = HP_HIGH
 	else:
@@ -37,7 +37,3 @@ func updateMask():
 
 func updateHitpoints():
 	$TextPanel/Label.text = "Life {0}/{1}".format([cur_hitpoints, max_hitpoints])
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

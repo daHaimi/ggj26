@@ -13,6 +13,7 @@
 [ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="9_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="11_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="13_trceg"]
+[ext_resource type="Texture2D" uid="uid://dogh0q5q1tcue" path="res://Assets/img/tony.png" id="14_a8y0u"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 
@@ -118,6 +119,42 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc10j"]
+atlas = ExtResource("14_a8y0u")
+region = Rect2(0, 0, 202, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jscy8"]
+atlas = ExtResource("14_a8y0u")
+region = Rect2(203, 0, 202, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm3ni"]
+atlas = ExtResource("14_a8y0u")
+region = Rect2(406, 0, 202, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6deb"]
+atlas = ExtResource("14_a8y0u")
+region = Rect2(609, 0, 202, 321)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_og1vs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc10j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jscy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm3ni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6deb")
+}],
+"loop": true,
+"name": &"tony",
+"speed": 2.0
+}]
+
 [node name="Main2" type="Node3D" unique_id=1620113986]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=776660648]
@@ -213,6 +250,14 @@ scale = Vector2(0.32, 0.32)
 sprite_frames = SubResource("SpriteFrames_yc10j")
 animation = &"disco"
 autoplay = "disco"
+
+[node name="Tony" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=119676368]
+visible = false
+position = Vector2(122, 50)
+scale = Vector2(0.32, 0.32)
+sprite_frames = SubResource("SpriteFrames_og1vs")
+animation = &"tony"
+autoplay = "tony"
 
 [node name="TextPanel" type="Panel" parent="UI/Stats" unique_id=671969044]
 layout_mode = 2

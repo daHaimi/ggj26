@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 		direction = direction.rotated(Vector3(0,1,0), isometric_angle)
 		var target_angle = atan2(modelTarget.x, modelTarget.z)
 		# Lerp into direction
-		$PlayerChar.rotation.y = lerpf($PlayerChar.rotation.y, target_angle, delta * 5)
+		$PlayerChar.rotation.y = lerp_angle($PlayerChar.rotation.y, target_angle, delta * 5)
 	else:
 		anim.play("idle")
 	
@@ -49,7 +49,7 @@ func _process(delta: float) -> void:
 	### Picking up ###
 	for area: Area3D in $Pickup.get_overlapping_areas():
 		if area.name == "Mask":
-			mask_collected.emit("Smiley")
+			mask_collected.emit("Tony")
 		elif area.name == "Machete":
 			hit.emit()
 		else:

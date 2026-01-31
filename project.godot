@@ -86,3 +86,4 @@ ui_down={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+lights_and_shadows/directional_shadow/16_bits=false

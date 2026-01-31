@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
 [ext_resource type="PackedScene" uid="uid://dvyopytowb03u" path="res://3rd-party/lpp/speaker-tower.fbx" id="17_gur6y"]
 [ext_resource type="PackedScene" uid="uid://b6shayrvub6dg" path="res://3rd-party/lpp/microphone-stand.fbx" id="18_v3why"]
+[ext_resource type="PackedScene" uid="uid://ename7g0nov" path="res://Assets/models/convention-sign.glb" id="31_w3o6u"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]
 material = ExtResource("1_2q6dc")
@@ -148,6 +149,11 @@ animations = [{
 "name": &"disco",
 "speed": 2.0
 }]
+
+[sub_resource type="Environment" id="Environment_kih21"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.29
 
 [node name="Node3D" type="Node3D" unique_id=1705667042]
 
@@ -1170,7 +1176,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.125, 0, -18.125)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -39.75, 0, -23.375)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1557123381]
-transform = Transform3D(0.9563048, -0.18120582, 0.2294464, 0, 0.7847764, 0.619779, -0.2923717, -0.5926976, 0.7504854, -22.359684, 4.894579, -14.069975)
+transform = Transform3D(-0.6819983, 0.45327756, -0.5739491, -7.545996e-09, 0.7847764, 0.619779, 0.73135364, 0.4226882, -0.5352163, -22.359684, 17.019579, -0.1949749)
 
 [node name="Player" parent="." unique_id=482459206 instance=ExtResource("6_ux5qa")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30.412468, 1.0020583, 10.079708)
@@ -1264,3 +1270,9 @@ offset_bottom = 49.0
 text = "You're fucked!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1977887183]
+environment = SubResource("Environment_kih21")
+
+[node name="convention-sign" parent="." unique_id=842501103 instance=ExtResource("31_w3o6u")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1, -26.625, 0, 3)

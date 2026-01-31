@@ -10,10 +10,10 @@
 [ext_resource type="Shader" uid="uid://cuq40omywk1u" path="res://Assets/Shaders/visibility.gdshader" id="8_85g3d"]
 [ext_resource type="Texture2D" uid="uid://bokfy5j716cdy" path="res://Assets/img/Smiley.png" id="8_choun"]
 [ext_resource type="Script" uid="uid://dh57ciddb87e" path="res://scenes/status_ui.gd" id="8_ya4ey"]
+[ext_resource type="Shader" path="res://Assets/Shaders/glow.gdshader" id="9_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="11_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="13_trceg"]
 [ext_resource type="Texture2D" uid="uid://dogh0q5q1tcue" path="res://Assets/img/tony.png" id="14_a8y0u"]
-[ext_resource type="PackedScene" uid="uid://cm3jv1yi67ac2" path="res://Assets/prefabs/enemy.tscn" id="15_jkv2x"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 
@@ -267,7 +267,7 @@ text = "You're fucked!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Enemy" parent="." unique_id=493197561 instance=ExtResource("15_jkv2x")]
+[node name="Enemy" parent="." unique_id=493197561]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8264327, 0.86076045, 2.1128287)
 
 [connection signal="hit" from="Player" to="UI/Stats" method="hit"]

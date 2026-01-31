@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cuog6afdg1i55"]
+
+[ext_resource type="PackedScene" uid="uid://cjmlg1flm5piu" path="res://Assets/models/machete.glb" id="1_45sih"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbgi4"]
+size = Vector3(0.98358154, 0.081451416, 0.13337708)
+
+[node name="Machete" type="StaticBody3D" unique_id=1920632882]
+transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, 0, 0, 0)
+
+[node name="machete" parent="." unique_id=2065739991 instance=ExtResource("1_45sih")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1368080853]
+transform = Transform3D(0.9394166, 0.28671607, -0.18785644, -0.32291862, 0.924081, -0.2044446, 0.11497707, 0.252721, 0.96068335, 0, 0, 0)
+shape = SubResource("BoxShape3D_tbgi4")

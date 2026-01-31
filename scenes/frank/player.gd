@@ -23,12 +23,20 @@ func hide_from_enemy():
 #const JUMP_VELOCITY = 4.5
 var isometric_angle = deg_to_rad(45)
 
-
+### Picking up ###
+func _body_entered(body):
+	print(body)
+	if is_in_group("lava"):
+		pass
+		#character_body.translation = Vector3(1, 1, 1)
+		# Set the position of the node to (x, y, z)`[enter image description here][1]
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
+	
+	### MOVEMENT ###
+	# Add the gravity. Important for physics bugging
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -58,3 +66,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, DAMPING * delta)
 
 	move_and_slide()
+
+	for index in get_slide_collision_count():
+		var collision := get_slide_collision(index)
+		var body := collision.get_collider()
+		print("Collided with: ", body.name)

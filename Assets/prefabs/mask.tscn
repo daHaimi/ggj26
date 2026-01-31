@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dd8ppnse7mnii"]
+
+[ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="1_18u33"]
+[ext_resource type="PackedScene" uid="uid://kah7es4jb32e" path="res://Assets/models/mask.glb" id="2_dm03s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_18u33"]
+size = Vector3(0.44970703, 0.4062271, 0.15478516)
+
+[node name="Mask" type="StaticBody3D" unique_id=439555137]
+script = ExtResource("1_18u33")
+
+[node name="mask" parent="." unique_id=1100882523 instance=ExtResource("2_dm03s")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.43053925, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1090452357]
+transform = Transform3D(1, 0, 0, 0, 0.9673828, 0.253319, 0, -0.253319, 0.9673828, -0.00056432, 0.46523568, -0.010434052)
+shape = SubResource("BoxShape3D_18u33")

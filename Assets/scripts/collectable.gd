@@ -10,6 +10,8 @@ var floatProgress: float;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	floatStart = position.y
+	# Random start
+	floatProgress = randf()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

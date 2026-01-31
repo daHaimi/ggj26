@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://nsyrijlcxkug" path="res://scenes/frank/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dl8625vddcehn" path="res://Assets/models/barrel.glb" id="2_0wfyh"]
 [ext_resource type="Material" uid="uid://c5768v54l7tjp" path="res://Assets/materials/floor.tres" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://kah7es4jb32e" path="res://Assets/models/mask.glb" id="4_jyhfs"]
-[ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/float.gd" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dd8ppnse7mnii" path="res://Assets/prefabs/mask.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cuog6afdg1i55" path="res://Assets/prefabs/machete.tscn" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="6_tefeu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 
@@ -59,11 +60,9 @@ skeleton = NodePath("../..")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("WorldBoundaryShape3D_sugp2")
 
-[node name="Mask" type="StaticBody3D" parent="." unique_id=1933443051]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 1, -2.041)
-script = ExtResource("4_tbgi4")
+[node name="Mask" parent="." unique_id=439555137 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9541563, 1, -2.5315638)
 
-[node name="mask" parent="Mask" unique_id=1100882523 instance=ExtResource("4_jyhfs")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.43053925, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Mask" unique_id=1030121855]
+[node name="Machete" parent="." unique_id=1920632882 instance=ExtResource("5_tbgi4")]
+transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, 0.32453412, 0.9999999, -1.7064006)
+script = ExtResource("6_tefeu")

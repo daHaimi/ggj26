@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://bydk8v2sbxtis"]
+
+[ext_resource type="Script" uid="uid://c6chbe8ii8dam" path="res://Assets/scripts/enemy.gd" id="1_2wj43"]
+[ext_resource type="PackedScene" path="res://Assets/prefabs/redneck.tscn" id="2_tjbv5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iq85u"]
+
+[sub_resource type="Animation" id="Animation_1i4hk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RotationAxis:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gmggq"]
+resource_name = "enemy_searching"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RotationAxis:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.7853982, 0), Vector3(0, -0.7853982, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"enter_idle"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uid6r"]
+_data = {
+&"RESET": SubResource("Animation_1i4hk"),
+&"enemy_searching": SubResource("Animation_gmggq")
+}
+
+[sub_resource type="PrismMesh" id="PrismMesh_1i4hk"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gmggq"]
+points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Enemy" type="CharacterBody3D" unique_id=493197561]
+script = ExtResource("1_2wj43")
+
+[node name="character" parent="." unique_id=214737925 instance=ExtResource("2_tjbv5")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.85589516, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1210280039]
+shape = SubResource("CapsuleShape3D_iq85u")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=973411507]
+collision_mask = 3
+debug_shape_custom_color = Color(0.95686275, 0, 0, 1)
+debug_shape_thickness = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=71278756]
+libraries/ = SubResource("AnimationLibrary_uid6r")
+autoplay = &"enemy_searching"
+
+[node name="RotationAxis" type="Node3D" parent="." unique_id=236248936]
+
+[node name="Sight" type="Area3D" parent="RotationAxis" unique_id=524216276]
+transform = Transform3D(0.9978015, -0.06615029, 0.004045929, 0, -0.061048593, -0.9981348, 0.066273905, 0.9959404, -0.06091438, 0, 0, -4.5381484)
+collision_layer = 0
+collision_mask = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RotationAxis/Sight" unique_id=1414420650]
+transform = Transform3D(4, 0, 0, 0, 8, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+layers = 0
+mesh = SubResource("PrismMesh_1i4hk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RotationAxis/Sight" unique_id=1901755525]
+transform = Transform3D(4, 0, 0, 0, 8, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_gmggq")

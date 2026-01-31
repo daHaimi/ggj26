@@ -107,7 +107,7 @@ func hit(damage: int):
 		enter_dead()
 
 func play_footsteps():
-	if not audio_effect.playing:
+	if audio_effect and not audio_effect.playing:
 		audio_effect.stream = footsteps.pick_random()
 		audio_effect.play()
 
@@ -171,4 +171,3 @@ func detect_attack():
 		if collisions.size() > 0:
 			$character.attack()
 			hit_player.emit()
-

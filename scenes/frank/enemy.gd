@@ -45,6 +45,7 @@ func enter_aggro():
 
 func enter_searching():
 	state = States.SEARCHING
+	velocity = Vector3.ZERO
 	animation_player.stop()
 	animation_player.play("enemy_searching")
 

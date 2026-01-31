@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpposkdext2aj"]
+
+[resource]
+resource_name = "26 RED-DARK"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.68743426, 0.028644234, 0.031684764, 1)
+emission_enabled = true

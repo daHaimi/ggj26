@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bteba1idbicuq"
-path="res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"
+uid="uid://cq1ljmnk8vnb6"
+path="res://.godot/imported/cereal-box.fbx-555fddab5b70790801f91b8230536fbe.scn"
 
 [deps]
 
-source_file="res://3rd-party/lpp/chair-dining.fbx"
-dest_files=["res://.godot/imported/chair-dining.fbx-19176ba596a970034af5fc4cd8bb339a.scn"]
+source_file="res://3rd-party/lpp/cereal-box.fbx"
+dest_files=["res://.godot/imported/cereal-box.fbx-555fddab5b70790801f91b8230536fbe.scn"]
 
 [params]
 
@@ -39,24 +39,27 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"17 GREY-DARKEST": {
+"30 YELLOW": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://3rd-party/lpp/17 GREY-DARKEST.tres",
-"use_external/path": "uid://buyshi5vwncnx"
+"use_external/fallback_path": "res://3rd-party/lpp/30 YELLOW.tres",
+"use_external/path": "uid://q35fs1401an8"
 },
-"20 GREY": {
+"43 BLUE-MEDIUM": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://3rd-party/lpp/20 GREY.tres",
-"use_external/path": "uid://0nt5yumgswoa"
+"use_external/fallback_path": "res://3rd-party/lpp/43 BLUE-MEDIUM.tres",
+"use_external/path": "uid://bcflm8xbhmbkj"
+},
+"58 WHITE": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3rd-party/lpp/58 WHITE.tres",
+"use_external/path": "uid://b50fm6hbp5ms4"
 }
 },
 "nodes": {
-"PATH:chair-dining": {
+"PATH:cereal-box": {
 "generate/physics": true,
 "physics/body_type": 1,
-"physics/shape_type": 1,
-"primitive/position": Vector3(0, 0.5, -0.01),
-"primitive/size": Vector3(0.51, 1.01, 0.54)
+"physics/shape_type": 1
 }
 }
 }

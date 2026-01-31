@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cm3jv1yi67ac2"]
 
-[ext_resource type="Script" uid="uid://c6chbe8ii8dam" path="res://scenes/frank/enemy.gd" id="1_1i4hk"]
+[ext_resource type="Script" uid="uid://c6chbe8ii8dam" path="res://Assets/scripts/enemy.gd" id="1_1i4hk"]
+[ext_resource type="PackedScene" uid="uid://sh8a27fjeysp" path="res://Assets/models/hitman.glb" id="2_xl01c"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_uid6r"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iq85u"]
 
 [sub_resource type="Animation" id="Animation_1i4hk"]
 length = 0.001
@@ -60,13 +61,14 @@ _data = {
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gmggq"]
 points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_gmggq"]
-
 [node name="Enemy" type="CharacterBody3D" unique_id=493197561]
 script = ExtResource("1_1i4hk")
 
+[node name="hitman" parent="." unique_id=20091878 instance=ExtResource("2_xl01c")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 0, 0.13923049, 0)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1210280039]
-shape = SubResource("CylinderShape3D_uid6r")
+shape = SubResource("CapsuleShape3D_iq85u")
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=973411507]
 collision_mask = 3
@@ -92,7 +94,3 @@ mesh = SubResource("PrismMesh_1i4hk")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RotationAxis/Sight" unique_id=1901755525]
 transform = Transform3D(4, 0, 0, 0, 8, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_gmggq")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RotationAxis" unique_id=1208592008]
-mesh = SubResource("CylinderMesh_gmggq")
-skeleton = NodePath("../..")

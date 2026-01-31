@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://c4wxjv3wv48qw"
-path="res://.godot/imported/Enemy_Hit_ 1.wav-8986ab7f10dcdb3576ad91546d9c7013.sample"
+uid="uid://c3okiervv6q0u"
+path="res://.godot/imported/Mask_Pickup.wav-b349619fcd0f7ea4bb3b94a459d32b56.sample"
 
 [deps]
 
-source_file="res://art/sfx/Enemy_Hit_ 1.wav"
-dest_files=["res://.godot/imported/Enemy_Hit_ 1.wav-8986ab7f10dcdb3576ad91546d9c7013.sample"]
+source_file="res://art/sfx/Mask_Pickup.wav"
+dest_files=["res://.godot/imported/Mask_Pickup.wav-b349619fcd0f7ea4bb3b94a459d32b56.sample"]
 
 [params]
 

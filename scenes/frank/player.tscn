@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bm34s0rqelvk5" path="res://scenes/frank/player.gd" id="1_ydx0u"]
 [ext_resource type="Script" uid="uid://dqb53brberiui" path="res://scenes/frank/dash.gd" id="2_a0svu"]
-[ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://scenes/player-char.tscn" id="2_cmddg"]
+[ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="2_cmddg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krpkg"]
 radius = 0.31347656
@@ -21,7 +21,7 @@ script = ExtResource("1_ydx0u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0121818, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=151154706]
-transform = Transform3D(0.7071068, -0.5, 0.5, 0, 0.7071068, 0.70710677, -0.7071068, -0.5, 0.5, 12, 17.295008, 12)
+transform = Transform3D(0.70710677, 0.49999997, -0.49999997, 0, 0.70710677, 0.70710677, 0.70710677, -0.49999997, 0.49999997, -12, 17.295, 12)
 projection = 1
 size = 8.068
 

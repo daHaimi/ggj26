@@ -78,11 +78,6 @@ animations = [{
 "speed": 1.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_trceg"]
-shader = ExtResource("9_ya4ey")
-shader_parameter/active = true
-shader_parameter/border_threshold = Vector2(0.01, 0.01)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_muem4"]
 atlas = ExtResource("13_trceg")
 region = Rect2(0, 0, 200, 338)
@@ -244,7 +239,6 @@ autoplay = "uncomfortable"
 
 [node name="Disco" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=165359013]
 visible = false
-material = SubResource("ShaderMaterial_trceg")
 position = Vector2(122, 50)
 scale = Vector2(0.32, 0.32)
 sprite_frames = SubResource("SpriteFrames_yc10j")

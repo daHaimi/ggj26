@@ -3,19 +3,26 @@ extends VBoxContainer
 const HP_DEFAULT = 2
 const HP_HIGH = 5
 
+@onready var glowShader: Shader = preload("res://Assets/Shaders/glow.gdshader")
 var max_hitpoints: int = HP_DEFAULT
 var cur_hitpoints: int;
 var cur_mask: String = "Default"
+var glow: ShaderMaterial
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	glow = ShaderMaterial.new()
+	glow.shader = glowShader
+	glow.set_shader_parameter("active", true)
 	cur_hitpoints = max_hitpoints
 
+func detected(det: bool):
+	# Todo
+	pass
+		
 func hit():
 	print("hit")
 	cur_hitpoints -= 1
 	if cur_hitpoints == 1:
-		cur_mask = "Disco"
 		updateMask()
 	updateHitpoints()
 
@@ -36,4 +43,9 @@ func updateMask():
 	$SmileyPanel.find_child(cur_mask, false).visible = true
 
 func updateHitpoints():
+	var avatar: AnimatedSprite2D = $SmileyPanel.find_child(cur_mask)
+	if cur_hitpoints == 1:
+		avatar.material = glow
+	else:
+		avatar.material = null
 	$TextPanel/Label.text = "Life {0}/{1}".format([cur_hitpoints, max_hitpoints])

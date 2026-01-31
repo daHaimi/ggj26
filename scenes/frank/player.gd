@@ -13,7 +13,6 @@ signal hit
 #@onready var dash_timer = $DashCooldownTimer
 # hide disables collider layer 2
 
-var direction: Vector3
 
 func dash():
 	if dash_component.dash_ready:
@@ -25,7 +24,11 @@ func hide_from_enemy():
 
 #const JUMP_VELOCITY = 4.5
 var isometric_angle = deg_to_rad(45)
+var direction: Vector3
+var animator: AnimationPlayer
 
+func _ready() -> void:
+	animator = $PlayerChar/model/AnimationPlayer
 
 func _process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -33,17 +36,16 @@ func _process(delta: float) -> void:
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	var anim: AnimationPlayer = $PlayerChar/model/AnimationPlayer
-	anim.playback_default_blend_time = 1.5
+	animator.playback_default_blend_time = 1.5
 	if input_dir != Vector2.ZERO:
-		anim.play("running")
+		animator.play("running")
 		direction = direction.rotated(Vector3(0,1,0), -isometric_angle)
 		var modelTarget = direction.rotated(Vector3(0,1,0), deg_to_rad(-90))
 		var target_angle = atan2(modelTarget.x, modelTarget.z)
 		# Lerp into direction
 		$PlayerChar.rotation.y = lerp_angle($PlayerChar.rotation.y, target_angle, delta * 10)
 	else:
-		anim.play("idle")
+		animator.play("idle")
 	
 	
 	### Picking up ###
@@ -73,7 +75,9 @@ func _physics_process(delta: float) -> void:
 
 	var speed_used = SPEED
 	if dash_component.dashing:
+		animator.set_speed_scale(DASH_SPEED / SPEED)
 		speed_used = DASH_SPEED
+	else: animator.set_speed_scale(1.0)
 
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * speed_used

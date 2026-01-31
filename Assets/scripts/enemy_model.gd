@@ -5,7 +5,7 @@ extends Node3D
 @onready var animator: AnimationPlayer = $model/AnimationPlayer
 
 var attack_map: Dictionary = {
-	"Redneck" = "hook_punch",
+	"Redneck" = "hook-punch",
 	"Hitman" = "pistol"
 }
 
@@ -14,4 +14,3 @@ func getAnimator() -> AnimationPlayer:
 
 func attack():
 	animator.play(attack_map[character_type])
-	animator.queue("idle")

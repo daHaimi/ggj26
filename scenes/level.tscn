@@ -29,12 +29,13 @@
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
 [ext_resource type="PackedScene" uid="uid://dvyopytowb03u" path="res://3rd-party/lpp/speaker-tower.fbx" id="17_gur6y"]
 [ext_resource type="PackedScene" uid="uid://b6shayrvub6dg" path="res://3rd-party/lpp/microphone-stand.fbx" id="18_v3why"]
-[ext_resource type="PackedScene" uid="uid://ename7g0nov" path="res://Assets/models/convention-sign.glb" id="31_w3o6u"]
 [ext_resource type="Texture2D" uid="uid://dogh0q5q1tcue" path="res://Assets/img/tony.png" id="30_2e2fo"]
 [ext_resource type="Texture2D" uid="uid://dlt7jtgk7ipi" path="res://Assets/img/jigsaw.png" id="31_gur6y"]
+[ext_resource type="PackedScene" uid="uid://ename7g0nov" path="res://Assets/models/convention-sign.glb" id="31_w3o6u"]
 [ext_resource type="Texture2D" uid="uid://c66sadw083typ" path="res://Assets/img/mask.png" id="32_v3why"]
 [ext_resource type="PackedScene" uid="uid://cm3jv1yi67ac2" path="res://Assets/prefabs/enemy.tscn" id="33_gur6y"]
 [ext_resource type="PackedScene" uid="uid://bydk8v2sbxtis" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
+[ext_resource type="AudioStream" uid="uid://buqp7huuob228" path="res://art/sfx/Wilhelmscream.wav" id="35_2jdvr"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]
 material = ExtResource("1_2q6dc")
@@ -154,10 +155,6 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="Environment" id="Environment_kih21"]
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.29
 [sub_resource type="AtlasTexture" id="AtlasTexture_yc10j"]
 atlas = ExtResource("30_2e2fo")
 region = Rect2(0, 0, 202, 321)
@@ -265,6 +262,11 @@ animations = [{
 "name": &"mask",
 "speed": 2.0
 }]
+
+[sub_resource type="Environment" id="Environment_kih21"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.29
 
 [node name="Node3D" type="Node3D" unique_id=1705667042]
 
@@ -1413,8 +1415,10 @@ environment = SubResource("Environment_kih21")
 
 [node name="convention-sign" parent="." unique_id=842501103 instance=ExtResource("31_w3o6u")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1, -26.625, 0, 3)
+
 [node name="Enemy" parent="." unique_id=493197561 instance=ExtResource("33_gur6y")]
 transform = Transform3D(-0.7781336, 0, 0.62809885, 0, 1, 0, -0.62809885, 0, -0.7781336, -14.948072, 0.9657839, -25.934914)
+voiceline_death = ExtResource("35_2jdvr")
 
 [node name="Enemy2" parent="." unique_id=101225594 instance=ExtResource("34_v3why")]
 transform = Transform3D(-0.3746066, 0, 0.92718387, 0, 1, 0, -0.92718387, 0, -0.3746066, -21.735743, 0.9079472, -2.959128)

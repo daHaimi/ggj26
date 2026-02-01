@@ -522,6 +522,10 @@ shadow_mesh = SubResource("ArrayMesh_j4eoh")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p0vju"]
 points = PackedVector3Array(1.0486568, 1.0155467, 0.8818672, 1.0250477, 1.071672, 0.9026396, 1.0250477, 1.071672, 0.95987964, 1.0484515, 1.0155467, 0.9806521, 0.8889358, 0.19902696, -1.7114704, 0.8889358, 0.27162936, -2.0244436, 0.8889358, 0.50539887, -2.0318294, 0.8889358, 0.7391683, -2.0387535, 0.8889358, 0.94873697, -1.8739579, 0.63375163, 1.4613307, -0.28001094, 0.63375163, 1.4121566, 0.31085277, 0.61260605, 0.8909382, 2.0728269, 0.8889358, 0.7951648, 1.730772, 0.8842139, 0.7022235, 1.7746253, 0.8889358, 0.53062946, 1.7289257, 0.83330035, 0.20018551, 1.7917051, -0.8891411, 0.19902696, -1.7114704, 0, 0.3354783, -2.357266, 0.83330035, 0.19902696, 1.0378921, 0.6097319, 0.3354783, -2.3157208, 0.6397053, 0.74792176, -2.2866392, 0.6173279, 0.900979, -2.2769454, 0.5920764, 1.0055059, -2.2164743, 0.5809903, 1.4025021, -1.2032354, 0.59597707, 1.4285051, -0.88749254, 0, 1.5141089, -0.28001094, 0, 1.4433087, 0.35101318, 0, 0.8900371, 2.1480694, 0.048244834, 0.73492026, 2.2763977, 0.09587371, 0.6919252, 2.2967086, 0.61055315, 0.779975, 2.122219, 0.5292555, 0.23713034, 2.287015, 0.83104205, 0.439619, 1.8692555, 0.7807443, 0.21112736, 1.9352665, 0.5820168, 0.19902696, 1.7917051, -0.8891411, 0.27162936, -2.0244436, -0.83350563, 0.19902696, 1.0378921, -0.83350563, 0.20018551, 1.7917051, -1.0486568, 1.0155467, 0.9806521, -1.0486568, 1.0155467, 0.8818672, -0.60993725, 0.3354783, -2.3157208, 0, 0.900979, -2.346649, 0, 1.023399, -2.3018725, 0, 1.4260592, -1.2032354, 0, 1.4757481, -0.8907238, -0.59618235, 1.4285051, -0.88749254, -0.63395697, 1.4613307, -0.28001094, -0.63395697, 1.4121566, 0.31085277, -0.6128114, 0.8909382, 2.0728269, -0.048450112, 0.73492026, 2.2763977, 0, 0.779975, 2.2431617, 0.048244834, 0.6489302, 2.3170195, 0, 0.5769714, 2.349794, 0.56087124, 0.61378753, 2.1946926, 0.5438316, 0.41413093, 2.2468548, 0, 0.24163583, 2.3585649, -0.58222216, 0.19902696, 1.7917051, -0.8891411, 0.50539887, -2.0318294, -0.52946085, 0.23713034, 2.287015, -0.7809496, 0.21112736, 1.9352665, -0.8312473, 0.439619, 1.8692555, -0.8891411, 0.53062946, 1.7289257, -0.88441926, 0.7022235, 1.7746253, -0.8891411, 0.7951648, 1.730772, -1.0252529, 1.071672, 0.95987964, -1.0252529, 1.071672, 0.9026396, -0.8891411, 0.94873697, -1.8739579, -0.8891411, 0.7391683, -2.0387535, -0.6399106, 0.74792176, -2.2866392, -0.6175332, 0.900979, -2.2769454, -0.5922817, 1.0055059, -2.2164743, -0.58119565, 1.4025021, -1.2032354, -0.6107584, 0.779975, 2.122219, -0.09607899, 0.6919252, 2.2967086, -0.048450112, 0.6489302, 2.3170195, -0.5610765, 0.61378753, 2.1946926, -0.5440369, 0.41413093, 2.2468548)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_w3o6u"]
+height = 1.0066528
+radius = 0.40966797
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2e2fo"]
 shader = ExtResource("11_pqd0y")
 shader_parameter/brightnessMult = 2.0000000298024
@@ -1173,6 +1177,12 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 27.0
 
 [node name="body-bag67" parent="floors" unique_id=744107385 instance=ExtResource("8_30hdq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 28.31475, 1.2497488, -23.263758)
+
+[node name="Enemy" parent="floors" unique_id=493197561 instance=ExtResource("34_v3why")]
+transform = Transform3D(-0.9658897, 0, -0.25895387, 0, 1, 0, 0.25895387, 0, -0.9658897, 24.06085, 1.0055182, -19.071085)
+
+[node name="Enemy2" parent="floors" unique_id=593056573 instance=ExtResource("33_gur6y")]
+transform = Transform3D(-0.10327861, 0, -0.99465245, 0, 1, 0, 0.99465245, 0, -0.10327861, -34.714817, 0.9652446, -16.804108)
 
 [node name="building" type="Node3D" parent="." unique_id=404355230]
 
@@ -2055,6 +2065,9 @@ transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.707
 [node name="hot-dog-stand2" parent="hall" unique_id=1914478367 instance=ExtResource("11_535f6")]
 transform = Transform3D(0.3423809, 0, -0.93956125, 0, 1, 0, 0.93956125, 0, 0.3423809, 32.2406, 0, 14.34236)
 
+[node name="Enemy" parent="hall" unique_id=635475429 instance=ExtResource("34_v3why")]
+transform = Transform3D(-0.67619485, 0, 0.7367228, 0, 1, 0, -0.7367228, 0, -0.67619485, -28.47125, 1.0055182, -26.574326)
+
 [node name="outside" type="Node3D" parent="." unique_id=1507530086]
 
 [node name="tree-beech2" parent="outside" unique_id=2028730149 instance=ExtResource("12_ux5qa")]
@@ -2174,7 +2187,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5935416, 0.24242395, -17.2
 [node name="shrub15" parent="outside" unique_id=823668521 instance=ExtResource("26_ok3ci")]
 transform = Transform3D(0.58953476, 0, -0.807743, 0, 1, 0, 0.807743, 0, 0.58953476, -6.5935416, 0.24242395, -15.78759)
 
-[node name="armored-truck" parent="outside" unique_id=368069657 instance=ExtResource("31_3fqns")]
+[node name="armored-truck" parent="outside" unique_id=1278683205 instance=ExtResource("31_3fqns")]
 transform = Transform3D(0.1269607, 0, -0.9919078, 0, 1, 0, 0.9919078, 0, 0.1269607, -38.05375, 0.0006439686, 37.68635)
 
 [node name="blood-spill" parent="outside" unique_id=220734495 instance=ExtResource("32_sc620")]
@@ -2462,7 +2475,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.386494, -0.67450714, 25.60
 [node name="tree-beech94" parent="outside" unique_id=1027146004 instance=ExtResource("12_ux5qa")]
 transform = Transform3D(0.9310558, 0, -0.36487678, 0, 1, 0, 0.36487678, 0, 0.9310558, -43.006756, -0.9195776, 3.2185206)
 
-[node name="armored-truck2" parent="outside" unique_id=1429451766 instance=ExtResource("31_3fqns")]
+[node name="armored-truck2" parent="outside" unique_id=374891088 instance=ExtResource("31_3fqns")]
 transform = Transform3D(0.9755805, 0, -0.21964195, 0, 1, 0, 0.21964195, 0, 0.9755805, -37.69443, 0.0006439686, 16.904282)
 
 [node name="log" parent="outside" unique_id=1165028716 instance=ExtResource("59_421lv")]
@@ -3472,7 +3485,6 @@ color = Color(1, 0, 0, 0)
 script = ExtResource("45_421lv")
 
 [node name="CRT" type="ColorRect" parent="UI" unique_id=1265730231]
-visible = false
 material = SubResource("ShaderMaterial_2e2fo")
 offset_left = -6.0
 offset_top = -7.0
@@ -3666,9 +3678,9 @@ centered = false
 environment = SubResource("Environment_kih21")
 
 [node name="convention-sign" parent="." unique_id=842501103 instance=ExtResource("31_w3o6u")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1, -26.625, 0, 3)
+transform = Transform3D(1.27, 0, 0, 0, 1.27, 0, 0, 0, 1.058, -26.625, 0, 2.8686986)
 
-[node name="Enemy" parent="." unique_id=493197561 instance=ExtResource("33_gur6y")]
+[node name="Enemy" parent="." unique_id=1309453903 instance=ExtResource("33_gur6y")]
 transform = Transform3D(-0.7781336, 0, 0.62809885, 0, 1, 0, -0.62809885, 0, -0.7781336, -14.948072, 0.9657839, -25.934914)
 
 [node name="Enemy2" parent="." unique_id=101225594 instance=ExtResource("34_v3why")]
@@ -3685,7 +3697,30 @@ shape = SubResource("BoxShape3D_421lv")
 [node name="beer" parent="." unique_id=983576426 instance=ExtResource("15_0fmhk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.59736, 1.1211194, 30.393806)
 
-[connection signal="hit" from="Player" to="UI/ColorRect" method="notify_hit"]
+[node name="Enemy3" parent="." unique_id=1290987668 instance=ExtResource("34_v3why")]
+transform = Transform3D(0.86797357, 0, -0.49661046, 0, 1, 0, 0.49661046, 0, 0.86797357, -24.174313, 1.0055144, 37.145393)
+
+[node name="Enemy4" parent="." unique_id=1959597604 instance=ExtResource("34_v3why")]
+transform = Transform3D(-0.5205328, 0, 0.8538417, 0, 1, 0, -0.8538417, 0, -0.5205328, 31.056414, 1.0055187, 12.100176)
+
+[node name="Enemy5" parent="." unique_id=188669680 instance=ExtResource("33_gur6y")]
+transform = Transform3D(0.22430483, 0, 0.974519, 0, 1, 0, -0.974519, 0, 0.22430483, -28.897951, 0.9652441, -18.303885)
+
+[node name="Enemy6" parent="." unique_id=1813278640 instance=ExtResource("34_v3why")]
+transform = Transform3D(0.5696812, 0, -0.82186574, 0, 1, 0, 0.82186574, 0, 0.5696812, -16.04491, 1.0055172, -36.384018)
+
+[node name="Enemy7" parent="." unique_id=1846942570 instance=ExtResource("34_v3why")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.049644, 1.0055172, 36.173714)
+
+[node name="Enemy8" parent="." unique_id=576305415 instance=ExtResource("33_gur6y")]
+transform = Transform3D(-0.024693906, 0, 0.9996951, 0, 1, 0, -0.9996951, 0, -0.024693906, 32.515324, 0.9652441, 17.172134)
+
+[node name="Enemy9" parent="." unique_id=654426497 instance=ExtResource("33_gur6y")]
+transform = Transform3D(-0.7391023, 0, 0.67359316, 0, 1, 0, -0.67359316, 0, -0.7391023, -4.673255, 0.9652441, 2.033866)
+
+[node name="Enemy10" parent="." unique_id=1981335030 instance=ExtResource("34_v3why")]
+transform = Transform3D(-0.7482498, 0, -0.66341704, 0, 1, 0, 0.66341704, 0, -0.7482498, -10.355362, 1.0055172, -16.653782)
+
 [connection signal="hit" from="Player" to="UI/Stats" method="hit"]
 [connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]
 [connection signal="player_hit" from="UI/Stats" to="Player" method="_on_stats_player_hit"]

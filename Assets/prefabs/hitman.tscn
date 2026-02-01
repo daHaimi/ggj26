@@ -131,7 +131,7 @@ bind/28/bone = -1
 bind/28/pose = Transform3D(7.807272e-06, 1.8007326, -1.0732225e-07, 0.004102854, 8.953319e-08, 1.8007209, 1.8007202, -7.807462e-06, -0.0041028517, -0.00045899636, -0.00013961489, 0.0013133528)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_s4jna"]
-height = 0.620697
+height = 0.33573914
 radius = 0.01
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6b6rb"]
@@ -144,7 +144,7 @@ _data = {
 }
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_m6jbf"]
-height = 6.5283203
+height = 3.7163086
 radius = 1.0
 
 [node name="hitman" type="Node3D" unique_id=838528403]
@@ -452,7 +452,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="model/metarig/Skeleton3D/Hand/AttackArea" unique_id=1438513598]
-transform = Transform3D(0.98325515, -0.18223518, -3.6228448e-07, 0.18223602, 0.983255, -9.723008e-07, 2.2532186e-07, 1.6130507e-06, 1.0000002, -0.05443511, 0.3226734, -0.032209873)
+transform = Transform3D(0.98325515, -0.1822351, -6.5844506e-07, 0.18223602, 0.9832558, -2.0377338e-06, 3.7933933e-07, 2.7231872e-06, 1.0000002, -0.028470434, 0.18258032, -0.032210104)
 shape = SubResource("CylinderShape3D_s4jna")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="model" unique_id=733265311]
@@ -465,5 +465,5 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="model/InRangeArea" unique_id=1516007182]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.6509936, 3.5576763)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.65099365, 2.1516705)
 shape = SubResource("CylinderShape3D_m6jbf")

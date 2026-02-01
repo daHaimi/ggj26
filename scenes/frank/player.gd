@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const DAMPING = 25.0
-const DASH_SPEED = 15
+const DASH_SPEED = 7.5
 const DASH_MAX_TIME = 3.0
 
 signal mask_collected(mask: String)
@@ -91,7 +91,7 @@ func play_mask_pickup_sound(mask_name: String):
 func _process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("attack"):
-		if !attacking:
+		if !attacking && stats.can_attack():
 			attacking = true
 			animator.play("slash")
 	elif !attacking:
@@ -135,12 +135,14 @@ func _physics_process(delta: float) -> void:
 		dash()
 
 	var speed_used = SPEED
+	var speed_scale = 1.5 if stats.is_fast() else 1.0
 	if attacking:
 		speed_used = 0
 	elif dash_component.dashing:
-		animator.set_speed_scale(DASH_SPEED / SPEED)
+		speed_scale += (DASH_SPEED / SPEED) - 1
 		speed_used = DASH_SPEED
-	else: animator.set_speed_scale(1.0)
+	speed_used *= speed_scale
+	animator.set_speed_scale(speed_scale)
 
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * speed_used

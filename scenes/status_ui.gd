@@ -25,6 +25,13 @@ func detected(det: bool):
 	# Todo
 	pass
 
+
+func can_attack() -> bool:
+	return cur_mask != "Default"
+
+func is_fast() -> bool:
+	return cur_mask == "Tony"
+
 func hit():
 	print("hit")
 	cur_hitpoints -= 1
@@ -35,7 +42,7 @@ func hit():
 
 func changeMask(mask: String) -> void:
 	cur_mask = mask
-	if cur_mask in ['Tony']:
+	if cur_mask in ['Jigsaw']:
 		max_hitpoints = HP_HIGH
 		cur_hitpoints = HP_HIGH
 	else:

@@ -3,7 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	BackgroundMusic.play_background_music()
+	#BackgroundMusic.play_background_music()
 	pass # Replace with function body.
 
 

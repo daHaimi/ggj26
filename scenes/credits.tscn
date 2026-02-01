@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0jp626hgiu1k" path="res://Assets/scripts/credits.gd" id="1_2fbfq"]
 [ext_resource type="PackedScene" uid="uid://cf864j3368ocb" path="res://Assets/prefabs/hitman.tscn" id="2_8gwij"]
+[ext_resource type="FontFile" uid="uid://djshywiib7bi6" path="res://Assets/fonts/Creepster-Regular.ttf" id="2_mah5v"]
 [ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="3_mah5v"]
 [ext_resource type="PackedScene" uid="uid://cxfx2qrpsx21r" path="res://Assets/prefabs/redneck.tscn" id="4_kyhnv"]
 [ext_resource type="Texture2D" uid="uid://er4e3v6g6mly" path="res://Assets/img/Baguetteboeden.png" id="5_8gwij"]
@@ -13,7 +14,8 @@ font_size = 69
 font_size = 18
 
 [sub_resource type="Environment" id="Environment_ya6b3"]
-background_energy_multiplier = 0.55
+background_mode = 1
+background_color = Color(0.16470589, 0, 0.023529412, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.90359825, 0.90359825, 0.9035982, 1)
 
@@ -42,7 +44,20 @@ grow_horizontal = 2
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/CenterContainer" unique_id=809180588]
 layout_mode = 2
 
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/CenterContainer/GridContainer" unique_id=42888062]
+layout_mode = 2
+theme_override_constants/line_separation = -47
+theme_override_fonts/normal_font = ExtResource("2_mah5v")
+theme_override_fonts/bold_font = ExtResource("2_mah5v")
+theme_override_font_sizes/normal_font_size = 57
+theme_override_font_sizes/bold_font_size = 118
+bbcode_enabled = true
+text = "[b][color=red]M[/color][/b]e [b][color=red]A[/color][/b]mong [b][color=red]S[/color][/b]erial [b][color=red]K[/color][/b]illers"
+fit_content = true
+autowrap_mode = 0
+
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer/GridContainer" unique_id=1568660818]
+visible = false
 layout_mode = 2
 text = "Me Among Serial Killers"
 label_settings = SubResource("LabelSettings_vmn6f")
@@ -82,7 +97,9 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "special thx:
-Thomas"
+Thomas
+Johanna
+Rudi"
 horizontal_alignment = 1
 vertical_alignment = 1
 

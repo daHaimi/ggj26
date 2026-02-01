@@ -9,6 +9,9 @@
 [sub_resource type="Environment" id="Environment_mhnvy"]
 background_mode = 1
 background_color = Color(0.16359308, 0, 0.023895236, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.0
 
 [node name="Menu" type="CanvasLayer" unique_id=1066489308]
 script = ExtResource("1_yqeox")

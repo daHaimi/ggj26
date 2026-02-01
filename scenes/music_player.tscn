@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dojewa1psfn5m"]
 
 [ext_resource type="Script" uid="uid://or4iin6eu1w0" path="res://scenes/music_player.gd" id="1_ql6qh"]
-[ext_resource type="AudioStream" uid="uid://pp7if8qdd22q" path="res://art/sfx/Enemy_Hit_ 2.wav" id="2_l7xiw"]
+[ext_resource type="AudioStream" uid="uid://pp7if8qdd22q" path="res://art/sfx/Enemy_Hit_2.wav" id="2_l7xiw"]
 [ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_l7xiw"]
 
 [sub_resource type="Animation" id="Animation_fwkb2"]

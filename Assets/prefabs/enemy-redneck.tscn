@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6chbe8ii8dam" path="res://Assets/scripts/enemy.gd" id="1_2wj43"]
 [ext_resource type="AudioStream" uid="uid://dwjlupsivkpfm" path="res://art/sfx/Player_Footsteps_0.wav" id="2_lqx03"]
-[ext_resource type="PackedScene" uid="uid://pfa3evluqjie" path="res://Assets/prefabs/redneck.tscn" id="2_tjbv5"]
+[ext_resource type="PackedScene" uid="uid://cxfx2qrpsx21r" path="res://Assets/prefabs/redneck.tscn" id="2_tjbv5"]
 [ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_2wki4"]
 [ext_resource type="Script" path="res://Assets/scripts/enemy_model.gd" id="3_ffs4v"]
 [ext_resource type="AudioStream" uid="uid://bjiv3pbguom6x" path="res://art/sfx/Player_Footsteps_2.wav" id="4_b4h52"]

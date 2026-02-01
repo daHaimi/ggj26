@@ -3,15 +3,6 @@
 [ext_resource type="Script" uid="uid://bm34s0rqelvk5" path="res://scenes/frank/player.gd" id="1_ydx0u"]
 [ext_resource type="Script" uid="uid://dqb53brberiui" path="res://scenes/frank/dash.gd" id="2_a0svu"]
 [ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="2_cmddg"]
-[ext_resource type="AudioStream" uid="uid://dwjlupsivkpfm" path="res://art/sfx/Player_Footsteps_0.wav" id="2_nwm54"]
-[ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_8hfjp"]
-[ext_resource type="AudioStream" uid="uid://bjiv3pbguom6x" path="res://art/sfx/Player_Footsteps_2.wav" id="4_lfhxo"]
-[ext_resource type="AudioStream" uid="uid://c00meqryvp7c1" path="res://art/sfx/Machete_Swing_1.wav" id="5_6igsk"]
-[ext_resource type="AudioStream" uid="uid://bccsh18weqgbh" path="res://art/sfx/Voc_PlayerDamaged_3.wav" id="6_n72is"]
-[ext_resource type="AudioStream" uid="uid://buqp7huuob228" path="res://art/sfx/Wilhelmscream.wav" id="7_vcbfp"]
-[ext_resource type="AudioStream" uid="uid://dkaa7w8mrlk3" path="res://art/sfx/Voc_Player_0.wav" id="8_dvtic"]
-[ext_resource type="AudioStream" uid="uid://cfdssy17nqfi5" path="res://art/sfx/Voc_Player_1.wav" id="9_f318w"]
-[ext_resource type="AudioStream" uid="uid://coidc8irbvhe3" path="res://art/sfx/Voc_Player_2.wav" id="10_yuemg"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_cmddg"]
 height = 0.5
@@ -29,15 +20,6 @@ height = 1.6977539
 collision_layer = 3
 platform_wall_layers = 1
 script = ExtResource("1_ydx0u")
-footsteps_01 = ExtResource("2_nwm54")
-footsteps_02 = ExtResource("3_8hfjp")
-footsteps_03 = ExtResource("4_lfhxo")
-sound_hitting = ExtResource("5_6igsk")
-voiceline_getting_hit = ExtResource("6_n72is")
-voiceline_death = ExtResource("7_vcbfp")
-sound_tiger_mask = ExtResource("8_dvtic")
-sound_jigsaw_mask = ExtResource("9_f318w")
-sound_the_mask = ExtResource("10_yuemg")
 
 [node name="PlayerChar" parent="." unique_id=1158323092 instance=ExtResource("2_cmddg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0121818, 0)

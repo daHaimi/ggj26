@@ -45,7 +45,6 @@
 [ext_resource type="Texture2D" uid="uid://c66sadw083typ" path="res://Assets/img/mask.png" id="32_v3why"]
 [ext_resource type="PackedScene" uid="uid://cm3jv1yi67ac2" path="res://Assets/prefabs/enemy.tscn" id="33_gur6y"]
 [ext_resource type="PackedScene" uid="uid://bydk8v2sbxtis" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
-[ext_resource type="AudioStream" uid="uid://buqp7huuob228" path="res://art/sfx/Wilhelmscream.wav" id="35_2jdvr"]
 [ext_resource type="Texture2D" uid="uid://bfme27r3vrj5c" path="res://Assets/img/beer-bottle-svgrepo-com.svg" id="39_iafhg"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]
@@ -1811,5 +1810,6 @@ transform = Transform3D(-0.3746066, 0, 0.92718387, 0, 1, 0, -0.92718387, 0, -0.3
 
 [connection signal="hit" from="Player" to="UI/Stats" method="hit"]
 [connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]
+[connection signal="player_hit" from="UI/Stats" to="Player" method="_on_stats_player_hit"]
 [connection signal="hit_player" from="Enemy" to="UI/Stats" method="hit"]
 [connection signal="hit_player" from="Enemy2" to="UI/Stats" method="hit"]

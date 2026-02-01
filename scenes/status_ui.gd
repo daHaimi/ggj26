@@ -5,6 +5,8 @@ const HP_HIGH = 5
 const STRENGTH_DEFAULT = 1
 const STRENGTH_HIGH = 1
 
+signal player_hit
+
 @onready var glowShader: Shader = preload("res://Assets/Shaders/glow.gdshader")
 @onready var dashBar: ProgressBar = $DashBar
 var max_hitpoints: int = HP_DEFAULT
@@ -29,6 +31,7 @@ func hit():
 	if cur_hitpoints == 1:
 		updateMask()
 	updateHitpoints()
+	player_hit.emit(cur_hitpoints)
 
 func changeMask(mask: String) -> void:
 	cur_mask = mask

@@ -130,7 +130,7 @@ func _physics_process(delta: float) -> void:
 		#velocity.y = JUMP_VELOCITY
 
 
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("dash"):
 		dash()
 
 	var speed_used = SPEED

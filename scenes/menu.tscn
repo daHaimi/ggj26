@@ -5,6 +5,9 @@
 [ext_resource type="FontFile" uid="uid://djshywiib7bi6" path="res://Assets/fonts/Creepster-Regular.ttf" id="3_con2f"]
 [ext_resource type="StyleBox" uid="uid://yk4ls7ctu0c0" path="res://Assets/menu_style_box_flat.tres" id="3_mhnvy"]
 [ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="5_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://cy4ebpr7ppvhs" path="res://Assets/img/sprite_mask.png" id="6_g3eks"]
+[ext_resource type="Texture2D" uid="uid://dq6l0c6rd5h2d" path="res://Assets/img/sprite_jigsaw.png" id="7_13sgg"]
+[ext_resource type="Texture2D" uid="uid://ccu3ukoc1q4ik" path="res://Assets/img/sprite_tony.png" id="8_i6lef"]
 
 [sub_resource type="Environment" id="Environment_mhnvy"]
 background_mode = 1
@@ -12,6 +15,26 @@ background_color = Color(0.16359308, 0, 0.023895236, 1)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v86rl"]
+transparency = 1
+albedo_texture = ExtResource("6_g3eks")
+uv1_scale = Vector3(2.105, 2.105, 2.105)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_13sgg"]
+height = 1.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70i5f"]
+transparency = 1
+albedo_texture = ExtResource("7_13sgg")
+uv1_scale = Vector3(2.105, 2.105, 2.105)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj5lg"]
+transparency = 1
+albedo_texture = ExtResource("8_i6lef")
+uv1_scale = Vector3(2.105, 2.105, 2.105)
 
 [node name="Menu" type="CanvasLayer" unique_id=1066489308]
 script = ExtResource("1_yqeox")
@@ -30,7 +53,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 447.0
+offset_left = 502.0
 offset_top = 195.0
 offset_right = -174.0
 offset_bottom = -70.0
@@ -102,6 +125,21 @@ transform = Transform3D(0.3593943, 0, 0.9331858, 0, 1, 0, -0.9331858, 0, 0.35939
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=882022895]
 environment = SubResource("Environment_mhnvy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2103778292]
+transform = Transform3D(-0.08560821, 0, -0.996329, 0, 1, 0, 0.996329, 0, -0.08560821, 1.5843797, 2.7653189, -3.1376734)
+material_override = SubResource("StandardMaterial3D_v86rl")
+mesh = SubResource("CylinderMesh_13sgg")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=46760246]
+transform = Transform3D(-0.08560821, 0, -0.996329, 0, 1, 0, 0.996329, 0, -0.08560821, 0.39433384, 2.7653189, -3.1376734)
+material_override = SubResource("StandardMaterial3D_70i5f")
+mesh = SubResource("CylinderMesh_13sgg")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1350444062]
+transform = Transform3D(-0.08560821, 0, -0.996329, 0, 1, 0, 0.996329, 0, -0.08560821, 2.7779193, 2.7653189, -3.1376734)
+material_override = SubResource("StandardMaterial3D_mj5lg")
+mesh = SubResource("CylinderMesh_13sgg")
 
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/ButtonStart" to="." method="startGame"]
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/ButtonCredits" to="." method="showCredits"]

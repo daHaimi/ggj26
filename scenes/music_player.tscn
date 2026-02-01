@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dojewa1psfn5m"]
 
 [ext_resource type="Script" uid="uid://or4iin6eu1w0" path="res://scenes/music_player.gd" id="1_ql6qh"]
-[ext_resource type="AudioStream" uid="uid://pp7if8qdd22q" path="res://art/sfx/Enemy_Hit_2.wav" id="2_l7xiw"]
-[ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_l7xiw"]
+[ext_resource type="AudioStream" uid="uid://b0ydhtmkfrcvd" path="res://art/music/music_default.wav" id="2_l7xiw"]
+[ext_resource type="AudioStream" uid="uid://d31hlyocs1orf" path="res://art/music/music_player_mask.wav" id="3_yalyj"]
 
 [sub_resource type="Animation" id="Animation_fwkb2"]
 length = 4.0
@@ -41,7 +41,7 @@ tracks/0/path = NodePath("AudioPlayerCalm:volume_db")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -80.0]
@@ -53,10 +53,10 @@ tracks/1/path = NodePath("AudioPlayerFast:volume_db")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-80.0, 0.0]
+"values": [-80.0, -20.0]
 }
 
 [sub_resource type="Animation" id="Animation_ql6qh"]
@@ -69,7 +69,7 @@ tracks/0/path = NodePath("AudioPlayerCalm:volume_db")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-80.0, 0.0]
@@ -81,7 +81,7 @@ tracks/1/path = NodePath("AudioPlayerFast:volume_db")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -80.0]
@@ -101,7 +101,7 @@ script = ExtResource("1_ql6qh")
 stream = ExtResource("2_l7xiw")
 
 [node name="AudioPlayerFast" type="AudioStreamPlayer" parent="." unique_id=707020977]
-stream = ExtResource("3_l7xiw")
+stream = ExtResource("3_yalyj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1714513413]
 libraries/ = SubResource("AnimationLibrary_l7xiw")

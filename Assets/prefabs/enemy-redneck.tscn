@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c6chbe8ii8dam" path="res://Assets/scripts/enemy.gd" id="1_2wj43"]
 [ext_resource type="AudioStream" uid="uid://dwjlupsivkpfm" path="res://art/sfx/Player_Footsteps_0.wav" id="2_lqx03"]
-[ext_resource type="PackedScene" uid="uid://pfa3evluqjie" path="res://Assets/prefabs/redneck.tscn" id="2_tjbv5"]
+[ext_resource type="PackedScene" uid="uid://cxfx2qrpsx21r" path="res://Assets/prefabs/redneck.tscn" id="2_tjbv5"]
 [ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_2wki4"]
-[ext_resource type="Script" path="res://Assets/scripts/enemy_model.gd" id="3_ffs4v"]
 [ext_resource type="AudioStream" uid="uid://bjiv3pbguom6x" path="res://art/sfx/Player_Footsteps_2.wav" id="4_b4h52"]
 [ext_resource type="AudioStream" uid="uid://cm660a3cw17pw" path="res://art/sfx/Voc_Redneck_0.wav" id="5_xhdcg"]
 [ext_resource type="AudioStream" uid="uid://cjt47wgik7uxb" path="res://art/sfx/Voc_Redneck_1.wav" id="6_r5hry"]
@@ -64,14 +63,6 @@ _data = {
 &"enemy_searching": SubResource("Animation_gmggq")
 }
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_ffs4v"]
-height = 0.36083984
-radius = 1.1088867
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_7vnk3"]
-height = 0.526001
-radius = 3.9848633
-
 [sub_resource type="PrismMesh" id="PrismMesh_1i4hk"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gmggq"]
@@ -91,7 +82,6 @@ voiceline_death = ExtResource("7_6s85n")
 
 [node name="character" parent="." unique_id=214737925 instance=ExtResource("2_tjbv5")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.85589516, 0)
-script = ExtResource("3_ffs4v")
 character_type = "Redneck"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1210280039]
@@ -105,22 +95,6 @@ debug_shape_thickness = 5
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=71278756]
 libraries/ = SubResource("AnimationLibrary_uid6r")
 autoplay = &"enemy_searching"
-
-[node name="PunchArea" type="Area3D" parent="." unique_id=1275321074]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PunchArea" unique_id=1063911432]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23120117, 0)
-shape = SubResource("CylinderShape3D_ffs4v")
-
-[node name="ShootArea" type="Area3D" parent="." unique_id=1270861843]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ShootArea" unique_id=1123794953]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.023742676, 0)
-shape = SubResource("CylinderShape3D_7vnk3")
 
 [node name="RotationAxis" type="Node3D" parent="." unique_id=236248936]
 

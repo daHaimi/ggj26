@@ -1690,11 +1690,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0066833496, 0)
 shape = SubResource("CylinderShape3D_w3o6u")
 
 [node name="Mask_Tony" parent="." unique_id=711317670 instance=ExtResource("8_gunhw")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.280544, 1, -5.5466003)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.623819, 1, -5.562516)
 mask_name = "Tony"
 
 [node name="Mask_Jigsaw" parent="." unique_id=884617238 instance=ExtResource("8_gunhw")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.237723, 0.78591156, -24.412481)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -14.275422, 0.78591156, -23.201096)
 mask_name = "Jigsaw"
 
 [node name="Mask_Mask" parent="." unique_id=377805891 instance=ExtResource("8_gunhw")]
@@ -1807,6 +1807,10 @@ voiceline_death = ExtResource("35_2jdvr")
 
 [node name="Enemy2" parent="." unique_id=101225594 instance=ExtResource("34_v3why")]
 transform = Transform3D(-0.3746066, 0, 0.92718387, 0, 1, 0, -0.92718387, 0, -0.3746066, -21.735743, 0.9079472, -2.959128)
+voiceline_search = null
+voiceline_aggro = null
+voiceline_aggro_02 = null
+voiceline_death = null
 
 [connection signal="hit" from="Player" to="UI/Stats" method="hit"]
 [connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]

@@ -11,7 +11,7 @@ signal hit
 @onready var dash_component = $Dash
 @onready var animator: AnimationPlayer = $PlayerChar/model/AnimationPlayer
 @onready var face: MeshInstance3D = $PlayerChar/model/metarig/Skeleton3D/Head/FaceMask
-@onready var punch: Area3D = $PlayerChar/PunchArea
+@onready var punch: Area3D = $PlayerChar/model/metarig/Skeleton3D/Hand/AttackArea
 @onready var stats = get_tree().get_nodes_in_group("globals")[0]
 #@onready var dash_timer = $DashTimer
 #@onready var dash_timer = $DashCooldownTimer
@@ -29,8 +29,10 @@ func dash():
 
 func check_hit_enemy():
 	var bodies: Array = punch.get_overlapping_bodies()
-	for body in bodies:
-		body.hit(stats.cur_strength)
+	if len(bodies) > 0:
+		for body in bodies:
+			body.hit(stats.cur_strength)
+		attacking = false
 
 func hide_from_enemy():
 	pass
@@ -41,7 +43,6 @@ func _ready() -> void:
 
 func _on_char_anim_finished(name: String):
 	if name == "slash":
-		check_hit_enemy()
 		animator.play("idle")
 		attacking = false
 		
@@ -65,7 +66,8 @@ func _process(delta: float) -> void:
 			$PlayerChar.rotation.y = lerp_angle($PlayerChar.rotation.y, target_angle, delta * 10)
 		else:
 			animator.play("idle")
-	
+	else: 
+		check_hit_enemy()
 	
 	### Picking up ###
 	for area: Area3D in $Pickup.get_overlapping_areas():

@@ -26,8 +26,8 @@ var player = null
 @onready var rotation_axis = $RotationAxis
 @onready var sight_cone = $RotationAxis/Sight
 @onready var sight_raycast = $RayCast3D
-@onready var hit_range = $PunchArea
-@onready var shoot_range = $ShootArea
+@onready var aorange = $character/model/InRangeArea
+@onready var aoa = $character/model/metarig/Skeleton3D/Hand/AttackArea
 @onready var animation_player = $AnimationPlayer
 @onready var char_animation: AnimationPlayer = $character/model/AnimationPlayer
 @onready var enemy_type: String = $character.character_type
@@ -116,12 +116,12 @@ func enter_attack():
 	$character.attack()
 	
 func enter_dead():
+	state = States.DEAD
 	if voiceline_death:
 		audio_voice.stream = voiceline_death
 		audio_voice.play()
-		char_animation.stop()
 	# play death animation
-	#queue_free()
+	char_animation.play("dying")
 
 func hit(damage: int):
 	LIFE = clamp(LIFE - damage, 0, LIFE)
@@ -131,6 +131,8 @@ func hit(damage: int):
 		audio_voice.play()
 	if LIFE == 0:
 		enter_dead()
+	else: 
+		look_at(player.position)
 
 func play_footsteps():
 	if audio_effect and not audio_effect.playing:
@@ -180,6 +182,9 @@ func _physics_process(delta: float) -> void:
 		States.AGGRO:
 			move_to_player(Vector3.ZERO, 0, delta)
 			detect_attack()
+		States.ATTACK:
+			look_at(player.position)
+			deal_damage()
 	if velocity.length() > 0: 
 		play_footsteps()
 	move_and_slide()
@@ -190,16 +195,15 @@ func _on_char_anim_finished(anim_name: String):
 	) or (
 		enemy_type == "Hitman" and anim_name == "pistol"
 	):
-		hit_player.emit()
 		enter_searching()
 
-func detect_attack():
-	if enemy_type == "Redneck":
-		var collisions: Array = hit_range.get_overlapping_bodies()
-		if collisions.size() > 0:
-			enter_attack()
+func deal_damage():
+	var collisions: Array = aoa.get_overlapping_bodies()
+	if collisions.size() > 0:
+		hit_player.emit()
+		state = States.IDLE
 
-	if enemy_type == "Hitman":
-		var collisions: Array = shoot_range.get_overlapping_bodies()
-		if collisions.size() > 0:
-			enter_attack()
+func detect_attack():
+	var collisions: Array = aorange.get_overlapping_bodies()
+	if collisions.size() > 0:
+		enter_attack()

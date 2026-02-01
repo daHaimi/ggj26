@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjy8st13k74c5"]
 
-[ext_resource type="Script" path="res://Assets/scripts/credits.gd" id="1_2fbfq"]
+[ext_resource type="Script" uid="uid://0jp626hgiu1k" path="res://Assets/scripts/credits.gd" id="1_2fbfq"]
 [ext_resource type="PackedScene" uid="uid://cf864j3368ocb" path="res://Assets/prefabs/hitman.tscn" id="2_8gwij"]
 [ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="3_mah5v"]
 [ext_resource type="PackedScene" uid="uid://cxfx2qrpsx21r" path="res://Assets/prefabs/redneck.tscn" id="4_kyhnv"]

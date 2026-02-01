@@ -43,7 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://ename7g0nov" path="res://Assets/models/convention-sign.glb" id="31_w3o6u"]
 [ext_resource type="Texture2D" uid="uid://c66sadw083typ" path="res://Assets/img/mask.png" id="32_v3why"]
 [ext_resource type="PackedScene" uid="uid://cm3jv1yi67ac2" path="res://Assets/prefabs/enemy.tscn" id="33_gur6y"]
-[ext_resource type="PackedScene" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
+[ext_resource type="PackedScene" uid="uid://bydk8v2sbxtis" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
 [ext_resource type="AudioStream" uid="uid://buqp7huuob228" path="res://art/sfx/Wilhelmscream.wav" id="35_2jdvr"]
 [ext_resource type="Texture2D" uid="uid://bfme27r3vrj5c" path="res://Assets/img/beer-bottle-svgrepo-com.svg" id="39_iafhg"]
 
@@ -1690,11 +1690,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0066833496, 0)
 shape = SubResource("CylinderShape3D_w3o6u")
 
 [node name="Mask_Tony" parent="." unique_id=711317670 instance=ExtResource("8_gunhw")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -29.973324, 1, 4.161951)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.280544, 1, -5.5466003)
 mask_name = "Tony"
 
 [node name="Mask_Jigsaw" parent="." unique_id=884617238 instance=ExtResource("8_gunhw")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -14.883863, 0.78591156, -11.503471)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.237723, 0.78591156, -24.412481)
 mask_name = "Jigsaw"
 
 [node name="Mask_Mask" parent="." unique_id=377805891 instance=ExtResource("8_gunhw")]

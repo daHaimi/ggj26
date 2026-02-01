@@ -20,6 +20,7 @@ cap_bottom = false
 height = 1.0
 
 [node name="Mask" type="Area3D" unique_id=711317670]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_18u33")
@@ -29,8 +30,13 @@ sprite_mask = ExtResource("4_kb6ni")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=136980162]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020385504, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_dm03s")
 mesh = SubResource("CylinderMesh_lu5iy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1090452357]
 shape = SubResource("CylinderShape3D_kb6ni")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1965423678]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+texture = ExtResource("2_18u33")

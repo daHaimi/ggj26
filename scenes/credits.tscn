@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bjy8st13k74c5"]
+
+[ext_resource type="Script" path="res://Assets/scripts/credits.gd" id="1_2fbfq"]
+[ext_resource type="PackedScene" uid="uid://cf864j3368ocb" path="res://Assets/prefabs/hitman.tscn" id="2_8gwij"]
+[ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="3_mah5v"]
+[ext_resource type="PackedScene" uid="uid://cxfx2qrpsx21r" path="res://Assets/prefabs/redneck.tscn" id="4_kyhnv"]
+[ext_resource type="Texture2D" uid="uid://er4e3v6g6mly" path="res://Assets/img/Baguetteboeden.png" id="5_8gwij"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vmn6f"]
+font_size = 69
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gwij"]
+font_size = 18
+
+[sub_resource type="Environment" id="Environment_ya6b3"]
+background_energy_multiplier = 0.55
+ambient_light_source = 2
+ambient_light_color = Color(0.90359825, 0.90359825, 0.9035982, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mah5v"]
+albedo_texture = ExtResource("5_8gwij")
+uv1_scale = Vector3(14.62, 11, 11)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kyhnv"]
+material = SubResource("StandardMaterial3D_mah5v")
+size = Vector2(7.37, 2.99)
+
+[node name="Outro" type="Node3D" unique_id=486676806]
+script = ExtResource("1_2fbfq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=748207645]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=818443646]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.521
+offset_left = 2.0
+offset_top = 41.0
+offset_bottom = 13.391968
+grow_horizontal = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/CenterContainer" unique_id=809180588]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/GridContainer" unique_id=1568660818]
+layout_mode = 2
+text = "Me Among Serial Killers"
+label_settings = SubResource("LabelSettings_vmn6f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/CenterContainer/GridContainer" unique_id=1305944035]
+custom_minimum_size = Vector2(1.04, 26.42)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/CenterContainer/GridContainer" unique_id=1530286157]
+layout_mode = 2
+text = "a game by:
+Frank, Franziska, Mathias und Moritz"
+label_settings = SubResource("LabelSettings_8gwij")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CenterContainer/GridContainer" unique_id=1701367689]
+custom_minimum_size = Vector2(1.04, 26.42)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/CenterContainer/GridContainer" unique_id=729746089]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/CenterContainer/GridContainer/GridContainer" unique_id=814064457]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "sound by:
+Tobias"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/CenterContainer/GridContainer/GridContainer" unique_id=853423223]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "special thx:
+Thomas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=461575598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.085044086, 1.6862749, 2.4817867)
+
+[node name="hitman" parent="." unique_id=838528403 instance=ExtResource("2_8gwij")]
+transform = Transform3D(0.6500318, 0, 0.75990707, 0, 1, 0, -0.75990707, 0, 0.6500318, -2.1584632, 0, 0.30436707)
+
+[node name="PlayerChar" parent="." unique_id=1158323092 instance=ExtResource("3_mah5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.30436707)
+
+[node name="Redneck" parent="." unique_id=214737925 instance=ExtResource("4_kyhnv")]
+transform = Transform3D(0.9306349, 0, -0.36594906, 0, 1, 0, 0.36594906, 0, 0.9306349, 2.1183498, 0, 0.30285418)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=372468434]
+environment = SubResource("Environment_ya6b3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1532833446]
+transform = Transform3D(1, 0, 0, 0, 0.99529374, 0.09690546, 0, -0.09690546, 0.99529374, 0, 1.6774461, 3.545276)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1043014923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.65130746)
+mesh = SubResource("PlaneMesh_kyhnv")

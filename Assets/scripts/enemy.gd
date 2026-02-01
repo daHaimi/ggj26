@@ -6,7 +6,7 @@ extends CharacterBody3D
 
 signal hit_player
 
-enum States {IDLE, ROAMING, SEARCHING, AGGRO, DEAD, ATTACK}
+enum States {IDLE, ROAMING, SEARCHING, AGGRO, DEAD, ATTACK, DANCING}
 
 @export var footsteps_01: AudioStream
 @export var footsteps_02: AudioStream
@@ -39,12 +39,18 @@ func _ready() -> void:
 	char_animation.animation_finished.connect(_on_char_anim_finished)
 
 func scan_for_player():
+	if state == States.DANCING:
+		return
+	
+	if player and player.player_dead:
+		enter_dancing()
+		return
+	
 	var bodies: Array = sight_cone.get_overlapping_bodies()
 	if bodies.size() > 0:
 		sight_raycast.target_position = to_local(player.global_position)
 		sight_raycast.force_raycast_update()
 		var raycast_result = sight_raycast.get_collider()
-		print(raycast_result)
 		if raycast_result == player:
 			if state not in [States.AGGRO, States.ATTACK]:
 				char_animation.play("running")
@@ -119,6 +125,12 @@ func enter_dead():
 		audio_voice.play()
 	# play death animation
 	char_animation.play("dying")
+
+func enter_dancing():
+	state = States.IDLE
+	velocity = Vector3.ZERO
+	animation_player.stop()	
+	char_animation.play("hiphop-dancing")
 
 func hit(damage: int):
 	LIFE = clamp(LIFE - damage, 0, LIFE)

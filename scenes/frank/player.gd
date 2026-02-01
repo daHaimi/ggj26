@@ -26,6 +26,7 @@ signal hit
 @onready var face: MeshInstance3D = $PlayerChar/model/metarig/Skeleton3D/Head/FaceMask
 @onready var punch: Area3D = $PlayerChar/model/metarig/Skeleton3D/Hand/AttackArea
 @onready var stats = get_tree().get_nodes_in_group("globals")[0]
+@onready var enemy_detection_point = $EnemyDetectionPoint
 
 @onready var audio_effect = $AudioEffect
 @onready var audio_voice = $AudioVoice

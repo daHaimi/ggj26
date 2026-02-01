@@ -44,12 +44,12 @@ func scan_for_player():
 		print("player in cone")
 		player = bodies[0]
 		
-		sight_raycast.target_position = to_local(player.global_position)
-		print(player.global_position)
-		print(sight_raycast.target_position)
+		sight_raycast.target_position = to_local(player.enemy_detection_point.global_position)
+		#print(player.global_position)
+		#print(sight_raycast.target_position)
 		sight_raycast.force_raycast_update()
 		var raycast_result = sight_raycast.get_collider()
-		# print(raycast_result)
+		print(raycast_result)
 		if raycast_result == player:
 			if state not in [States.AGGRO, States.ATTACK]:
 				char_animation.play("running")

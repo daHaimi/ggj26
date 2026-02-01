@@ -41,12 +41,10 @@ func _ready() -> void:
 func scan_for_player():
 	var bodies: Array = sight_cone.get_overlapping_bodies()
 	if bodies.size() > 0:
-		sight_raycast.target_position = to_local(player.global_position)
-		print(player.global_position)
-		print(sight_raycast.target_position)
+		sight_raycast.target_position = to_local(player.enemy_detection_point.global_position)
 		sight_raycast.force_raycast_update()
 		var raycast_result = sight_raycast.get_collider()
-		# print(raycast_result)
+		print(raycast_result)
 		if raycast_result == player:
 			if state not in [States.AGGRO, States.ATTACK]:
 				char_animation.play("running")

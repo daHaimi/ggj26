@@ -106,9 +106,11 @@ func enter_dead():
 		audio_voice.stream = voiceline_death
 		audio_voice.play()
 	# play death animation
+	queue_free()
 
 func hit(damage: int):
 	LIFE = clamp(LIFE - damage, 0, LIFE)
+	print(LIFE)
 	if voiceline_getting_hit:
 		audio_voice.stream = voiceline_getting_hit
 		audio_voice.play()

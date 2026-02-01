@@ -263,6 +263,8 @@ shape = SubResource("WorldBoundaryShape3D_sugp2")
 
 [node name="Mask" parent="." unique_id=439555137 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9541563, 1, -2.5315638)
+rotate_speed = 2.0
+mask_name = ""
 
 [node name="Machete" parent="." unique_id=1920632882 instance=ExtResource("5_tbgi4")]
 transform = Transform3D(0.95456344, -0.27176583, -0.12227895, -0.039212406, 0.29221076, -0.9555497, 0.29541698, 0.91692764, 0.2682771, 0.32453412, 0.9999999, -1.7064006)

@@ -1,19 +1,36 @@
 [gd_scene format=3 uid="uid://dd8ppnse7mnii"]
 
 [ext_resource type="Script" uid="uid://bugqgk471x74t" path="res://Assets/scripts/collectable.gd" id="1_18u33"]
-[ext_resource type="PackedScene" uid="uid://kah7es4jb32e" path="res://Assets/models/mask.glb" id="2_dm03s"]
+[ext_resource type="Texture2D" uid="uid://ccu3ukoc1q4ik" path="res://Assets/img/sprite_tony.png" id="2_18u33"]
+[ext_resource type="Texture2D" uid="uid://dq6l0c6rd5h2d" path="res://Assets/img/sprite_jigsaw.png" id="3_lu5iy"]
+[ext_resource type="Texture2D" uid="uid://cy4ebpr7ppvhs" path="res://Assets/img/sprite_mask.png" id="4_kb6ni"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_18u33"]
-size = Vector3(0.44970703, 0.4062271, 0.15478516)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dm03s"]
+transparency = 1
+albedo_texture = ExtResource("2_18u33")
+uv1_scale = Vector3(2, 2, 2)
+uv1_world_triplanar = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lu5iy"]
+height = 1.0
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kb6ni"]
+height = 1.0
 
 [node name="Mask" type="Area3D" unique_id=711317670]
 collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_18u33")
+sprite_tony = ExtResource("2_18u33")
+sprite_jigsaw = ExtResource("3_lu5iy")
+sprite_mask = ExtResource("4_kb6ni")
 
-[node name="mask" parent="." unique_id=1100882523 instance=ExtResource("2_dm03s")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.43053925, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=136980162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020385504, 0)
+material_override = SubResource("StandardMaterial3D_dm03s")
+mesh = SubResource("CylinderMesh_lu5iy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1090452357]
-transform = Transform3D(1, 0, 0, 0, 0.9673828, 0.253319, 0, -0.253319, 0.9673828, -0.00056432, 0.46523568, -0.010434052)
-shape = SubResource("BoxShape3D_18u33")
+shape = SubResource("CylinderShape3D_kb6ni")

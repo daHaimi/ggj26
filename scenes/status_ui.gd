@@ -2,10 +2,14 @@ extends VBoxContainer
 
 const HP_DEFAULT = 2
 const HP_HIGH = 5
+const STRENGTH_DEFAULT = 1
+const STRENGTH_HIGH = 1
 
 @onready var glowShader: Shader = preload("res://Assets/Shaders/glow.gdshader")
+@onready var dashBar: ProgressBar = $DashBar
 var max_hitpoints: int = HP_DEFAULT
 var cur_hitpoints: int;
+var cur_strength: int = STRENGTH_DEFAULT;
 var cur_mask: String = "Default"
 var glow: ShaderMaterial
 

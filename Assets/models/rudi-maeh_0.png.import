@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccu3ukoc1q4ik"
-path.s3tc="res://.godot/imported/sprite_tony.png-d05bfd97574c08981bdd521184db857f.s3tc.ctex"
+uid="uid://eliq3ojlbhh"
+path.s3tc="res://.godot/imported/rudi-maeh_0.png-fc4677fa25e0a569b14e91ebfc3f0ce2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "ed7ed14f3cb37e4dc2d9a95f58e6fd03"
+}
 
 [deps]
 
-source_file="res://Assets/img/sprite_tony.png"
-dest_files=["res://.godot/imported/sprite_tony.png-d05bfd97574c08981bdd521184db857f.s3tc.ctex"]
+source_file="res://Assets/models/rudi-maeh_0.png"
+dest_files=["res://.godot/imported/rudi-maeh_0.png-fc4677fa25e0a569b14e91ebfc3f0ce2.s3tc.ctex"]
 
 [params]
 

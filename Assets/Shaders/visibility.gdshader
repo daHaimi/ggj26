@@ -1,6 +1,7 @@
 shader_type canvas_item;
 
 
+uniform float _MaxAlpha : hint_range(0.0, 1.0, 0.01) = 0.8;
 /** Circle position in [0, 1]² */
 uniform vec2 _CirclePosition = vec2(0.5);
 /** Progress of the transition */

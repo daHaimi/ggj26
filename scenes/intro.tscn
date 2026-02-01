@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bsm2ah0d5jgfi"]
+
+[ext_resource type="Script" uid="uid://dj6adai371yvk" path="res://Assets/scripts/intro.gd" id="1_yjqpq"]
+[ext_resource type="FontFile" uid="uid://djshywiib7bi6" path="res://Assets/fonts/Creepster-Regular.ttf" id="2_4bx60"]
+
+[sub_resource type="Environment" id="Environment_fu77f"]
+background_mode = 1
+background_color = Color(0.16359308, 0, 0.023895236, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.0
+
+[node name="Intro" type="CanvasLayer" unique_id=1710848064]
+script = ExtResource("1_yjqpq")
+
+[node name="Control" type="Control" parent="." unique_id=769758858]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=951827638]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 153.0
+offset_right = 986.0
+offset_bottom = 490.0
+theme_override_fonts/font = ExtResource("2_4bx60")
+theme_override_font_sizes/font_size = 20
+text = "Larry Oser is a real failure. After working as a pizza delivery boy for five years, he is now a cornflakes salesman. The new Kellogg's are especially crunchy. So delicious that he has 10,000 boxes at home that he has to sell before they expire in three months. On Monday morning, he lounges on the couch and feels sorry for himself. Then his gaze falls on a newspaper ad for “Cereal Con.” It's happening today. This is his chance to get rid of the cornflakes and earn a commission to pay the rent (which is three months overdue). He purchases a convention pass and puts on his old high school suit. Larry calls a taxi and heads to the fair.
+
+He arrives at the exhibition grounds and sees a huge banner that reads “Cereal Killers.” Hmm, something is odd here. Nevertheless, he enters the grounds. Less than five seconds later, a bullet whizzes past his ear. Larry knocks over a table and runs... "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1046397627]
+environment = SubResource("Environment_fu77f")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=582219001]

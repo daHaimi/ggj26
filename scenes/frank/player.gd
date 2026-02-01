@@ -39,11 +39,11 @@ signal hit
 var isometric_angle = deg_to_rad(45)
 var direction: Vector3
 var attacking: bool = false
+var player_dead: bool = false
 
 func dash():
 	if dash_component.dash_ready:
 		dash_component.dash()
-		
 
 func check_hit_enemy():
 	var bodies: Array = punch.get_overlapping_bodies()
@@ -57,16 +57,11 @@ func play_footsteps():
 		audio_effect.stream = footsteps.pick_random()
 		audio_effect.play()
 
-func _on_player_got_hit(cur_health: int):
-	if cur_health <= 0:
-		die()
-	else:
-		audio_voice.stream = voiceline_getting_hit
-		audio_voice.play()
-
 func die():
+	player_dead = true
 	audio_voice.stream = voiceline_death
 	audio_voice.play()
+	animator.play("dying")
 
 func _ready() -> void:
 	animator.playback_default_blend_time = 1.5
@@ -76,6 +71,13 @@ func _on_char_anim_finished(name: String):
 	if name == "slash":
 		animator.play("idle")
 		attacking = false
+	if name == "dying":
+		var delay_to_gameover_screen = 2
+		await get_tree().create_timer(delay_to_gameover_screen).timeout
+		if ResourceLoader.exists("res://scenes/game_over.tscn"):
+			get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+		else:
+			print("game_over.tscn not found")
 
 func play_mask_pickup_sound(mask_name: String):
 	print(mask_name)
@@ -89,7 +91,9 @@ func play_mask_pickup_sound(mask_name: String):
 	audio_voice.play()
 	
 func _process(delta: float) -> void:
-		
+	if player_dead:
+		return
+	
 	if Input.is_action_just_pressed("attack"):
 		if !attacking && stats.can_attack():
 			attacking = true
@@ -121,6 +125,8 @@ func _process(delta: float) -> void:
 		area.queue_free()
 
 func _physics_process(delta: float) -> void:
+	if player_dead:
+		return
 	### MOVEMENT ###
 	# Add the gravity. Important for physics bugging
 	if not is_on_floor():
@@ -160,11 +166,10 @@ func _physics_process(delta: float) -> void:
 	if velocity.length() > 0: 
 		play_footsteps()
 
-
 func _on_stats_player_hit(cur_health) -> void:
-	print(cur_health)
-	if cur_health <= 0:
-		die()
-	else:
-		audio_voice.stream = voiceline_getting_hit
-		audio_voice.play()
+	if not player_dead:
+		if cur_health <= 0:
+			die()
+		else:
+			audio_voice.stream = voiceline_getting_hit
+			audio_voice.play()

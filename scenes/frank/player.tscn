@@ -21,7 +21,7 @@ height = 1.762207
 radius = 0.30419922
 height = 1.6977539
 
-[node name="Player" type="CharacterBody3D" unique_id=482459206]
+[node name="Player" type="CharacterBody3D" unique_id=482459206 groups=["player"]]
 collision_layer = 3
 platform_wall_layers = 1
 script = ExtResource("1_ydx0u")
@@ -59,7 +59,6 @@ shape = SubResource("CapsuleShape3D_krpkg")
 script = ExtResource("2_a0svu")
 
 [node name="DashTimer" type="Timer" parent="Dash" unique_id=160366443]
-wait_time = 3.0
 
 [node name="DashCooldownTimer" type="Timer" parent="Dash" unique_id=2067276604]
 wait_time = 10.0

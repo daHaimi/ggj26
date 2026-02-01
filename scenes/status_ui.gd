@@ -8,7 +8,9 @@ const STRENGTH_HIGH = 1
 signal player_hit
 
 @onready var glowShader: Shader = preload("res://Assets/Shaders/glow.gdshader")
-@onready var dashBar: ProgressBar = $DashBar
+@onready var dashBar: Sprite2D = $Panel/DashBar
+@onready var smileyPanel: Panel = $Panel/SmileyPanel
+@onready var hpPanel: Panel = $Panel/HpPanel
 var max_hitpoints: int = HP_DEFAULT
 var cur_hitpoints: int;
 var cur_strength: int = STRENGTH_DEFAULT;
@@ -34,7 +36,7 @@ func is_fast() -> bool:
 
 func hit():
 	print("hit")
-	cur_hitpoints -= 1
+	cur_hitpoints = clampi(cur_hitpoints - 1, 0, max_hitpoints)
 	if cur_hitpoints == 1:
 		updateMask()
 	updateHitpoints()
@@ -52,14 +54,14 @@ func changeMask(mask: String) -> void:
 	updateHitpoints()
 
 func updateMask():
-	for mask in $SmileyPanel.get_children():
+	for mask in smileyPanel.get_children():
 		mask.visible = false
-	$SmileyPanel.find_child(cur_mask, false).visible = true
+	smileyPanel.find_child(cur_mask, false).visible = true
 
 func updateHitpoints():
-	var avatar: AnimatedSprite2D = $SmileyPanel.find_child(cur_mask)
+	var avatar: AnimatedSprite2D = smileyPanel.find_child(cur_mask)
 	if cur_hitpoints == 1:
 		avatar.material = glow
 	else:
 		avatar.material = null
-	$TextPanel/Label.text = "Life {0}/{1}".format([cur_hitpoints, max_hitpoints])
+	hpPanel.update(max_hitpoints, cur_hitpoints)

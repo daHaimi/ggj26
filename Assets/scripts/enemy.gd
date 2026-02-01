@@ -44,7 +44,6 @@ func scan_for_player():
 		sight_raycast.target_position = to_local(player.global_position)
 		sight_raycast.force_raycast_update()
 		var raycast_result = sight_raycast.get_collider()
-		print(raycast_result)
 		if raycast_result == player:
 			if state not in [States.AGGRO, States.ATTACK]:
 				char_animation.play("running")
@@ -122,7 +121,6 @@ func enter_dead():
 
 func hit(damage: int):
 	LIFE = clamp(LIFE - damage, 0, LIFE)
-	print(LIFE)
 	if voiceline_getting_hit:
 		audio_voice.stream = voiceline_getting_hit
 		audio_voice.play()

@@ -80,7 +80,6 @@ func _on_char_anim_finished(name: String):
 			print("game_over.tscn not found")
 
 func play_mask_pickup_sound(mask_name: String):
-	print(mask_name)
 	match mask_name:
 		"Tony":
 			audio_voice.stream = sound_tiger_mask

@@ -57,7 +57,17 @@
 [ext_resource type="PackedScene" uid="uid://bydk8v2sbxtis" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
 [ext_resource type="PackedScene" uid="uid://dgtvuhfwktlyb" path="res://3rd-party/lpp/statue-knight.fbx" id="36_sc620"]
 [ext_resource type="Texture2D" uid="uid://bfme27r3vrj5c" path="res://Assets/img/beer-bottle-svgrepo-com.svg" id="39_iafhg"]
-[ext_resource type="Script" uid="uid://782cd48upi8p" path="res://Assets/scripts/escapeArea.gd" id="58_sc620"]
+[ext_resource type="Script" uid="uid://be6kwctsh5fxw" path="res://Assets/scripts/hitui.gd" id="45_421lv"]
+[ext_resource type="Texture2D" uid="uid://fopphofr367t" path="res://Assets/img/badge.png" id="49_oksur"]
+[ext_resource type="Texture2D" uid="uid://m3mrmbxw8jt0" path="res://Assets/img/charge_bg.png" id="57_ql8jr"]
+[ext_resource type="Script" uid="uid://c2snl12bw0kt6" path="res://Assets/scripts/dash_bar.gd" id="58_5ga6x"]
+[ext_resource type="Script" path="res://Assets/scripts/escapeArea.gd" id="58_sc620"]
+[ext_resource type="Texture2D" uid="uid://bfmhhsi5cspia" path="res://Assets/img/charge.png" id="59_nj2gj"]
+[ext_resource type="Script" uid="uid://dity0s8ubhpak" path="res://Assets/scripts/hpui.gd" id="60_jydfl"]
+[ext_resource type="Texture2D" uid="uid://bkr65fquq2wxn" path="res://Assets/img/hp-2-empty.png" id="60_nj2gj"]
+[ext_resource type="Texture2D" uid="uid://dtu5183xl8g53" path="res://Assets/img/hp-2.png" id="61_msn66"]
+[ext_resource type="Texture2D" uid="uid://cusgg5tvperu4" path="res://Assets/img/hp-5-empty.png" id="63_u0n8q"]
+[ext_resource type="Texture2D" uid="uid://bh1wcw3xa2r83" path="res://Assets/img/hp-5.png" id="64_d5irf"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w7c3h"]
 material = ExtResource("1_2q6dc")
@@ -709,8 +719,6 @@ animations = [{
 "name": &"mask",
 "speed": 2.0
 }]
-
-[sub_resource type="Theme" id="Theme_iafhg"]
 
 [sub_resource type="Environment" id="Environment_kih21"]
 ambient_light_source = 2
@@ -2855,6 +2863,14 @@ mask_name = "Mask"
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1433507822]
 
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=1310142775]
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1222.0
+offset_bottom = 696.0
+color = Color(1, 0, 0, 0)
+script = ExtResource("45_421lv")
+
 [node name="CRT" type="ColorRect" parent="UI" unique_id=1265730231]
 material = SubResource("ShaderMaterial_2e2fo")
 offset_left = -6.0
@@ -2872,24 +2888,34 @@ offset_bottom = 1023.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Stats" type="VBoxContainer" parent="UI" unique_id=2000462218 groups=["globals"]]
+anchors_preset = -1
+anchor_bottom = 0.32407406
 offset_right = 249.0
 offset_bottom = 163.0
 script = ExtResource("13_wu01b")
 metadata/_edit_use_anchors_ = true
 
-[node name="SmileyPanel" type="Panel" parent="UI/Stats" unique_id=1109749936]
+[node name="Panel" type="Panel" parent="UI/Stats" unique_id=1416016240]
 layout_mode = 2
+
+[node name="SmileyPanel" type="Panel" parent="UI/Stats/Panel" unique_id=1109749936]
+layout_mode = 0
+offset_left = 34.995
+offset_top = 75.715
+offset_right = 121.84999
+offset_bottom = 176.7149
+scale = Vector2(1.925, 1.925)
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="Default" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=1610160487]
+[node name="Default" type="AnimatedSprite2D" parent="UI/Stats/Panel/SmileyPanel" unique_id=1610160487]
 position = Vector2(50, 50)
 scale = Vector2(0.32038835, 0.32038835)
 sprite_frames = SubResource("SpriteFrames_v3why")
 animation = &"uncomfortable"
 autoplay = "uncomfortable"
 
-[node name="Disco" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=2044979674]
+[node name="Disco" type="AnimatedSprite2D" parent="UI/Stats/Panel/SmileyPanel" unique_id=2044979674]
 visible = false
 material = SubResource("ShaderMaterial_asl66")
 position = Vector2(50, 50)
@@ -2898,7 +2924,7 @@ sprite_frames = SubResource("SpriteFrames_2jdvr")
 animation = &"disco"
 autoplay = "disco"
 
-[node name="Tony" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=712029937]
+[node name="Tony" type="AnimatedSprite2D" parent="UI/Stats/Panel/SmileyPanel" unique_id=712029937]
 visible = false
 position = Vector2(50, 50)
 scale = Vector2(0.32, 0.32)
@@ -2906,7 +2932,7 @@ sprite_frames = SubResource("SpriteFrames_asl66")
 animation = &"tony"
 autoplay = "tony"
 
-[node name="Jigsaw" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=493891408]
+[node name="Jigsaw" type="AnimatedSprite2D" parent="UI/Stats/Panel/SmileyPanel" unique_id=493891408]
 visible = false
 position = Vector2(50, 50)
 scale = Vector2(0.32, 0.32)
@@ -2914,7 +2940,7 @@ sprite_frames = SubResource("SpriteFrames_q4oe8")
 animation = &"jigsaw"
 autoplay = "jigsaw"
 
-[node name="Mask" type="AnimatedSprite2D" parent="UI/Stats/SmileyPanel" unique_id=1563901674]
+[node name="Mask" type="AnimatedSprite2D" parent="UI/Stats/Panel/SmileyPanel" unique_id=1563901674]
 visible = false
 position = Vector2(50, 50)
 scale = Vector2(0.32, 0.32)
@@ -2922,30 +2948,118 @@ sprite_frames = SubResource("SpriteFrames_svjb4")
 animation = &"mask"
 autoplay = "mask"
 
-[node name="stronger" type="Sprite2D" parent="UI/Stats/SmileyPanel" unique_id=278192239]
+[node name="stronger" type="Sprite2D" parent="UI/Stats/Panel/SmileyPanel" unique_id=278192239]
 visible = false
 position = Vector2(200, 53.43)
 scale = Vector2(0.098, 0.096)
 texture = ExtResource("39_iafhg")
 
-[node name="DashBar" type="ProgressBar" parent="UI/Stats" unique_id=1473946747]
-layout_mode = 2
-theme = SubResource("Theme_iafhg")
-step = 1.0
-value = 100.0
+[node name="Badge" type="Sprite2D" parent="UI/Stats/Panel" unique_id=791732482]
+position = Vector2(133.75, 204.47221)
+scale = Vector2(0.5696798, 0.5696798)
+texture = ExtResource("49_oksur")
 
-[node name="TextPanel" type="Panel" parent="UI/Stats" unique_id=560329296]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="DashBar" type="Sprite2D" parent="UI/Stats/Panel" unique_id=546498560]
+position = Vector2(136, 308)
+scale = Vector2(0.5816327, 0.5816327)
+texture = ExtResource("57_ql8jr")
+script = ExtResource("58_5ga6x")
 
-[node name="Label" type="Label" parent="UI/Stats/TextPanel" unique_id=307272117]
+[node name="Charge" type="Sprite2D" parent="UI/Stats/Panel/DashBar" unique_id=795718131]
+position = Vector2(-147.85963, -17.192984)
+scale = Vector2(0.9657097, 0.7848972)
+texture = ExtResource("59_nj2gj")
+centered = false
+
+[node name="HpPanel" type="Panel" parent="UI/Stats/Panel" unique_id=560329296]
 layout_mode = 0
-offset_left = 8.0
-offset_right = 241.0
-offset_bottom = 43.0
-text = "Health: 2/2"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 44.0
+offset_top = 329.0
+offset_right = 230.0
+offset_bottom = 351.0
+size_flags_vertical = 3
+script = ExtResource("60_jydfl")
+
+[node name="Hp2" type="Panel" parent="UI/Stats/Panel/HpPanel" unique_id=410513793]
+layout_mode = 0
+offset_right = 186.0
+offset_bottom = 23.0
+
+[node name="Hp2Empty" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp2" unique_id=1586048429]
+position = Vector2(45.4, 12)
+scale = Vector2(0.59999996, 0.6)
+texture = ExtResource("60_nj2gj")
+
+[node name="Hp2" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp2/Hp2Empty" unique_id=1730528069]
+position = Vector2(-77.333336, -20.00002)
+texture = ExtResource("61_msn66")
+centered = false
+
+[node name="Hp2Empty2" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp2" unique_id=1641830170]
+position = Vector2(139.40001, 8)
+scale = Vector2(0.59999996, 0.6)
+texture = ExtResource("60_nj2gj")
+
+[node name="Hp2" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp2/Hp2Empty2" unique_id=493077218]
+position = Vector2(-77.333336, -20.00002)
+texture = ExtResource("61_msn66")
+centered = false
+
+[node name="Hp5" type="Panel" parent="UI/Stats/Panel/HpPanel" unique_id=495147953]
+visible = false
+layout_mode = 0
+offset_right = 186.0
+offset_bottom = 23.0
+
+[node name="Hp5Empty" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5" unique_id=1026866218]
+position = Vector2(20.800003, 11.799988)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("63_u0n8q")
+
+[node name="Hp5" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5/Hp5Empty" unique_id=1282393918]
+position = Vector2(-34.66667, -17.999979)
+texture = ExtResource("64_d5irf")
+centered = false
+
+[node name="Hp5Empty2" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5" unique_id=2086235663]
+position = Vector2(56.800003, 10.799988)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("63_u0n8q")
+
+[node name="Hp5" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5/Hp5Empty2" unique_id=28413785]
+position = Vector2(-34.66667, -17.999979)
+texture = ExtResource("64_d5irf")
+centered = false
+
+[node name="Hp5Empty3" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5" unique_id=1062817792]
+position = Vector2(93.799995, 9.799988)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("63_u0n8q")
+
+[node name="Hp5" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5/Hp5Empty3" unique_id=1048416241]
+position = Vector2(-34.66667, -17.999979)
+texture = ExtResource("64_d5irf")
+centered = false
+
+[node name="Hp5Empty4" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5" unique_id=571013247]
+position = Vector2(128.8, 11.799988)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("63_u0n8q")
+
+[node name="Hp5" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5/Hp5Empty4" unique_id=1231867518]
+position = Vector2(-34.66667, -17.999979)
+texture = ExtResource("64_d5irf")
+centered = false
+
+[node name="Hp5Empty5" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5" unique_id=1515748281]
+position = Vector2(164.8, 10.799988)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("63_u0n8q")
+
+[node name="Hp5" type="Sprite2D" parent="UI/Stats/Panel/HpPanel/Hp5/Hp5Empty5" unique_id=1097342573]
+position = Vector2(-34.66667, -17.999979)
+texture = ExtResource("64_d5irf")
+centered = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1977887183]
 environment = SubResource("Environment_kih21")
@@ -2971,9 +3085,11 @@ script = ExtResource("58_sc620")
 transform = Transform3D(0.96419275, 0, 0.26520267, 0, 1, 0, -0.26520267, 0, 0.96419275, -1.4484959, 1.3447227, 0.5215721)
 shape = SubResource("BoxShape3D_421lv")
 
+[connection signal="hit" from="Player" to="UI/ColorRect" method="notify_hit"]
 [connection signal="hit" from="Player" to="UI/Stats" method="hit"]
 [connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]
 [connection signal="player_hit" from="UI/Stats" to="Player" method="_on_stats_player_hit"]
+[connection signal="player_hit" from="UI/Stats" to="UI/ColorRect" method="notify_hit"]
 [connection signal="hit_player" from="Enemy" to="UI/Stats" method="hit"]
 [connection signal="hit_player" from="Enemy2" to="UI/Stats" method="hit"]
 [connection signal="body_entered" from="EscapeArea" to="EscapeArea" method="body_entered"]

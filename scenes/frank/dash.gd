@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if dashing:
-		stats.dashBar.value = (dash_timer.time_left / dash_timer.wait_time) * 100.0
+		stats.dashBar.update(dash_timer.time_left / dash_timer.wait_time)
 	elif !dash_ready && dash_cooldown_timer.time_left > 0: # Cooling down
-		stats.dashBar.value = 100 - (dash_cooldown_timer.time_left / (dash_cooldown_timer.wait_time - dash_timer.wait_time)) * 100.0
+		stats.dashBar.update(1 - (dash_cooldown_timer.time_left / (dash_cooldown_timer.wait_time - dash_timer.wait_time)))
 		

@@ -3690,6 +3690,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.59736, 1.1211194, 30.39380
 [connection signal="mask_collected" from="Player" to="UI/Stats" method="changeMask"]
 [connection signal="player_hit" from="UI/Stats" to="Player" method="_on_stats_player_hit"]
 [connection signal="player_hit" from="UI/Stats" to="UI/ColorRect" method="notify_hit"]
-[connection signal="hit_player" from="Enemy" to="UI/Stats" method="hit"]
-[connection signal="hit_player" from="Enemy2" to="UI/Stats" method="hit"]
 [connection signal="body_entered" from="EscapeArea" to="EscapeArea" method="body_entered"]

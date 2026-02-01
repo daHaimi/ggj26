@@ -65,3 +65,7 @@ func updateHitpoints():
 	else:
 		avatar.material = null
 	hpPanel.update(max_hitpoints, cur_hitpoints)
+
+
+func _on_player_mask_collected(mask):
+	pass # Replace with function body.

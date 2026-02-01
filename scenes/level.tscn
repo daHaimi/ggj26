@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://bo6cw3wo4by53" path="res://materials/floor.tres" id="1_2q6dc"]
 [ext_resource type="Material" uid="uid://dbb073ivpyo6f" path="res://materials/grass.tres" id="1_2r41h"]
-[ext_resource type="Script" path="res://Assets/scripts/level.gd" id="1_ok3ci"]
+[ext_resource type="Script" uid="uid://du3xoj1ufjuf5" path="res://Assets/scripts/level.gd" id="1_ok3ci"]
 [ext_resource type="PackedScene" uid="uid://cx1eevx2paxgl" path="res://art/building-tiles/wall-straight.glb" id="2_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://bteba1idbicuq" path="res://3rd-party/lpp/chair-dining.fbx" id="3_3ies3"]
 [ext_resource type="PackedScene" uid="uid://dg6knds3tymhc" path="res://3rd-party/lpp/atm-mechine.fbx" id="3_8iemx"]
@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://crt11i8gnnx8d" path="res://3rd-party/lpp/beer.fbx" id="15_0fmhk"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="15_xy2fk"]
 [ext_resource type="PackedScene" uid="uid://djlifiqli0v35" path="res://3rd-party/lpp/speaker-array.fbx" id="16_2e2fo"]
-[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
+[ext_resource type="Shader" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
 [ext_resource type="PackedScene" uid="uid://bmxhxdm30rgw5" path="res://3rd-party/lpp/coffee-cup-paper.fbx" id="16_iafhg"]
 [ext_resource type="PackedScene" uid="uid://evmhhrelbk6c" path="res://3rd-party/lpp/flag-big.fbx" id="17_0fmhk"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
@@ -56,14 +56,14 @@
 [ext_resource type="PackedScene" uid="uid://bydk8v2sbxtis" path="res://Assets/prefabs/enemy-redneck.tscn" id="34_v3why"]
 [ext_resource type="PackedScene" uid="uid://dgtvuhfwktlyb" path="res://3rd-party/lpp/statue-knight.fbx" id="36_sc620"]
 [ext_resource type="Texture2D" uid="uid://bfme27r3vrj5c" path="res://Assets/img/beer-bottle-svgrepo-com.svg" id="39_iafhg"]
-[ext_resource type="Script" uid="uid://be6kwctsh5fxw" path="res://Assets/scripts/hitui.gd" id="45_421lv"]
+[ext_resource type="Script" path="res://Assets/scripts/hitui.gd" id="45_421lv"]
 [ext_resource type="Texture2D" uid="uid://fopphofr367t" path="res://Assets/img/badge.png" id="49_oksur"]
 [ext_resource type="Texture2D" uid="uid://m3mrmbxw8jt0" path="res://Assets/img/charge_bg.png" id="57_ql8jr"]
-[ext_resource type="Script" uid="uid://c2snl12bw0kt6" path="res://Assets/scripts/dash_bar.gd" id="58_5ga6x"]
-[ext_resource type="Script" path="res://Assets/scripts/escapeArea.gd" id="58_sc620"]
+[ext_resource type="Script" path="res://Assets/scripts/dash_bar.gd" id="58_5ga6x"]
+[ext_resource type="Script" uid="uid://782cd48upi8p" path="res://Assets/scripts/escapeArea.gd" id="58_sc620"]
 [ext_resource type="PackedScene" uid="uid://dn2mx3qc6f1or" path="res://3rd-party/lpp/log.fbx" id="59_421lv"]
 [ext_resource type="Texture2D" uid="uid://bfmhhsi5cspia" path="res://Assets/img/charge.png" id="59_nj2gj"]
-[ext_resource type="Script" uid="uid://dity0s8ubhpak" path="res://Assets/scripts/hpui.gd" id="60_jydfl"]
+[ext_resource type="Script" path="res://Assets/scripts/hpui.gd" id="60_jydfl"]
 [ext_resource type="Texture2D" uid="uid://bkr65fquq2wxn" path="res://Assets/img/hp-2-empty.png" id="60_nj2gj"]
 [ext_resource type="Texture2D" uid="uid://dtu5183xl8g53" path="res://Assets/img/hp-2.png" id="61_msn66"]
 [ext_resource type="Texture2D" uid="uid://cusgg5tvperu4" path="res://Assets/img/hp-5-empty.png" id="63_u0n8q"]
@@ -521,10 +521,6 @@ shadow_mesh = SubResource("ArrayMesh_j4eoh")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p0vju"]
 points = PackedVector3Array(1.0486568, 1.0155467, 0.8818672, 1.0250477, 1.071672, 0.9026396, 1.0250477, 1.071672, 0.95987964, 1.0484515, 1.0155467, 0.9806521, 0.8889358, 0.19902696, -1.7114704, 0.8889358, 0.27162936, -2.0244436, 0.8889358, 0.50539887, -2.0318294, 0.8889358, 0.7391683, -2.0387535, 0.8889358, 0.94873697, -1.8739579, 0.63375163, 1.4613307, -0.28001094, 0.63375163, 1.4121566, 0.31085277, 0.61260605, 0.8909382, 2.0728269, 0.8889358, 0.7951648, 1.730772, 0.8842139, 0.7022235, 1.7746253, 0.8889358, 0.53062946, 1.7289257, 0.83330035, 0.20018551, 1.7917051, -0.8891411, 0.19902696, -1.7114704, 0, 0.3354783, -2.357266, 0.83330035, 0.19902696, 1.0378921, 0.6097319, 0.3354783, -2.3157208, 0.6397053, 0.74792176, -2.2866392, 0.6173279, 0.900979, -2.2769454, 0.5920764, 1.0055059, -2.2164743, 0.5809903, 1.4025021, -1.2032354, 0.59597707, 1.4285051, -0.88749254, 0, 1.5141089, -0.28001094, 0, 1.4433087, 0.35101318, 0, 0.8900371, 2.1480694, 0.048244834, 0.73492026, 2.2763977, 0.09587371, 0.6919252, 2.2967086, 0.61055315, 0.779975, 2.122219, 0.5292555, 0.23713034, 2.287015, 0.83104205, 0.439619, 1.8692555, 0.7807443, 0.21112736, 1.9352665, 0.5820168, 0.19902696, 1.7917051, -0.8891411, 0.27162936, -2.0244436, -0.83350563, 0.19902696, 1.0378921, -0.83350563, 0.20018551, 1.7917051, -1.0486568, 1.0155467, 0.9806521, -1.0486568, 1.0155467, 0.8818672, -0.60993725, 0.3354783, -2.3157208, 0, 0.900979, -2.346649, 0, 1.023399, -2.3018725, 0, 1.4260592, -1.2032354, 0, 1.4757481, -0.8907238, -0.59618235, 1.4285051, -0.88749254, -0.63395697, 1.4613307, -0.28001094, -0.63395697, 1.4121566, 0.31085277, -0.6128114, 0.8909382, 2.0728269, -0.048450112, 0.73492026, 2.2763977, 0, 0.779975, 2.2431617, 0.048244834, 0.6489302, 2.3170195, 0, 0.5769714, 2.349794, 0.56087124, 0.61378753, 2.1946926, 0.5438316, 0.41413093, 2.2468548, 0, 0.24163583, 2.3585649, -0.58222216, 0.19902696, 1.7917051, -0.8891411, 0.50539887, -2.0318294, -0.52946085, 0.23713034, 2.287015, -0.7809496, 0.21112736, 1.9352665, -0.8312473, 0.439619, 1.8692555, -0.8891411, 0.53062946, 1.7289257, -0.88441926, 0.7022235, 1.7746253, -0.8891411, 0.7951648, 1.730772, -1.0252529, 1.071672, 0.95987964, -1.0252529, 1.071672, 0.9026396, -0.8891411, 0.94873697, -1.8739579, -0.8891411, 0.7391683, -2.0387535, -0.6399106, 0.74792176, -2.2866392, -0.6175332, 0.900979, -2.2769454, -0.5922817, 1.0055059, -2.2164743, -0.58119565, 1.4025021, -1.2032354, -0.6107584, 0.779975, 2.122219, -0.09607899, 0.6919252, 2.2967086, -0.048450112, 0.6489302, 2.3170195, -0.5610765, 0.61378753, 2.1946926, -0.5440369, 0.41413093, 2.2468548)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_w3o6u"]
-height = 1.0066528
-radius = 0.40966797
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2e2fo"]
 shader = ExtResource("11_pqd0y")

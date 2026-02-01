@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://ue28t0nqeime"]
+
+[ext_resource type="Script" uid="uid://bb67phq1q7nt2" path="res://Assets/scripts/menu.gd" id="1_yqeox"]
+[ext_resource type="Theme" uid="uid://cp7a42lyl0muf" path="res://Assets/menu_theme.tres" id="2_vjb58"]
+[ext_resource type="FontFile" uid="uid://djshywiib7bi6" path="res://Assets/fonts/Creepster-Regular.ttf" id="3_con2f"]
+[ext_resource type="StyleBox" uid="uid://yk4ls7ctu0c0" path="res://Assets/menu_style_box_flat.tres" id="3_mhnvy"]
+[ext_resource type="PackedScene" uid="uid://q1ebvdlpy6hi" path="res://Assets/prefabs/player-char.tscn" id="5_4ytvr"]
+
+[sub_resource type="Environment" id="Environment_mhnvy"]
+background_mode = 1
+background_color = Color(0.16359308, 0, 0.023895236, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.0
+
+[node name="Menu" type="CanvasLayer" unique_id=1066489308]
+script = ExtResource("1_yqeox")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1270338733]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+
+[node name="Control" type="Control" parent="." unique_id=1299485465]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 447.0
+offset_top = 195.0
+offset_right = -174.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vjb58")
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=518665891]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 56.005
+offset_right = 91.0
+offset_bottom = 96.00493
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=191405877]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/CenterContainer/VBoxContainer" unique_id=243918102]
+layout_mode = 2
+
+[node name="ButtonStart" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1442507632]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_con2f")
+theme_override_styles/normal = ExtResource("3_mhnvy")
+text = "Start Game"
+
+[node name="ButtonCredits" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1427510668]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_con2f")
+text = "Credits"
+
+[node name="ButtonQuit" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=2003195320]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_con2f")
+text = "Quit"
+
+[node name="Control2" type="Control" parent="." unique_id=1758943665]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2" unique_id=1226696220]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 580.0
+offset_right = 705.0
+offset_bottom = 719.0
+rotation = -1.1117747
+theme_override_constants/line_separation = -47
+theme_override_fonts/normal_font = ExtResource("3_con2f")
+theme_override_fonts/bold_font = ExtResource("3_con2f")
+theme_override_font_sizes/normal_font_size = 57
+theme_override_font_sizes/bold_font_size = 118
+bbcode_enabled = true
+text = "[b][color=red]M[/color][/b]e [b][color=red]A[/color][/b]mong [b][color=red]S[/color][/b]erial [b][color=red]K[/color][/b]illers"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1776189561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48158365, 1.5253491, 0.10854781)
+
+[node name="PlayerChar" parent="." unique_id=1158323092 instance=ExtResource("5_4ytvr")]
+transform = Transform3D(0.3593943, 0, 0.9331858, 0, 1, 0, -0.9331858, 0, 0.3593943, 0.08373088, 0, -0.83040714)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=882022895]
+environment = SubResource("Environment_mhnvy")
+
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/ButtonStart" to="." method="startGame"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/ButtonCredits" to="." method="showCredits"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/ButtonQuit" to="." method="quitGame"]

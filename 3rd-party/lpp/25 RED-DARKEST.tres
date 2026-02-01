@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cmbf33jib70nw"]
+
+[resource]
+resource_name = "25 RED-DARKEST"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.57925403, 1.0348111e-06, 3.85046e-07, 1)
+roughness = 0.3
+emission_enabled = true

@@ -37,6 +37,8 @@ var state := States.IDLE
 
 func _ready() -> void:
 	char_animation.animation_finished.connect(_on_char_anim_finished)
+	var ui_node = get_node("/root/Level/UI/Stats")
+	hit_player.connect(ui_node.hit)
 
 func scan_for_player():
 	if state == States.DANCING:

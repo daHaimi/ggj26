@@ -519,10 +519,10 @@ shader_parameter/chromaticAberrationOffset = 0.00170999995725
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gur6y"]
 shader = ExtResource("12_5k0ak")
-shader_parameter/_MaxAlpha = 0.8
+shader_parameter/_MaxAlpha = 0.97999997809504
 shader_parameter/_CirclePosition = Vector2(0.5, 0.5)
-shader_parameter/_Progress = 0.749999983236
-shader_parameter/_Smoothness = 1.0
+shader_parameter/_Progress = 0.8499999810008
+shader_parameter/_Smoothness = 2.485
 shader_parameter/_Background = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trceg"]
@@ -2818,7 +2818,7 @@ light_indirect_energy = 0.382
 light_volumetric_fog_energy = 0.614
 light_specular = 0.536
 
-[node name="Player" parent="." unique_id=482459206 groups=["player"] instance=ExtResource("6_ux5qa")]
+[node name="Player" parent="." unique_id=482459206 instance=ExtResource("6_ux5qa")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30.412468, 1.0020583, 10.079708)
 axis_lock_linear_y = true
 

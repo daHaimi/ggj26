@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://d2450rn6hg1os"]
+
+[ext_resource type="Script" uid="uid://djl8y43ngqjsm" path="res://Assets/scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="FontFile" uid="uid://djshywiib7bi6" path="res://Assets/fonts/Creepster-Regular.ttf" id="1_xeevv"]
+
+[sub_resource type="Environment" id="Environment_wqhvx"]
+background_mode = 1
+background_color = Color(0.16359308, 0, 0.023895236, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.0
+
+[node name="GameOver" type="CanvasLayer" unique_id=1879429299]
+script = ExtResource("1_wqhvx")
+
+[node name="Control" type="Control" parent="." unique_id=694239155]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1654870980]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 83.0
+offset_right = 698.0
+offset_bottom = 222.0
+theme_override_constants/line_separation = -47
+theme_override_fonts/normal_font = ExtResource("1_xeevv")
+theme_override_fonts/bold_font = ExtResource("1_xeevv")
+theme_override_font_sizes/normal_font_size = 57
+theme_override_font_sizes/bold_font_size = 118
+bbcode_enabled = true
+text = "[b][color=red]Y[/color][/b]ou [b][color=red]D[/color][/b]ied"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Label" type="Label" parent="Control" unique_id=1108957140]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 269.0
+offset_right = 833.0
+offset_bottom = 348.0
+theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_font_sizes/font_size = 20
+text = "you walked right into a serial killer convention ...
+
+and then you were killed
+
+
+
+what did you expect?"
+horizontal_alignment = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=448896034]
+environment = SubResource("Environment_wqhvx")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1638319071]

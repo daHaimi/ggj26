@@ -36,7 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://crt11i8gnnx8d" path="res://3rd-party/lpp/beer.fbx" id="15_0fmhk"]
 [ext_resource type="Texture2D" uid="uid://c75kniy87hn28" path="res://Assets/img/face.png" id="15_xy2fk"]
 [ext_resource type="PackedScene" uid="uid://djlifiqli0v35" path="res://3rd-party/lpp/speaker-array.fbx" id="16_2e2fo"]
-[ext_resource type="Shader" uid="uid://daw6byy23fjtw" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
+[ext_resource type="Shader" path="res://Assets/Shaders/glow.gdshader" id="16_cmcjb"]
 [ext_resource type="PackedScene" uid="uid://bmxhxdm30rgw5" path="res://3rd-party/lpp/coffee-cup-paper.fbx" id="16_iafhg"]
 [ext_resource type="PackedScene" uid="uid://evmhhrelbk6c" path="res://3rd-party/lpp/flag-big.fbx" id="17_0fmhk"]
 [ext_resource type="Texture2D" uid="uid://bxmfu1fwysr8k" path="res://Assets/img/discovered.png" id="17_556r4"]
@@ -1743,7 +1743,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.170887, -1.145226, -33.961
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.10435, -0.67450714, -31.987843)
 
 [node name="tree-beech36" parent="outside" unique_id=795894013 instance=ExtResource("12_ux5qa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.268845, -0.67450714, -29.158379)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.188553, -0.67450714, -28.847416)
 
 [node name="tree-beech37" parent="outside" unique_id=871319212 instance=ExtResource("12_ux5qa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.451237, -0.67450714, -26.276646)
@@ -1915,6 +1915,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.10255, -0.67450666, 12.834
 
 [node name="tree-beech87" parent="outside" unique_id=1743922498 instance=ExtResource("12_ux5qa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.046974, -0.67450714, 19.993591)
+
+[node name="tree-beech88" parent="outside" unique_id=185706360 instance=ExtResource("12_ux5qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.227173, -0.67450714, -29.65821)
 
 [node name="carpark" type="Node3D" parent="." unique_id=808020704]
 

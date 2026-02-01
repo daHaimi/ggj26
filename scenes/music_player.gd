@@ -6,6 +6,8 @@ class_name MusicPlayer
 
 @onready var animation_player = $AnimationPlayer
 
+var track_playing = "calm"
+
 func _ready() -> void:
 	$AudioPlayerCalm.finished.connect($AudioPlayerCalm.play)
 	$AudioPlayerFast.finished.connect($AudioPlayerFast.play)
@@ -19,10 +21,11 @@ func play_background_music():
 
 func play_calm():
 	animation_player.play("fast_to_calm")
-	
+	track_playing = "calm"
 	
 func play_fast():
 	animation_player.play("calm_to_fast")
+	track_playing = "fast"
 
 func stop_music():
 	$AudioPlayerCalm.stop()

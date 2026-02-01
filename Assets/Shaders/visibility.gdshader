@@ -34,5 +34,5 @@ void fragment()
 	float f = mix(new_progress, new_progress + _Smoothness, new_progress);
 	float mask = smoothstep(new_progress, f, distance(new_uv, position));
 
-	COLOR = vec4(_Background, mask);
+	COLOR = vec4(_Background, clamp(mask, 0.0, _MaxAlpha));
 }

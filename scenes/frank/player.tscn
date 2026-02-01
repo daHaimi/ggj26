@@ -35,12 +35,8 @@ sound_tiger_mask = ExtResource("8_dvtic")
 sound_jigsaw_mask = ExtResource("9_f318w")
 sound_the_mask = ExtResource("10_yuemg")
 
-[node name="EnemyDetectionPoint" type="Node3D" parent="." unique_id=1596330819]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.122, 0)
-
 [node name="PlayerChar" parent="." unique_id=1158323092 instance=ExtResource("2_cmddg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0121818, 0)
-script = null
 
 [node name="StaticBody3D" type="StaticBody3D" parent="PlayerChar" unique_id=2108260834]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0121818, 0)

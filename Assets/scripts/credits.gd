@@ -10,6 +10,7 @@ func _ready():
 	animator_hitman.play("hiphop-dancing")
 	animator_player.play("hiphop-dancing")
 	animator_redneck.play("hiphop-dancing")
+	BackgroundMusic.play_fast()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -17,4 +18,5 @@ func _process(delta):
 
 func _input(event):
 	if event.is_action("ui_cancel") or event.is_action("attack"):
+		BackgroundMusic.play_calm()
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")

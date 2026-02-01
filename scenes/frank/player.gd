@@ -62,6 +62,8 @@ func die():
 	audio_voice.stream = voiceline_death
 	audio_voice.play()
 	animator.play("dying")
+	if BackgroundMusic.track_playing == "fast":
+		BackgroundMusic.play_calm()
 
 func _ready() -> void:
 	animator.playback_default_blend_time = 1.5

@@ -57,15 +57,18 @@ layout_mode = 2
 
 [node name="ButtonStart" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1442507632]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_con2f")
 theme_override_styles/normal = ExtResource("3_mhnvy")
 text = "Start Game"
 
 [node name="ButtonCredits" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1427510668]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_con2f")
 text = "Credits"
 
 [node name="ButtonQuit" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=2003195320]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_con2f")
 text = "Quit"
 
 [node name="Control2" type="Control" parent="." unique_id=1758943665]

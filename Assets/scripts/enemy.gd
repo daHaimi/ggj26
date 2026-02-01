@@ -21,7 +21,7 @@ enum States {IDLE, ROAMING, SEARCHING, AGGRO, DEAD, ATTACK}
 @export var voiceline_death: AudioStream
 
 var state := States.IDLE
-var player = null
+@onready var player = get_tree().get_nodes_in_group("player")[0]
 
 @onready var rotation_axis = $RotationAxis
 @onready var sight_cone = $RotationAxis/Sight
@@ -41,15 +41,10 @@ func _ready() -> void:
 func scan_for_player():
 	var bodies: Array = sight_cone.get_overlapping_bodies()
 	if bodies.size() > 0:
-		print("player in cone")
-		player = bodies[0]
-		
-		sight_raycast.target_position = to_local(player.global_position)
-		print(player.global_position)
-		print(sight_raycast.target_position)
+		sight_raycast.target_position = to_local(player.enemy_detection_point.global_position)
 		sight_raycast.force_raycast_update()
 		var raycast_result = sight_raycast.get_collider()
-		# print(raycast_result)
+		print(raycast_result)
 		if raycast_result == player:
 			if state not in [States.AGGRO, States.ATTACK]:
 				char_animation.play("running")
@@ -117,6 +112,8 @@ func enter_attack():
 	
 func enter_dead():
 	state = States.DEAD
+	set_collision_layer_value(1, false)
+	set_collision_layer_value(3, false)
 	if voiceline_death:
 		audio_voice.stream = voiceline_death
 		audio_voice.play()

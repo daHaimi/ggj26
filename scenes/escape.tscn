@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dmxu1ta4jtvah"]
+
+[ext_resource type="FontFile" uid="uid://djshywiib7bi6" path="res://Assets/fonts/Creepster-Regular.ttf" id="1_fu77f"]
+[ext_resource type="Script" uid="uid://kpiy1tc0ovu8" path="res://Assets/scripts/escape.gd" id="1_ig01c"]
+
+[sub_resource type="Environment" id="Environment_fu77f"]
+background_mode = 1
+background_color = Color(0.16359308, 0, 0.023895236, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.0
+
+[node name="Escape" type="CanvasLayer" unique_id=1710848064]
+script = ExtResource("1_ig01c")
+
+[node name="Control" type="Control" parent="." unique_id=769758858]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=2074821568]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 86.0
+offset_right = 746.0
+offset_bottom = 225.0
+theme_override_constants/line_separation = -47
+theme_override_fonts/normal_font = ExtResource("1_fu77f")
+theme_override_fonts/bold_font = ExtResource("1_fu77f")
+theme_override_font_sizes/normal_font_size = 57
+theme_override_font_sizes/bold_font_size = 118
+bbcode_enabled = true
+text = "[b][color=red]Y[/color][/b]ou [b][color=red]E[/color][/b]scaped"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Label" type="Label" parent="Control" unique_id=951827638]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 321.0
+offset_right = 698.0
+offset_bottom = 370.0
+theme_override_fonts/font = ExtResource("1_fu77f")
+theme_override_font_sizes/font_size = 20
+text = "You found a way to escape the
+Serial Killer Convention"
+horizontal_alignment = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1046397627]
+environment = SubResource("Environment_fu77f")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=582219001]

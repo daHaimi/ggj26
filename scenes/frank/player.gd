@@ -120,6 +120,7 @@ func _process(delta: float) -> void:
 			mask_collected.emit(area.mask_name)
 			face.activate(area.mask_name)
 			play_mask_pickup_sound(area.mask_name)
+			BackgroundMusic.play_fast()
 		else:
 			print("Collected: ", area)
 		area.queue_free()

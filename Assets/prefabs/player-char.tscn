@@ -4,6 +4,7 @@
 [ext_resource type="Animation" uid="uid://by6ma4itsfyf2" path="res://Assets/animations/idle2.res" id="2_1m3xm"]
 [ext_resource type="Animation" uid="uid://e5hd0j0i8lpe" path="res://Assets/animations/dying.res" id="2_328n0"]
 [ext_resource type="Animation" uid="uid://cgj18akvbcdmn" path="res://Assets/animations/running.res" id="3_ag1m8"]
+[ext_resource type="Animation" uid="uid://2wjbo3b7wjbw" path="res://Assets/animations/hiphop-dancing.res" id="3_q33wc"]
 [ext_resource type="Animation" uid="uid://cu2apumsokpvo" path="res://Assets/animations/slash.res" id="4_8vequ"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15e3"]
@@ -128,6 +129,7 @@ bind/28/pose = Transform3D(9.928375e-07, 1.0000018, 3.2694413e-15, -1.0000001, 9
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4ylut"]
 _data = {
 &"dying": ExtResource("2_328n0"),
+&"hiphop-dancing": ExtResource("3_q33wc"),
 &"idle": ExtResource("2_1m3xm"),
 &"running": ExtResource("3_ag1m8"),
 &"slash": ExtResource("4_8vequ")

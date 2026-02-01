@@ -5,6 +5,7 @@
 [ext_resource type="Animation" uid="uid://c3ots8uk01f1b" path="res://Assets/animations/idle.res" id="1_r2s1j"]
 [ext_resource type="Animation" uid="uid://cgj18akvbcdmn" path="res://Assets/animations/running.res" id="2_3iw73"]
 [ext_resource type="Texture2D" uid="uid://05cukloi8877" path="res://Assets/models/hitman-rig-v1_Image_1.png" id="2_5upm4"]
+[ext_resource type="Animation" uid="uid://2wjbo3b7wjbw" path="res://Assets/animations/hiphop-dancing.res" id="4_s4jna"]
 [ext_resource type="Animation" uid="uid://bs4klpjvs4yo5" path="res://Assets/animations/pistol.res" id="5_hm373"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40pa8"]
@@ -130,6 +131,7 @@ bind/28/pose = Transform3D(7.807272e-06, 1.8007326, -1.0732225e-07, 0.004102854,
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6b6rb"]
 _data = {
+&"hiphop-dancing": ExtResource("4_s4jna"),
 &"idle": ExtResource("1_r2s1j"),
 &"pistol": ExtResource("5_hm373"),
 &"running": ExtResource("2_3iw73")
@@ -141,7 +143,7 @@ script = ExtResource("1_8yy1m")
 [node name="model" type="Node3D" parent="." unique_id=1177241355]
 
 [node name="metarig" type="Node3D" parent="model" unique_id=1297412486]
-transform = Transform3D(98.55508, 4.451501, 16.342945, -16.026125, -6.730662, 98.477715, 5.483725, -99.673874, -5.9200025, -0.14454931, -0.009739532, 0.0045155557)
+transform = Transform3D(98.55509, 4.45151, 16.342945, -16.026127, -6.7306633, 98.477715, 5.483741, -99.673874, -5.9200025, -0.14454931, -0.009739532, 0.0045155557)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="model/metarig" unique_id=1520210767]
 bones/0/name = "spine"

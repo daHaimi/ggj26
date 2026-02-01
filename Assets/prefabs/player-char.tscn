@@ -3,9 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dyq4ead8k1iki" path="res://Assets/models/player-char/textures/Image_0.png" id="1_b5lm1"]
 [ext_resource type="Animation" uid="uid://by6ma4itsfyf2" path="res://Assets/animations/idle2.res" id="2_1m3xm"]
 [ext_resource type="Animation" uid="uid://e5hd0j0i8lpe" path="res://Assets/animations/dying.res" id="2_328n0"]
+[ext_resource type="Texture2D" uid="uid://cpmi46mwvora5" path="res://Assets/img/transpixel.png" id="2_w3dvv"]
 [ext_resource type="Animation" uid="uid://cgj18akvbcdmn" path="res://Assets/animations/running.res" id="3_ag1m8"]
 [ext_resource type="Animation" uid="uid://2wjbo3b7wjbw" path="res://Assets/animations/hiphop-dancing.res" id="3_q33wc"]
-[ext_resource type="Animation" uid="uid://cu2apumsokpvo" path="res://Assets/animations/slash.res" id="4_8vequ"]
+[ext_resource type="Script" uid="uid://bknjcgkfsrikn" path="res://Assets/prefabs/rotate.gd" id="3_r2ei2"]
+[ext_resource type="Animation" path="res://Assets/animations/slash.res" id="4_8vequ"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15e3"]
 resource_name = "Material_0"
@@ -125,6 +127,13 @@ bind/27/pose = Transform3D(-1.0000001, -9.15334e-07, 3.4161403e-08, 9.153352e-07
 bind/28/name = &"heel.02.R"
 bind/28/bone = -1
 bind/28/pose = Transform3D(9.928375e-07, 1.0000018, 3.2694413e-15, -1.0000001, 9.928359e-07, 1.2123654e-08, 1.2123654e-08, -1.5306234e-14, 1.0000001, -0.00045899895, -0.0018121488, -0.0003327459)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fl1ux"]
+transparency = 1
+albedo_texture = ExtResource("2_w3dvv")
+uv1_scale = Vector3(3, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_unqq8"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4ylut"]
 _data = {
@@ -427,6 +436,17 @@ bones/39/scale = Vector3(1, 1, 1)
 [node name="geometry_0" type="MeshInstance3D" parent="model/metarig/Skeleton3D" unique_id=40336498]
 mesh = SubResource("ArrayMesh_d5nlb")
 skin = SubResource("Skin_6ot3p")
+
+[node name="Head" type="BoneAttachment3D" parent="model/metarig/Skeleton3D" unique_id=1878418548]
+transform = Transform3D(0.98207766, 0.106038325, 0.15581673, 0.18762816, -0.47174644, -0.8615393, -0.017850205, 0.8753343, -0.48318744, -8.829142e-05, -0.0003581341, 0.015305077)
+bone_name = "spine.006"
+bone_idx = 6
+
+[node name="FaceMask" type="MeshInstance3D" parent="model/metarig/Skeleton3D/Head" unique_id=568568271]
+transform = Transform3D(0.004, 5.456968e-12, 5.456968e-12, 6.366463e-12, 0.004, 6.9849193e-10, 1.8189894e-12, -6.9849193e-10, 0.0039999997, -1.2144708e-05, 0.0012436882, -0.0002444978)
+material_override = SubResource("StandardMaterial3D_fl1ux")
+mesh = SubResource("SphereMesh_unqq8")
+script = ExtResource("3_r2ei2")
 
 [node name="world" type="Node3D" parent="model" unique_id=367264704]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)

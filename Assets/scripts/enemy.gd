@@ -14,7 +14,9 @@ enum States {IDLE, ROAMING, SEARCHING, AGGRO, DEAD, ATTACK}
 @onready var footsteps = [footsteps_01, footsteps_02, footsteps_03]
 
 @export var voiceline_search: AudioStream
+@export var voiceline_search_02: AudioStream
 @export var voiceline_aggro: AudioStream
+@export var voiceline_aggro_02: AudioStream
 @export var voiceline_getting_hit: AudioStream
 @export var voiceline_death: AudioStream
 
@@ -72,10 +74,17 @@ func scan_for_player():
 			States.AGGRO:
 				char_animation.play("idle")
 				enter_searching()
+			#States.ATTACK:
+				#char_animation.play("idle")
+				#enter_searching()
 
 func enter_aggro():
 	if voiceline_aggro:
-		audio_voice.stream = voiceline_aggro
+		if enemy_type == "Redneck":
+			var voicelines = [voiceline_aggro, voiceline_aggro_02]
+			audio_voice.stream = voicelines.pick_random()
+		else:
+			audio_voice.stream = voiceline_aggro
 		audio_voice.play()
 	state = States.AGGRO
 	animation_player.stop()
@@ -83,7 +92,11 @@ func enter_aggro():
 
 func enter_searching():
 	if voiceline_search:
-		audio_voice.stream = voiceline_search
+		if enemy_type == "Agent":
+			var voicelines = [voiceline_search, voiceline_search_02]
+			audio_voice.stream = voicelines.pick_random()
+		else:
+			audio_voice.stream = voiceline_search
 		audio_voice.play()
 	state = States.SEARCHING
 	velocity = Vector3.ZERO
@@ -94,6 +107,7 @@ func enter_idle():
 	state = States.IDLE
 	velocity = Vector3.ZERO
 	animation_player.stop()	
+	char_animation.play("idle")
 
 func enter_attack():
 	state = States.ATTACK
@@ -105,8 +119,9 @@ func enter_dead():
 	if voiceline_death:
 		audio_voice.stream = voiceline_death
 		audio_voice.play()
+		char_animation.stop()
 	# play death animation
-	queue_free()
+	#queue_free()
 
 func hit(damage: int):
 	LIFE = clamp(LIFE - damage, 0, LIFE)
@@ -176,7 +191,7 @@ func _on_char_anim_finished(anim_name: String):
 		enemy_type == "Hitman" and anim_name == "pistol"
 	):
 		hit_player.emit()
-		enter_idle()
+		enter_searching()
 
 func detect_attack():
 	if enemy_type == "Redneck":

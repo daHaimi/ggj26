@@ -10,7 +10,8 @@ signal hit
 
 @onready var dash_component = $Dash
 @onready var animator: AnimationPlayer = $PlayerChar/model/AnimationPlayer
-@onready var punch: Area3D = $PunchArea
+@onready var face: MeshInstance3D = $PlayerChar/model/metarig/Skeleton3D/Head/FaceMask
+@onready var punch: Area3D = $PlayerChar/PunchArea
 @onready var stats = get_tree().get_nodes_in_group("globals")[0]
 #@onready var dash_timer = $DashTimer
 #@onready var dash_timer = $DashCooldownTimer
@@ -40,6 +41,7 @@ func _ready() -> void:
 
 func _on_char_anim_finished(name: String):
 	if name == "slash":
+		check_hit_enemy()
 		animator.play("idle")
 		attacking = false
 		
@@ -69,13 +71,12 @@ func _process(delta: float) -> void:
 	for area: Area3D in $Pickup.get_overlapping_areas():
 		if area.name.begins_with("Mask_"):
 			mask_collected.emit(area.mask_name)
+			face.activate(area.mask_name)
 		else:
 			print("Collected: ", area)
 		area.queue_free()
 
 func _physics_process(delta: float) -> void:
-	if attacking:
-		check_hit_enemy()
 	### MOVEMENT ###
 	# Add the gravity. Important for physics bugging
 	if not is_on_floor():

@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cf864j3368ocb" path="res://Assets/prefabs/hitman.tscn" id="2_xl01c"]
 [ext_resource type="AudioStream" uid="uid://dfb3sqox3vn5i" path="res://art/sfx/Player_Footsteps_1.wav" id="3_i48qi"]
 [ext_resource type="AudioStream" uid="uid://bjiv3pbguom6x" path="res://art/sfx/Player_Footsteps_2.wav" id="4_32sm5"]
+[ext_resource type="AudioStream" uid="uid://vme2qs3cigud" path="res://art/sfx/Voc_Agent_0.wav" id="5_2r314"]
+[ext_resource type="AudioStream" uid="uid://cf7gmlniwmfo8" path="res://art/sfx/Voc_Agent_1.wav" id="6_b1u3u"]
+[ext_resource type="AudioStream" uid="uid://ha6v5nnxaven" path="res://art/sfx/Voc_Agent_2.wav" id="7_80uhp"]
+[ext_resource type="AudioStream" uid="uid://bccsh18weqgbh" path="res://art/sfx/Voc_PlayerDamaged_3.wav" id="8_2rig5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iq85u"]
 
@@ -79,6 +83,10 @@ script = ExtResource("1_1i4hk")
 footsteps_01 = ExtResource("2_3ui4r")
 footsteps_02 = ExtResource("3_i48qi")
 footsteps_03 = ExtResource("4_32sm5")
+voiceline_search = ExtResource("5_2r314")
+voiceline_search_02 = ExtResource("6_b1u3u")
+voiceline_aggro = ExtResource("7_80uhp")
+voiceline_death = ExtResource("8_2rig5")
 
 [node name="character" parent="." unique_id=838528403 instance=ExtResource("2_xl01c")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.8714245, 0)

@@ -22,7 +22,7 @@ func _ready() -> void:
 func detected(det: bool):
 	# Todo
 	pass
-		
+
 func hit():
 	print("hit")
 	cur_hitpoints -= 1
